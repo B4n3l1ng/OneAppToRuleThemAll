@@ -1,0 +1,15 @@
+<h1>Log In to access your world</h1>
+
+<div>
+    <form method="POST" action="/login">
+        <label>Username: <input name="username" type="text" required/></label>
+        <label>Password: <input name="password" type="text" required/></label>
+        <button type="submit">Log In</button>
+    </form>
+</div>
+
+<div>
+    <% if (typeof errorMessage !== "undefined") {%> 
+        <p><%= errorMessage%> </p>
+        <% } %>
+</div>
