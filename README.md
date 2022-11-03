@@ -54,6 +54,7 @@ One App To Rule Them All is a simple web application allowing the user to access
 
 # Shop
 - sound effects
+- item descriptions
 
 # Easter Eggs
 - TBD
