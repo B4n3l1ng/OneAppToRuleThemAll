@@ -22,7 +22,7 @@ const characterSchema = new Schema({
     reqired: true,
   },
 
-  alliengance: {
+  allegiance: {
     type: String,
   },
 
@@ -39,7 +39,7 @@ const characterSchema = new Schema({
   },
 
   owner: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: "User",
   },
 });
