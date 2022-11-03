@@ -40,8 +40,7 @@ const characterSchema = new Schema({
   },
 
   owner: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
+    type: String,
   },
 });
 
