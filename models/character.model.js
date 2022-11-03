@@ -32,6 +32,7 @@ const characterSchema = new Schema({
 
   weapons: {
     type: String,
+    required: true,
   },
 
   image: {
