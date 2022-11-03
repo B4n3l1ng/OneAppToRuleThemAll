@@ -13,6 +13,11 @@ router.get("/characters/new", (req, res) => {
   res.render("profileViews/newCharacter");
 });
 
+router.get("/characters/:Id/details", async (req, res) => {
+  const character = await Character.findById(req.params.Id);
+  res.render("profileViews/characterDetails", { character });
+});
+
 router.post("/characters/new", async (req, res) => {
   const charName = req.body.name;
   if (await Character.findOne({ name: charName })) {
@@ -33,9 +38,6 @@ router.post("/characters/new", async (req, res) => {
     res.redirect(`/character/${created.id}/details`);
   }
 });
-router.get("/characters/:id/details", async (req, res) => {
-  const character = await Character.findById(id);
-  res.render("profileViews/characterDetails", { character });
-});
+
 
 module.exports = router;
