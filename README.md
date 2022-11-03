@@ -7,19 +7,42 @@ One App To Rule Them All is a simple web application allowing the user to access
 
 ## MVP (2 Models, 1 Relationship, CRUD, Auth)
 # Sign Up 
-
+- form with username, email and password
 
 # Log In
-
+- form with username and password
 
 # Profile
-# Characters List
-# Character Details
-# Shop
-# Money/Earn Money
-# Inventory
-# Explore World
+- links to all additional pages
+- background detail and central image
+- icons surrounding central images to act as buttons
 
+# Characters List
+- library of all characters listed from DB ==> READ
+- link to add new character to DB ==> CREATE
+- each listed character should be a link that can be selected to take user to Character Details
+
+# Character Details
+- all object properties and values listed
+- character image shown
+- links to update or delete character ==> UPDATE & DELETE
+
+# Shop
+- available items listed with prices and images
+- link to allow user to buy item, sending it to inventory DB ==> CREATE
+
+# Money/Earn Money
+- lists available money
+- link to add money
+
+# Inventory
+- additional collection, model and schema
+- lists all purchased items as a library with info and image ==> READ
+- link to sell item which increase money available ==> DELETE
+
+# Explore World
+- additional collection, model and schema
+- lists all major areas and info about them ==> READ
 
 ## Backlog
 # API
@@ -33,118 +56,106 @@ One App To Rule Them All is a simple web application allowing the user to access
 - sound effects
 
 # Easter Eggs
+- TBD
 
 ## Data structure
-# main.js
-- create Splash Screen
-- create Game Screen
-- create Gameover Screen
+# login.ejs
+- form
+- nav bar
+- styling
 
-# game.js
-- startGame() 
-- animate()
-- animateBackground()
-- gameId
-- clearCanvas()
-- moveCanvas()
-- drawCanvas()
+# signup.ejs
+- form
+- nav bar
+- styling
 
-# blue.js
-- positioning
-- movement
-- canvas boundaries 
-- moveBlue()
-- drawBlue()
+# profile.ejs
+- nav bar
+- styling
+- links as icons
 
-# resource.js
-- positioning
-- movement
-- resourceArr
-- drawResource() {
-    drawResource()
-    moveResource()
-}
-- create map
-- create compass
-- create bone
-- create ball
-- create pigeon
-- check collision
-- add to strength bar
-- add to score
+# layout.ejs
+- nav bar
+- styling 
 
-# danger.js
-- positioning
-- movement
-- dangerArr
-- drawDanger() {
-    drawDanger()
-    moveDanger()
-}
-- create rubbish1
-- create rubbish2
-- create poison
-- create sinkhole
-- create trap
-- check collision
-- reduce strength bar 
+# characters.ejs
+- characters listed as library
+- styling
+- characters as links
+- create character link
 
-# strengthbar.js
-- create
-- add to strengthCounter
+# character-details.ejs
+- update character link
+- delete character link
+- styling
+- character details listed
+- character image shown
 
-# score.js
-- create
-- update total
-- add to scoreCounter
-- update highScoreCounter
+# shop.ejs
+- styling
+- items listed with price and image
+- purchase links
 
-## States y States Transitions
-- Splash
-- Gameplay
-- Gameover
+# money.ejs
+- current amount
+- styling
+- link to earn money 
+
+# inventory.ejs
+- styling
+- items purchased listed with image
+- links to sell item to increase money 
+
+# world.ejs
+- styling
+- all places listed as library 
+- links to see place details
 
 ## Task
-[x] main - build splash screen
-[x] main - build gameplay screen
-[x] main - build gameover screen
-[x] game - build Canvas
-[x] game - start animation loop
-[x] game - update Canvas
-[x] game - draw Canvas
-[x] game - update Blue
-[x] game - move Blue
-[x] game - create resources
-[x] game - create dangers
-[x] game - fire random resource
-[x] game - fire random danger
-[x] game - create strength bar
-[x] game - update stength bar
-[x] game - create score
-[x] game - update score
-[x] game - check collision
-[x] game - game over
-[x] game - event listener arrow keys
-[x] game - add audio
-[x] game - gameId not resetting
-[x] main - medals
-[x] main - splash screen styling
-[x] main - gameplay screen styling including score number
-[x] main - strength bar styling
-[x] main - gameover screen styling
-[x] main - reorganise code/tidy JS
-[x] main - change music to make less repetitive
-[x] main - fix start button sensitivity
-[x] main - fix restart button size
-[x] main - address dizziness of game
-[x] game - add audio
-[x] game - change sensitivity of Blue
-[x] game - create high score
-[x] game - SFX sounds
-[x] game - ensure objects return to correct starting position
-
+[] login.ejs - form
+[] login.ejs - nav bar
+[] login.ejs - styling
+[] signup.ejs - form
+[] signup.ejs - nav bar
+[] signup.ejs - styling
+[] profile.ejs - nav bar
+[] profile.ejs - styling
+[] profile.ejs - links as icons
+[] layout.ejs - nav bar
+[] layout.ejs - styling
+[] characters.ejs - characters listed as library
+[] characters.ejs - styling
+[] characters.ejs - characters as links
+[] characters.ejs - create character link
+[] character-details.ejs - update character link
+[] character-details.ejs - delete character link
+[] character-details.ejs - styling
+[] character-details.ejs - character details listed
+[] character-details.ejs - character image shown
+[] shop.ejs - styling
+[] shop.ejs - items listed with price and image
+[] shop.ejs - purchase links
+[] money.ejs - current amount
+[] money.ejs - styling
+[] money.ejs - link to earn money
+[] inventory.ejs - styling
+[] inventory.ejs - items purchased listed with image
+[] inventory.ejs - links to sell item to increase money
+[] world.ejs - styling
+[] world.ejs - all places listed as library
+[] world.ejs - links to see place details
+[X] config - session config
+[] routes - character routes
+[X] routes - auth routes
+[X] .env
+[] models - user model
+[] models - character model
+[] models - shop model
+[] models - world model
+[] models - inventory model
+[X] logout
 
 ## Links
-Trello - https://trello.com/b/uw0SVOy2/tasks
-GitHub - https://github.com/POrwell/Project1_A_Dogs_Quest_For_Home
-Slides - https://docs.google.com/presentation/d/1tPmZ_TNNKGFaqCpDe-KGB26cRj28iG9vrj8Mq4VNHdY/edit#slide=id.p
+Trello - https://trello.com/b/nSV8ho0j/project-2
+GitHub - https://github.com/B4n3l1ng/OneAppToRuleThemAll
+Slides - https://docs.google.com/presentation/d/1ol4Fh5LV5pmmtLXIFrS300f-j6tiI59abDop2s5Z9GY/edit#slide=id.p
