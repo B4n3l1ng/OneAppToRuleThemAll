@@ -10,4 +10,8 @@ router.get("/characters", async (req, res) => {
   res.render("profileViews/characters", { characters });
 });
 
+router.get("/characters/new", (req, res) => {
+  res.render("profileViews/newCharacter");
+});
+
 module.exports = router;
