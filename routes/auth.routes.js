@@ -1,7 +1,12 @@
 const express = require("express");
 const router = express.Router();
+<<<<<<< HEAD
 const User = require("../models/User.model");
 const bcrypt = require("bcryptjs");
+=======
+const bcrypt = require("bcryptjs");
+const User = require("../models/User.model")
+>>>>>>> master
 
 router.get("/login", (req, res) => {
   res.render("auth/login");
@@ -26,6 +31,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 router.get("/logout", (req, res, next) => {
   req.session.destroy((err) => {
     if (err) {
@@ -34,6 +40,31 @@ router.get("/logout", (req, res, next) => {
     res.redirect("/login");
   });
 });
+=======
+        else {
+            if (bcrypt.compareSync(password, currentUser.password)) {
+                req.session.user = currentUser
+                res.redirect("/profile")
+            } else {
+                res.render("auth/login", {errorMessage: "Incorrect password"})
+            }
+        }}
+        catch (error) {
+            console.log(error)
+        }
+ })
+
+
+ router.get("/logout", (req, res, next) => {
+    req.session.destroy(err => {
+        if (err) {
+            next(err)
+        }
+        res.redirect("/login")
+    })
+ })
+
+>>>>>>> master
 
 router.get("/signup", (req, res) => {
   res.render("auth/signup");
