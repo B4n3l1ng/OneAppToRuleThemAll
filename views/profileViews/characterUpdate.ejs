@@ -1,0 +1,24 @@
+<div>
+  <h3>
+    You can change your character's name, occupation and allegiance using the
+    form below:
+  </h3>
+  <form action="/characters/<%= character.id %>/update" method="POST">
+    <label
+      >Name:<input type="text" name="name" value="<%= character.name %>"
+    /></label>
+    <label
+      >Occupation:<input
+        type="text"
+        name="occupation"
+        value="<%= character.occupation %>"
+    /></label>
+    <label
+      >Allegiance:<input
+        type="text"
+        name="allegiance"
+        value="<%= character.allegiance %>"
+    /></label>
+    <button type="submit">Apply changes!</button>
+  </form>
+</div>

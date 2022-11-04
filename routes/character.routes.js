@@ -3,10 +3,14 @@ const router = express.Router();
 const Character = require("../models/Character.model");
 
 router.get("/characters", async (req, res) => {
-  const currentUser = req.session.user;
-  const characters = await Character.find({ owner: currentUser });
-  console.log(characters);
-  res.render("profileViews/characters", { characters });
+  try {
+    const currentUser = req.session.user;
+    const characters = await Character.find({ owner: currentUser });
+    console.log(characters);
+    res.render("profileViews/characters", { characters });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 router.get("/characters/new", (req, res) => {
@@ -14,33 +18,67 @@ router.get("/characters/new", (req, res) => {
 });
 
 router.get("/characters/:Id/", async (req, res) => {
-  const character = await Character.findById(req.params.Id);
-  res.render("profileViews/characterDetails", { character });
+  try {
+    const character = await Character.findById(req.params.Id);
+    res.render("profileViews/characterDetails", { character });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 router.post("/characters/new", async (req, res) => {
-  const charName = req.body.name;
-  if (await Character.findOne({ name: charName })) {
-    const errorMessage = "Name is already in use";
-    res.render("profileViews/newCharacter", { errorMessage });
-  } else {
-    const created = await Character.create({
-      name: req.body.name,
-      species: req.body.species,
-      gender: req.body.gender,
-      occupation: req.body.occupation,
-      allegiance: req.body.allegiance,
-      money: 0,
-      weapons: req.body.weapons,
-      image: "",
-      owner: req.session.user,
-    });
-    res.redirect(`/characters/${created.id}/details`);
+  try {
+    const charName = req.body.name;
+    if (await Character.findOne({ name: charName })) {
+      const errorMessage = "Name is already in use";
+      res.render("profileViews/newCharacter", { errorMessage });
+    } else {
+      const created = await Character.create({
+        name: req.body.name,
+        species: req.body.species,
+        gender: req.body.gender,
+        occupation: req.body.occupation,
+        allegiance: req.body.allegiance,
+        money: 0,
+        weapons: req.body.weapons,
+        image: "",
+        owner: req.session.user,
+      });
+      res.redirect(`/characters/${created.id}/details`);
+    }
+  } catch (error) {
+    console.log(error);
   }
 });
 router.get("/characters/:id/details", async (req, res) => {
-  const character = await Character.findById(req.params.id);
-  res.render("profileViews/characterDetails", { character });
+  try {
+    const character = await Character.findById(req.params.id);
+    res.render("profileViews/characterDetails", { character });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.get("/characters/:id/update", async (req, res) => {
+  try {
+    const character = await Character.findById(req.params.id);
+    res.render("profileViews/characterUpdate", { character });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.post("/characters/:id/update", async (req, res) => {
+  try {
+    await Character.findByIdAndUpdate(req.params.id, {
+      name: req.body.name,
+      occupation: req.body.occupation,
+      allegiance: req.body.allegiance,
+    });
+    res.redirect(`/characters/${req.params.id}/details`);
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 module.exports = router;
