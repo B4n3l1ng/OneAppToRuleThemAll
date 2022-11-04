@@ -39,7 +39,6 @@ router.post("/characters/new", async (req, res) => {
         gender: req.body.gender,
         occupation: req.body.occupation,
         allegiance: req.body.allegiance,
-        money: 0,
         weapons: req.body.weapons,
         image: "",
         owner: req.session.user,
@@ -79,6 +78,22 @@ router.post("/characters/:id/update", async (req, res) => {
   } catch (error) {
     console.log(error);
   }
+});
+
+router.get("/characters/:id/delete", async (req, res) => {
+  try {
+    const toDelete = await Character.findById(req.params.id);
+    res.render("profileViews/characterDelete", { toDelete });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.get("/characters/:id/deleteValid", async (req, res) => {
+  try {
+    await Character.findByIdAndDelete(req.params.id);
+    res.redirect("/characters");
+  } catch (error) {}
 });
 
 module.exports = router;

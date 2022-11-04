@@ -20,6 +20,15 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    money: {
+      type: Number,
+    },
+    basket: {
+      type: Array,
+    },
+    inventory: {
+      type: Array,
+    },
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

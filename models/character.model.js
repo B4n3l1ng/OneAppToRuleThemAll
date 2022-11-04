@@ -26,10 +26,6 @@ const characterSchema = new Schema({
     type: String,
   },
 
-  money: {
-    type: Number,
-  },
-
   weapons: {
     type: String,
     required: true,
