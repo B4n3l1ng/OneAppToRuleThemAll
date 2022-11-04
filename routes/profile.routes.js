@@ -14,10 +14,8 @@ router.get("/:username/shop", async (req, res) => {
 });
 
 router.get("/:username/basket", (req, res) => {
-        res.render("profileViews/basket")
-})
-  
-
+  res.render("profileViews/basket");
+});
 
 router.get("/:username/inventory", (req, res) => {
   res.render("profileViews/inventory");
@@ -27,35 +25,38 @@ router.get("/explore", (req, res) => {
   res.render("profileViews/explore");
 });
 
-router.get("/:username/wealth", (req, res) => {
-  res.render("profileViews/wealth");
+router.get("/:username/wealth", async (req, res) => {
+  const currentUser = await User.findOne({ username: req.params.username });
+  res.render("profileViews/wealth", { currentUser });
 });
 
-router.get("/:userName/dealer", async (req, res) => {
-  const currentUser = await User.findOne({ username: req.params.userName });
-  res.render("profileViews/dealer", currentUser);
+router.get("/:username/dealer", async (req, res) => {
+  const currentUser = await User.findOne({ username: req.params.username });
+  res.render("profileViews/dealer", { currentUser, result: "undefined" });
 });
 
-router.get("/:userName/dealer/dice", async (req, res) => {
+router.get("/:username/dealer/dice", async (req, res) => {
   try {
+    let currentUser = await User.findOne({ username: req.params.username });
+    const cash = currentUser.money;
     const playerDiceResult = Math.floor(Math.random() * (6 - 1 + 1) + 1);
     const dealerDiceResult = Math.floor(Math.random() * (6 - 1 + 1) + 1);
-    const currentUser = await User.findOne({ username: req.params.userName });
-    const money = currentUser.money;
-    let result;
     if (playerDiceResult > dealerDiceResult) {
-      result = "player";
+      const result = "player";
       await User.findOneAndUpdate(
-        { username: req.params.userName },
-        { money: money + 100 }
+        { username: req.params.username },
+        { money: cash + 100 }
       );
-      res.render("profileViews/dealer", { result });
+      currentUser = await User.findOne({ username: req.params.username });
+      res.render("profileViews/dealer", { currentUser, result });
     } else if (dealerDiceResult > playerDiceResult) {
-      result = "dealer";
-      res.render("profileViews/dealer", { result });
+      const result = "dealer";
+      currentUser = await User.findOne({ username: req.params.username });
+      res.render("profileViews/dealer", { currentUser, result });
     } else if (playerDiceResult === dealerDiceResult) {
-      result = "draw";
-      res.render("profileViews/dealer", { result });
+      const result = "draw";
+      currentUser = await User.findOne({ username: req.params.username });
+      res.render("profileViews/dealer", { currentUser, result });
     }
   } catch (error) {
     console.log(error);

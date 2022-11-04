@@ -3,12 +3,17 @@
   Roll a 6 sided dice against the dealer. If the number on your dice is higher
   then the dealer's, you win 100 Castar!
 </p>
-<a href="/<%= currentUser %>/dealer/dice">Let's roll!</a>
 
-<% if (result==="player") { %>
+<a href="/<%= currentUser.username %>/dealer/dice">Let's roll!</a>
+
+<% if (result) { %> <% if (result==="player") { %>
 <p>You won! 100 Castar was added to your bank! The dealer salutes you!</p>
+
 <% } else if (result==="dealer") { %>
 <p>You lost! Better luck next time, for you can always try again!</p>
+
 <% } else if (result==="draw") { %>
 <p>A draw! Would you like to go again, traveller?</p>
-<% } %>
+
+<% } %> <% } %>
+<p>Your coin: <%= currentUser.money %></p>
