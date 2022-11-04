@@ -39,7 +39,6 @@ router.post("/characters/new", async (req, res) => {
         gender: req.body.gender,
         occupation: req.body.occupation,
         allegiance: req.body.allegiance,
-        money: 0,
         weapons: req.body.weapons,
         image: "",
         owner: req.session.user,

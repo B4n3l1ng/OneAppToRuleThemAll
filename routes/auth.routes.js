@@ -55,6 +55,9 @@ router.post("/signup", async (req, res) => {
           username: req.body.username,
           email: req.body.email,
           password: hashedPassword,
+          money: 150,
+          basket: [],
+          inventory: [],
         });
         res.redirect("/login");
       }
