@@ -5,13 +5,24 @@ const User = require("../models/User.model");
 
 router.get("/:username/shop", async (req, res) => {
   try {
+    const currentUser = req.session.user
     const shopItems = await Shop.find();
     console.log(shopItems);
-    res.render("profileViews/shop", { shopItems });
+    res.render("profileViews/shop", { shopItems, currentUser });
   } catch (error) {
     console.log(error);
   }
 });
+
+router.post("/:username/shop/:id", async (req, res) => {
+    try {
+        const selectedItem = await Shop.findById(req.params.body)
+        console.log(selectedItem);
+        res.render("profileViews/basket")
+    } catch (error) {
+        console.log(error)
+    }
+})
 
 router.get("/:username/basket", (req, res) => {
     const currentUser = req.session.user
