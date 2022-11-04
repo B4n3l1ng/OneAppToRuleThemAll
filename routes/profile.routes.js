@@ -7,28 +7,34 @@ router.get("/:username/shop", async (req, res) => {
   try {
     const currentUser = req.session.user
     const shopItems = await Shop.find();
-    console.log(shopItems);
     res.render("profileViews/shop", { shopItems, currentUser });
   } catch (error) {
     console.log(error);
   }
 });
 
-router.post("/:username/shop/:id", async (req, res) => {
+router.post("/shop/:id", async (req, res) => {
     try {
-        const selectedItem = await Shop.findById(req.params.body)
-        console.log(selectedItem);
-        res.render("profileViews/basket")
-    } catch (error) {
+    const { id } = req.params
+    const currentUser = req.session.user
+    await User.findByIdAndUpdate(currentUser._id, {$push:{basket: id}} )
+    res.redirect(`/${currentUser.username}/basket`)
+    } catch(error) {
         console.log(error)
     }
 })
 
-router.get("/:username/basket", (req, res) => {
+router.get("/:username/basket", async (req, res) => {
+    try{
     const currentUser = req.session.user
-        res.render("profileViews/basket", { currentUser })
+   const currentUserObj = await User.findById(currentUser._id).populate("basket")
+   const currentUserBasket = currentUserObj.basket
+    res.render("profileViews/basket", { currentUserBasket, currentUser })
+   } catch(error) {
+    console.log(error)
+   }      
 })
-  
+
 
 
 router.get("/:username/inventory", (req, res) => {

@@ -24,7 +24,8 @@ const userSchema = new Schema(
       type: Number,
     },
     basket: {
-      type: Array,
+      type: [Schema.Types.ObjectId], 
+      ref: "Shop"
     },
     inventory: {
       type: Array,

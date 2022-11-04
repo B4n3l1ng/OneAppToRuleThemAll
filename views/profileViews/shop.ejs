@@ -12,7 +12,7 @@
 <p> <%= item.name %> </p>
 <p> <%= item.price %> </p>
 <p> <img src="<%= item.image %>"/> </p>
-<form method = POST action = "/<%=currentUser.username%>/shop">
+<form method="POST" action="/shop/<%=item._id%>">
     <button type="submit">Purchase</button>
 </form>
 </div>
