@@ -31,4 +31,34 @@ router.get("/:username/wealth", (req, res) => {
   res.render("profileViews/wealth");
 });
 
+router.get("/:userName/dealer", async (req, res) => {
+  const currentUser = await User.findOne({ username: req.params.userName });
+  res.render("profileViews/dealer", currentUser);
+});
+
+router.get("/:userName/dealer/dice", async (req, res) => {
+  try {
+    const playerDiceResult = Math.floor(Math.random() * (6 - 1 + 1) + 1);
+    const dealerDiceResult = Math.floor(Math.random() * (6 - 1 + 1) + 1);
+    const currentUser = await User.findOne({ username: req.params.userName });
+    const money = currentUser.money;
+    let result;
+    if (playerDiceResult > dealerDiceResult) {
+      result = "player";
+      await User.findOneAndUpdate(
+        { username: req.params.userName },
+        { money: money + 100 }
+      );
+      res.render("profileViews/dealer", { result });
+    } else if (dealerDiceResult > playerDiceResult) {
+      result = "dealer";
+      res.render("profileViews/dealer", { result });
+    } else if (playerDiceResult === dealerDiceResult) {
+      result = "draw";
+      res.render("profileViews/dealer", { result });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+});
 module.exports = router;
