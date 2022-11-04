@@ -60,7 +60,7 @@ const shopItems = [
 ];
 
 
-const addNewShopItems = async () => {
+/*const addNewShopItems = async () => {
     try {      
     let newShopItems = await Shop.insertMany(shopItems);
  console.log(newShopItems)
@@ -69,4 +69,4 @@ const addNewShopItems = async () => {
 }
 }
 
-addNewShopItems();
+addNewShopItems(); */
