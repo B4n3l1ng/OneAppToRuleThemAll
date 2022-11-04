@@ -29,6 +29,34 @@ router.get("/characters/:Id/", async (req, res) => {
 router.post("/characters/new", async (req, res) => {
   try {
     const charName = req.body.name;
+    let imgUrl;
+    if (req.body.species === "Human" && req.body.gender === "Male") {
+      imgUrl = "/images/male_human.png";
+    } else if (req.body.species === "Human" && req.body.gender === "Female") {
+      imgUrl = "/images/female_human.png";
+    } else if (req.body.species === "Dwarf" && req.body.gender === "Male") {
+      imgUrl = "/images/male_dwarf.png";
+    } else if (req.body.species === "Dwarf" && req.body.gender === "Female") {
+      imgUrl = "/images/female_dwarf.png";
+    } else if (req.body.species === "Elf" && req.body.gender === "Male") {
+      imgUrl = "/images/male_elf.png";
+    } else if (req.body.species === "Elf" && req.body.gender === "Female") {
+      imgUrl = "/images/female_elf.png";
+    } else if (req.body.species === "Orc" && req.body.gender === "Male") {
+      imgUrl = "/images/male_orc.png";
+    } else if (req.body.species === "Orc" && req.body.gender === "Female") {
+      imgUrl = "/images/female_orc.png";
+    } else if (req.body.species === "Ent") {
+      imgUrl = "/images/ent.png";
+    } else if (req.body.species === "Wizard" && req.body.gender === "Male") {
+      imgUrl = "/images/male_wizard.png";
+    } else if (req.body.species === "Wizard" && req.body.gender === "Female") {
+      imgUrl = "/images/female_wizard.png";
+    } else if (req.body.species === "Hobbit" && req.body.gender === "Male") {
+      imgUrl = "/images/male_hobbit.png";
+    } else if (req.body.species === "Hobbit" && req.body.gender === "Female") {
+      imgUrl = "/images/female_hobbit.png";
+    }
     if (await Character.findOne({ name: charName })) {
       const errorMessage = "Name is already in use";
       res.render("profileViews/newCharacter", { errorMessage });
@@ -40,7 +68,7 @@ router.post("/characters/new", async (req, res) => {
         occupation: req.body.occupation,
         allegiance: req.body.allegiance,
         weapons: req.body.weapons,
-        image: "",
+        image: imgUrl,
         owner: req.session.user,
       });
       res.redirect(`/characters/${created.id}/details`);
