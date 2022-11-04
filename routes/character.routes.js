@@ -3,8 +3,8 @@ const router = express.Router();
 const Character = require("../models/Character.model");
 
 router.get("/characters", async (req, res) => {
-  const currentUserId = req.session.user.id;
-  const characters = await Character.find({ owner: currentUserId });
+  const currentUser = req.session.user;
+  const characters = await Character.find({ owner: currentUser });
   console.log(characters);
   res.render("profileViews/characters", { characters });
 });
