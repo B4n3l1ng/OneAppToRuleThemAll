@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const Shop = require("../models/Shop.model");
+const User = require("../models/User.model");
 
-router.get("/shop", async (req, res) => {
+router.get("/:username/shop", async (req, res) => {
   try {
     const shopItems = await Shop.find();
     console.log(shopItems);
@@ -12,14 +13,13 @@ router.get("/shop", async (req, res) => {
   }
 });
 
-
-router.get("/basket", (req, res) => {
+router.get("/:username/basket", (req, res) => {
         res.render("profileViews/basket")
 })
   
 
 
-router.get("/inventory", (req, res) => {
+router.get("/:username/inventory", (req, res) => {
   res.render("profileViews/inventory");
 });
 
@@ -27,7 +27,7 @@ router.get("/explore", (req, res) => {
   res.render("profileViews/explore");
 });
 
-router.get("/wealth", (req, res) => {
+router.get("/:username/wealth", (req, res) => {
   res.render("profileViews/wealth");
 });
 

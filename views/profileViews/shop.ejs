@@ -12,9 +12,7 @@
 <p> <%= item.name %> </p>
 <p> <%= item.price %> </p>
 <p> <img src="<%= item.image %>"/> </p>
-<form>
-<button type="submit">Purchase</button>
-</form>
+<a href="/basket/<%= item.id %>">Purchase</a>
 </div>
 <% }) %>
 </div>
