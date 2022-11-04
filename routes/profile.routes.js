@@ -12,6 +12,13 @@ router.get("/shop", async (req, res) => {
   }
 });
 
+
+router.get("/basket", (req, res) => {
+        res.render("profileViews/basket")
+})
+  
+
+
 router.get("/inventory", (req, res) => {
   res.render("profileViews/inventory");
 });
