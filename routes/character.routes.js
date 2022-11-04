@@ -30,11 +30,11 @@ router.post("/characters/new", async (req, res) => {
       image: "",
       owner: req.session.user,
     });
-    res.redirect(`/character/${created.id}/details`);
+    res.redirect(`/characters/${created.id}/details`);
   }
 });
 router.get("/characters/:id/details", async (req, res) => {
-  const character = await Character.findById(id);
+  const character = await Character.findById(req.params.id);
   res.render("profileViews/characterDetails", { character });
 });
 
