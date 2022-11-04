@@ -2,7 +2,8 @@
   <% characters.forEach(element => { %>
   <div>
     <p><%= element.name %></p>
-    <a href="/<%= element.id %>/details">More details!</a>
+    <a href="/characters/<%= element.id %>/details">More details!</a>
   </div>
   <% }) %>
+  <a href="/characters/new">Create a new character!</a>
 </div>
