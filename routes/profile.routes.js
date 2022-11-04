@@ -14,7 +14,8 @@ router.get("/:username/shop", async (req, res) => {
 });
 
 router.get("/:username/basket", (req, res) => {
-        res.render("profileViews/basket")
+    const currentUser = req.session.user
+        res.render("profileViews/basket", { currentUser })
 })
   
 

@@ -1,7 +1,7 @@
 <p>Some excellent selections, my good traveller. Can I interest you in anything further?</p>
 
 <div>
-<a href="/shop">Keep Looking</a>
+<a href="/<%=currentUser.username%>/shop">Keep Looking</a>
 </div>
 
 <div>
@@ -9,3 +9,13 @@
         <button type="sumbit">Pay Eginhard</button>
     </form>
 </div>
+
+<div>
+    <% currentUser.basket.forEach((element) => { %>
+        <div>
+    <p> <%= element.name %> </p>
+    <p> <%= element.price %> </p>
+    <p> <img src="<%= element.image %>"/> </p>
+    </div>
+    <% }) %>
+    </div>
