@@ -22,7 +22,7 @@ router.post("/shop/:id", async (req, res) => {
     const { id } = req.params;
     const currentUser = req.session.user;
     await User.findByIdAndUpdate(currentUser._id, { $push: { basket: id } });
-    res.redirect(`/${currentUser.username}/basket`);
+    res.redirect(`/profile/basket`);
   } catch (error) {
     console.log(error);
   }
