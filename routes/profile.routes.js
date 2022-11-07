@@ -17,7 +17,7 @@ router.post("/shop/:id", async (req, res) => {
     try {
     const { id } = req.params
     const currentUser = req.session.user
-    await User.findByIdAndUpdate(currentUser._id, {$push:{basket: id}} )
+    await User.findByIdAndUpdate(currentUser.id, {$push:{basket: id}} )
     res.redirect(`/${currentUser.username}/basket`)
     } catch(error) {
         console.log(error)
