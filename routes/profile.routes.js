@@ -42,6 +42,30 @@ router.get("/basket", async (req, res) => {
   }
 });
 
+router.post("/checkout", async (req, res) => {
+  try {
+    const currentUser = req.session.user;
+    console.log(currentUser)
+    const currentUserObj = await User.findById(currentUser._id).populate(
+      "basket"
+    )
+    const currentUserBasket = currentUserObj.basket;
+    let counter = 0;
+    currentUserBasket.forEach((item) => {
+const itemPrice = item.price;
+counter += itemPrice
+    })
+    const cash = currentUser.money;
+   const updatedUser = await User.findOneAndUpdate({username: currentUser.username}, { money: cash - counter }, {new:true});
+   console.log(updatedUser)
+    await User.findByIdAndUpdate(currentUser._id, {$set:{"basket": []}}) 
+    res.render("profileViews/checkout", {amount: counter, updatedUser})
+    counter = 0;
+  } catch(error) {
+    console.log(error)
+  }
+  })
+
 router.get("/inventory", (req, res) => {
   res.render("profileViews/inventory");
 });
@@ -52,7 +76,9 @@ router.get("/explore", (req, res) => {
 
 router.get("/wealth", async (req, res) => {
   const currentUser = req.session.user;
-  res.render("profileViews/wealth", { currentUser });
+  const user = await User.findById(currentUser._id)
+  console.log(user)
+  res.render("profileViews/wealth", { user });
 });
 
 router.get("/dealer", async (req, res) => {
