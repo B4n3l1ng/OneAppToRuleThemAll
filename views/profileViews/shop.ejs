@@ -9,6 +9,10 @@
   you need me, I will be in the back...
 </p>
 
+<% if (typeof errorMessage !== 'undefined') { %>
+  <p style="font-weight: bold"><%= errorMessage %></p>
+  <% } %>
+
 <div>
   <% shopItems.forEach((item) => { %>
   <div>
