@@ -18,27 +18,16 @@ router.get("/shop", async (req, res) => {
 });
 
 router.post("/shop/:id", async (req, res) => {
-<<<<<<< HEAD
     try {
     const { id } = req.params
     const currentUser = req.session.user
-    await User.findByIdAndUpdate(currentUser.id, {$push:{basket: id}} )
-    res.redirect(`/${currentUser.username}/basket`)
+    console.log(id)
+    await User.findByIdAndUpdate(currentUser._id, {$push:{basket: id}} )
+    res.redirect("/profile/basket")
     } catch(error) {
         console.log(error)
     }
 })
-=======
-  try {
-    const { id } = req.params;
-    const currentUser = req.session.user;
-    await User.findByIdAndUpdate(currentUser._id, { $push: { basket: id } });
-    res.redirect(`/${currentUser.username}/basket`);
-  } catch (error) {
-    console.log(error);
-  }
-});
->>>>>>> master
 
 router.get("/basket", async (req, res) => {
   try {
