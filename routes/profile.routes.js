@@ -86,6 +86,7 @@ router.post("/checkout", async (req, res) => {
     counter = 0;
   } catch (error) {
     console.log(error);
+<<<<<<< HEAD
   }
 });
 
@@ -100,6 +101,13 @@ router.get("/inventory", async (req, res) => {
   } catch (error) {
     console.log(error)
   }
+=======
+  }
+});
+
+router.get("/inventory", (req, res) => {
+  res.render("profileViews/inventory");
+>>>>>>> Eric
 });
 
 router.get("/explore", (req, res) => {
@@ -117,8 +125,32 @@ router.get("/explore/Legolas", (req, res) => {
   res.render("exploreViews/legolas");
 });
 
+router.get("/explore/Frodo", (req, res) => {
+  res.render("exploreViews/frodo");
+});
+
+router.get("/explore/Sam", (req, res) => {
+  res.render("exploreViews/sam");
+});
+
 router.get("/explore/Gimli", (req, res) => {
   res.render("exploreViews/gimli");
+});
+
+router.get("/explore/MerryPippin", (req, res) => {
+  res.render("exploreViews/merryAndPippin");
+});
+
+router.get("/explore/Galadriel", (req, res) => {
+  res.render("exploreViews/galadriel");
+});
+
+router.get("/explore/Elrond", (req, res) => {
+  res.render("exploreViews/elrond");
+});
+
+router.get("/explore/Gollum", (req, res) => {
+  res.render("exploreViews/smeagolGollum");
 });
 
 router.get("/wealth", async (req, res) => {
