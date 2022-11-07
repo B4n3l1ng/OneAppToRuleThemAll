@@ -4,58 +4,58 @@ require("../db");
 const shopItems = [
     {
         name: "Strength Potion",
-        price: 30,
-        image: ""
+        price: 60,
+        image: "/images/strength_potion.png"
     },
     {
         name: "Healing Potion",
-        price: 50,
-        image: ""
+        price: 80,
+        image: "/images/health_potion.png"
     },
     {
         name: "Mithril",
         price: 200,
-        image: ""
+        image: "/images/mithril.png"
     },
     {
         name: "Lembas Bread",
         price: 10,
-        image: ""
+        image: "/images/lembas_bread.png"
     },
     {
         name: "Travelling Cloak",
         price: 40,
-        image: ""
+        image: "/images/travel_cloak.png"
     },
     {
-        name: "Canoe & Oar",
+        name: "Canoe",
         price: 100,
-        image: ""
+        image: "/images/canoe.png"
     },
     {
         name: "Elden Ring Bow",
         price: 150,
-        image: ""
+        image: "/images/bow.png"
     },
     {
         name: "Giant Slayer",
         price: 150,
-        image: ""
+        image: "/images/long_sword.png"
     },
     {
         name: "Goblin Slayer",
         price: 150,
-        image: ""
+        image: "/images/short_sword.png"
     },
     {
         name: "Staff of Power",
         price: 150,
-        image: ""
+        image: "/images/staff.png"
     },
     {
         name: "Berserker Axe",
         price: 150,
-        image: ""
+        image: "/images/axe.png"
     }
 ];
 

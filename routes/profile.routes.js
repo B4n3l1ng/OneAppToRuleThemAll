@@ -18,6 +18,7 @@ router.get("/shop", async (req, res) => {
 });
 
 router.post("/shop/:id", async (req, res) => {
+<<<<<<< HEAD
   try {
     const { id } = req.params;
     const currentUser = req.session.user;
@@ -27,6 +28,18 @@ router.post("/shop/:id", async (req, res) => {
     console.log(error);
   }
 });
+=======
+    try {
+    const { id } = req.params
+    const currentUser = req.session.user
+    console.log(id)
+    await User.findByIdAndUpdate(currentUser._id, {$push:{basket: id}} )
+    res.redirect("/profile/basket")
+    } catch(error) {
+        console.log(error)
+    }
+})
+>>>>>>> master
 
 router.get("/basket", async (req, res) => {
   try {
