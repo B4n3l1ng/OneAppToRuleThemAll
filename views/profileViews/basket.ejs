@@ -1,21 +1,24 @@
-<p>Some excellent selections, my good traveller. Can I interest you in anything further?</p>
+<p>
+  Some excellent selections, my good traveller. Can I interest you in anything
+  further?
+</p>
 
 <div>
-<a href="/<%=currentUser.username%>/shop">Keep Looking</a>
+  <a href="/profile/shop">Keep Looking</a>
 </div>
 
 <div>
-    <form>
-        <button type="sumbit">Pay Eginhard</button>
-    </form>
+  <form>
+    <button type="sumbit">Pay Eginhard</button>
+  </form>
 </div>
 
 <div>
-    <% currentUserBasket.forEach((element) => { %>
-        <div>
-    <p> <%= element.name %> </p>
-    <p> <%= element.price %> </p>
-    <p> <img src="<%= element.image %>"/> </p>
-    </div>
-    <% }) %>
-    </div>
+  <% currentUserBasket.forEach((element) => { %>
+  <div>
+    <p><%= element.name %></p>
+    <p><%= element.price %></p>
+    <p><img src="<%= element.image %>" /></p>
+  </div>
+  <% }) %>
+</div>
