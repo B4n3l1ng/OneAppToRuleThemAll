@@ -18,28 +18,16 @@ router.get("/shop", async (req, res) => {
 });
 
 router.post("/shop/:id", async (req, res) => {
-<<<<<<< HEAD
   try {
     const { id } = req.params;
     const currentUser = req.session.user;
+    console.log(id);
     await User.findByIdAndUpdate(currentUser._id, { $push: { basket: id } });
-    res.redirect(`/profile/basket`);
+    res.redirect("/profile/basket");
   } catch (error) {
     console.log(error);
   }
 });
-=======
-    try {
-    const { id } = req.params
-    const currentUser = req.session.user
-    console.log(id)
-    await User.findByIdAndUpdate(currentUser._id, {$push:{basket: id}} )
-    res.redirect("/profile/basket")
-    } catch(error) {
-        console.log(error)
-    }
-})
->>>>>>> master
 
 router.get("/basket", async (req, res) => {
   try {
@@ -62,8 +50,24 @@ router.get("/explore", (req, res) => {
   res.render("profileViews/explore");
 });
 
+router.get("/explore/Gandalf", (req, res) => {
+  res.render("exploreViews/gandalf");
+});
+router.get("/explore/Aragorn", (req, res) => {
+  res.render("exploreViews/aragorn");
+});
+
+router.get("/explore/Legolas", (req, res) => {
+  res.render("exploreViews/legolas");
+});
+
+router.get("/explore/Gimli", (req, res) => {
+  res.render("exploreViews/gimli");
+});
+
 router.get("/wealth", async (req, res) => {
   const currentUser = req.session.user;
+  console.log(currentUser);
   res.render("profileViews/wealth", { currentUser });
 });
 
