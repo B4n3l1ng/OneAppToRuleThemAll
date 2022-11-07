@@ -108,7 +108,53 @@ router.get("/inventory", async (req, res) => {
       "inventory"
     );
     const currentUserInv = currentUserObj.inventory;
-    res.render("profileViews/inventory", { currentUserInv });
+    const strengthPotions = []
+    const healthPotions = []
+    const mithrils = []
+    const breads = []
+    const cloaks = []
+    const canoes = []
+    const bows = []
+    const longSwords = []
+    const shortSwords = []
+    const staffs = []
+    const axes = []
+    currentUserInv.forEach((element) => {
+      if(element.name === "Strength Potion") {
+        strengthPotions.push(element)
+      }
+      else if(element.name === "Healing Potion") {
+        healthPotions.push(element)
+      }
+      else if(element.name === "Mithril") {
+        mithrils.push(element)
+      }
+      else if(element.name === "Lembas Bread") {
+        breads.push(element)
+      }
+      else if(element.name === "Travelling Cloak") {
+        cloaks.push(element)
+      }
+      else if(element.name === "Canoe") {
+        canoes.push(element)
+      }
+      else if(element.name === "Elden Ring Bow") {
+        bows.push(element)
+      }
+      else if(element.name === "Giant Slayer") {
+        shortSwords.push(element)
+      }
+      else if(element.name === "Goblin Slayer") {
+        longSwords.push(element)
+      }
+      else if(element.name === "Staff of Power") {
+        staffs.push(element)
+      }
+      else if(element.name === "Berserker Axe") {
+        axes.push(element)
+      }
+    })
+    res.render("profileViews/inventory", { currentUserInv, strengthPotions, healthPotions, mithrils, breads, cloaks, canoes, bows, shortSwords, longSwords, staffs, axes });
   } catch (error) {
     console.log(error);
   }

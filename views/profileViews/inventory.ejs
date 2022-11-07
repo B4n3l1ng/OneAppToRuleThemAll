@@ -10,10 +10,92 @@
 
 
 <div>
-  <% currentUserInv.forEach((element) => { %>
-  <div>
-    <p><%= element.name %></p>
-    <p><img src="<%= element.image %>" /></p>
-  </div>
-  <% }) %>
+  <% if(strengthPotions.length !== 0) { %>
+<p><%=strengthPotions[0].name%></p>
+<p><%=strengthPotions[0].price%> Castar</p>
+<p><img src="<%= strengthPotions[0].image %>" /></p>
+<p>You have <%=strengthPotions.length%> in your stores.</p>
+  <% } %>
 </div>
+<div>
+  <% if(healthPotions.length !== 0) { %>
+<p><%=healthPotions[0].name%></p>
+<p><%=healthPotions[0].price%> Castar</p>
+<p><img src="<%= healthPotions[0].image %>" /></p>
+<p>You have <%=healthPotions.length%> in your stores.</p>
+<% } %>
+</div>
+<div>
+  <% if(mithrils.length !== 0) { %>
+<p><%=mithrils[0].name%></p>
+<p><%=mithrils[0].price%> Castar</p>
+<p><img src="<%= mithrils[0].image %>" /></p>
+<p>You have <%=mithrils.length%> in your stores.</p>
+<% } %>
+</div>
+<div>
+  <% if(breads.length !== 0) { %>
+<p><%=breads[0].name%></p>
+<p><%=breads[0].price%> Castar</p>
+<p><img src="<%= breads[0].image %>" /></p>
+<p>You have <%=breads.length%> in your stores.</p>
+<% } %>
+</div>
+<div>
+  <% if(cloaks.length !== 0) { %>
+<p><%=cloaks[0].name%></p>
+<p><%=cloaks[0].price%> Castar</p>
+<p><img src="<%= cloaks[0].image %>" /></p>
+<p>You have <%=cloaks.length%> in your stores.</p>
+<% } %>
+</div>
+<div>
+  <% if(canoes.length !== 0) { %>
+<p><%=canoes[0].name%></p>
+<p><%=canoes[0].price%> Castar</p>
+<p><img src="<%= canoes[0].image %>" /></p>
+<p>You have <%=canoes.length%> in your stores.</p>
+<% } %>
+</div>
+<div>
+  <% if(bows.length !== 0) { %>
+<p><%=bows[0].name%></p>
+<p><%=bows[0].price%> Castar</p>
+<p><img src="<%= bows[0].image %>" /></p>
+<p>You have <%=bows.length%> in your stores.</p>
+<% } %>
+</div>
+<div>
+  <% if(longSwords.length !== 0) { %>
+<p><%=longSwords[0].name%></p>
+<p><%=longSwords[0].price%> Castar</p>
+<p><img src="<%= longSwords[0].image %>" /></p>
+<p>You have <%=longSwords.length%> in your stores.</p>
+<% } %>
+</div>
+<div>
+  <% if(shortSwords.length !== 0) { %>
+<p><%=shortSwords[0].name%></p>
+<p><%=shortSwords[0].price%> Castar</p>
+<p><img src="<%= shortSwords[0].image %>" /></p>
+<p>You have <%=shortSwords.length%> in your stores.</p>
+<% } %>
+</div>
+<div>
+  <% if(staffs.length !== 0) { %>
+<p><%=staffs[0].name%></p>
+<p><%=staffs[0].price%> Castar</p>
+<p><img src="<%= staffs[0].image %>" /></p>
+<p>You have <%=staffs.length%> in your stores.</p>
+<% } %>
+</div>
+<div>
+  <% if(axes.length !== 0) { %>
+<p><%=axes[0].name%></p>
+<p><%=axes[0].price%> Castar</p>
+<p><img src="<%= axes[0].image %>" /></p>
+<p>You have <%=axes.length%> in your stores.</p>
+<% } %>
+</div>
+
+ 

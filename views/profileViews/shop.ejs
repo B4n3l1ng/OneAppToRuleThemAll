@@ -17,7 +17,7 @@
   <% shopItems.forEach((item) => { %>
   <div>
     <p><%= item.name %></p>
-    <p><%= item.price %></p>
+    <p><%= item.price %> Castar</p>
     <p><img src="<%= item.image %>" /></p>
     <form method="POST" action="/profile/shop/<%=item._id%>">
       <button type="submit">Purchase</button>
