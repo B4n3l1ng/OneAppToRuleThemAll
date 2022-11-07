@@ -5,8 +5,74 @@ body {
 
 a {
   color: #00b7ff;
+  padding: 5px;
 }
 
 h1 {
-  color: 15px;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  font-size: larger;
+  padding: 10px
+}
+
+.explore-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.places {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.places a {
+  border: 1px solid black;
+  margin: 5px;
+  width: 10vw;
+  text-align: center;
+  text-decoration: none;
+  color: black
+}
+
+.characters {
+  display: flex;
+  flex-direction:column;
+  justify-content: space-evenly;
+}
+
+.characters a {
+  border: 1px solid black;
+  margin: 5px;
+  width: 10vw;
+  text-align: center;
+  text-decoration: none;
+  color: black
+}
+.about-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.about-image{
+  width: 60vw;
+}
+.about-image img {
+  width: 500px;
+}
+.about {
+  margin-left: 20px;
+  text-align: left;
+  margin-top: 0px;
+  padding-top: 0px
+}
+
+.gimli-picture{
+  width: 500px;
+  height: 400px
 }
