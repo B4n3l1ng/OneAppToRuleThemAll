@@ -203,6 +203,14 @@ router.get("/explore/Gollum", (req, res) => {
   res.render("exploreViews/smeagolGollum");
 });
 
+router.get("/explore/Saruman", (req, res) => {
+  res.render("exploreViews/saruman");
+});
+
+router.get("/explore/Sauron", (req, res) => {
+  res.render("exploreViews/sauron");
+});
+
 router.get("/wealth", async (req, res) => {
   const currentUser = req.session.user;
   const user = await User.findById(currentUser._id);
