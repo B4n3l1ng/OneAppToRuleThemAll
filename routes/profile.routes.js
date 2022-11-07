@@ -21,22 +21,28 @@ router.post("/shop/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const currentUser = req.session.user;
-    const currentUserObj = await User.findById(currentUser._id).populate("basket")
+    const currentUserObj = await User.findById(currentUser._id).populate(
+      "basket"
+    );
     const currentUserBasket = currentUserObj.basket;
-    let totalBasket = 0
+    let totalBasket = 0;
     currentUserBasket.forEach((item) => {
       const itemPrice = item.price;
-      totalBasket += itemPrice
-    })
-    const selectedItem = await Shop.findById(id)
-    const selectedItemPrice = selectedItem.price
-    console.log(selectedItemPrice)
-    if ((totalBasket + selectedItemPrice) > currentUserObj.money) {
+      totalBasket += itemPrice;
+    });
+    const selectedItem = await Shop.findById(id);
+    const selectedItemPrice = selectedItem.price;
+    console.log(selectedItemPrice);
+    if (totalBasket + selectedItemPrice > currentUserObj.money) {
       const shopItems = await Shop.find();
-      res.render("profileViews/shop", {shopItems, errorMessage:"You do not have enough Castar to buy that item, dear traveller. Perhaps you should go and see the dealer..."})
+      res.render("profileViews/shop", {
+        shopItems,
+        errorMessage:
+          "You do not have enough Castar to buy that item, dear traveller. Perhaps you should go and see the dealer...",
+      });
     } else {
-    await User.findByIdAndUpdate(currentUser._id, { $push: { basket: id } });
-    res.redirect("/profile/basket");
+      await User.findByIdAndUpdate(currentUser._id, { $push: { basket: id } });
+      res.redirect("/profile/basket");
     }
   } catch (error) {
     console.log(error);
@@ -50,12 +56,16 @@ router.get("/basket", async (req, res) => {
       "basket"
     );
     const currentUserBasket = currentUserObj.basket;
-    let totalBasket = 0
+    let totalBasket = 0;
     currentUserBasket.forEach((item) => {
       const itemPrice = item.price;
-      totalBasket += itemPrice
-    })
-    res.render("profileViews/basket", { currentUserBasket, currentUser, totalBasket });
+      totalBasket += itemPrice;
+    });
+    res.render("profileViews/basket", {
+      currentUserBasket,
+      currentUser,
+      totalBasket,
+    });
   } catch (error) {
     console.log(error);
   }
@@ -68,7 +78,9 @@ router.post("/checkout", async (req, res) => {
       "basket"
     );
     const currentUserBasket = currentUserObj.basket;
-    await User.findByIdAndUpdate(currentUser._id, { $push: { inventory: currentUserBasket } });
+    await User.findByIdAndUpdate(currentUser._id, {
+      $push: { inventory: currentUserBasket },
+    });
     let counter = 0;
     currentUserBasket.forEach((item) => {
       const itemPrice = item.price;
@@ -86,28 +98,20 @@ router.post("/checkout", async (req, res) => {
     counter = 0;
   } catch (error) {
     console.log(error);
-<<<<<<< HEAD
   }
 });
 
 router.get("/inventory", async (req, res) => {
   try {
-  const currentUser = req.session.user;
-  const currentUserObj = await User.findById(currentUser._id).populate(
-    "inventory"
-  );
-  const currentUserInv = currentUserObj.inventory
-  res.render("profileViews/inventory", {currentUserInv});
+    const currentUser = req.session.user;
+    const currentUserObj = await User.findById(currentUser._id).populate(
+      "inventory"
+    );
+    const currentUserInv = currentUserObj.inventory;
+    res.render("profileViews/inventory", { currentUserInv });
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-=======
-  }
-});
-
-router.get("/inventory", (req, res) => {
-  res.render("profileViews/inventory");
->>>>>>> Eric
 });
 
 router.get("/explore", (req, res) => {
