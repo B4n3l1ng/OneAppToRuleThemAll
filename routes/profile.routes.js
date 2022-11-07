@@ -36,7 +36,12 @@ router.get("/basket", async (req, res) => {
       "basket"
     );
     const currentUserBasket = currentUserObj.basket;
-    res.render("profileViews/basket", { currentUserBasket, currentUser });
+    let totalBasket = 0
+    currentUserBasket.forEach((item) => {
+      const itemPrice = item.price;
+      totalBasket += itemPrice
+    })
+    res.render("profileViews/basket", { currentUserBasket, currentUser, totalBasket });
   } catch (error) {
     console.log(error);
   }
@@ -49,6 +54,7 @@ router.post("/checkout", async (req, res) => {
       "basket"
     );
     const currentUserBasket = currentUserObj.basket;
+    await User.findByIdAndUpdate(currentUser._id, { $push: { inventory: currentUserBasket } });
     let counter = 0;
     currentUserBasket.forEach((item) => {
       const itemPrice = item.price;
@@ -69,8 +75,17 @@ router.post("/checkout", async (req, res) => {
   }
 });
 
-router.get("/inventory", (req, res) => {
-  res.render("profileViews/inventory");
+router.get("/inventory", async (req, res) => {
+  try {
+  const currentUser = req.session.user;
+  const currentUserObj = await User.findById(currentUser._id).populate(
+    "inventory"
+  );
+  const currentUserInv = currentUserObj.inventory
+  res.render("profileViews/inventory", {currentUserInv});
+  } catch (error) {
+    console.log(error)
+  }
 });
 
 router.get("/explore", (req, res) => {

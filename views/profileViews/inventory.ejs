@@ -9,3 +9,11 @@
 </p>
 
 
+<div>
+  <% currentUserInv.forEach((element) => { %>
+  <div>
+    <p><%= element.name %></p>
+    <p><img src="<%= element.image %>" /></p>
+  </div>
+  <% }) %>
+</div>

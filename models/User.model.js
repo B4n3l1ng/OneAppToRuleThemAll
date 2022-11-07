@@ -28,7 +28,8 @@ const userSchema = new Schema(
       ref: "Shop"
     },
     inventory: {
-      type: Array,
+      type: [Schema.Types.ObjectId],
+      ref: "Shop"
     },
   },
   {
