@@ -176,6 +176,21 @@ router.get("/inventory", isLoggedIn, async (req, res) => {
   }
 });
 
+router.post("/inventory/:id", isLoggedIn, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const currentUser = req.session.user;
+    await User.findById(currentUser._id).populate("inventory"); 
+    const currentUserInv = currentUser.inventory
+    console.log("OH", currentUserInv)
+    await User.findByIdAndUpdate(currentUser._id, { $pull: { inventory: id } })
+    res.render("profileViews/sale")
+    }
+    catch(error) {
+      console.log(error)
+    }
+  })
+
 router.get("/explore", (req, res) => {
   res.render("profileViews/explore");
 });
