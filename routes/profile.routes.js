@@ -2,13 +2,14 @@ const express = require("express");
 const router = express.Router();
 const Shop = require("../models/Shop.model");
 const User = require("../models/User.model");
+const isLoggedIn = require("../middleware/routes");
 
-router.get("/", (req, res) => {
+router.get("/", isLoggedIn, (req, res) => {
   const user = req.session.user;
   res.render("profile", { user });
 });
 
-router.get("/shop", async (req, res) => {
+router.get("/shop", isLoggedIn, async (req, res) => {
   try {
     const currentUser = req.session.user;
     const shopItems = await Shop.find();
@@ -18,7 +19,7 @@ router.get("/shop", async (req, res) => {
   }
 });
 
-router.post("/shop/:id", async (req, res) => {
+router.post("/shop/:id", isLoggedIn, async (req, res) => {
   try {
     const { id } = req.params;
     const currentUser = req.session.user;
@@ -50,7 +51,7 @@ router.post("/shop/:id", async (req, res) => {
   }
 });
 
-router.get("/basket", async (req, res) => {
+router.get("/basket", isLoggedIn, async (req, res) => {
   try {
     const currentUser = req.session.user;
     const currentUserObj = await User.findById(currentUser._id).populate(
@@ -72,7 +73,7 @@ router.get("/basket", async (req, res) => {
   }
 });
 
-router.post("/checkout", async (req, res) => {
+router.post("/checkout", isLoggedIn, async (req, res) => {
   try {
     const currentUser = req.session.user;
     const currentUserObj = await User.findById(currentUser._id).populate(
@@ -102,7 +103,7 @@ router.post("/checkout", async (req, res) => {
   }
 });
 
-router.get("/inventory", async (req, res) => {
+router.get("/inventory", isLoggedIn, async (req, res) => {
   try {
     const currentUser = req.session.user;
     const currentUserObj = await User.findById(currentUser._id).populate(
@@ -255,19 +256,19 @@ router.get("/explore/Mordor/true", (req, res) => {
   res.render("exploreViews/mordor");
 });
 
-router.get("/wealth", async (req, res) => {
+router.get("/wealth", isLoggedIn, async (req, res) => {
   const currentUser = req.session.user;
   const user = await User.findById(currentUser._id);
   res.render("profileViews/wealth", { user });
 });
 
-router.get("/dealer", async (req, res) => {
+router.get("/dealer", isLoggedIn, async (req, res) => {
   const currentUser = req.session.user;
   const user = await User.findById(currentUser._id);
   res.render("profileViews/dealer", { user, result: "undefined" });
 });
 
-router.get("/dealer/dice", async (req, res) => {
+router.get("/dealer/dice", isLoggedIn, async (req, res) => {
   try {
     const currentUser = req.session.user;
     const userObj = await User.findById(currentUser._id);

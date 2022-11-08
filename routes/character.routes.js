@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const Character = require("../models/Character.model");
+const isLoggedIn = require("../middleware/routes");
 
-router.get("/", async (req, res) => {
+router.get("/", isLoggedIn, async (req, res) => {
   try {
     const currentUser = req.session.user;
     const characters = await Character.find({ owner: currentUser });
@@ -17,7 +18,7 @@ router.get("/new", (req, res) => {
   res.render("profileViews/newCharacter");
 });
 
-router.get("/:Id/", async (req, res) => {
+router.get("/:Id/", isLoggedIn, async (req, res) => {
   try {
     const character = await Character.findById(req.params.Id);
     res.render("profileViews/characterDetails", { character });
@@ -26,7 +27,7 @@ router.get("/:Id/", async (req, res) => {
   }
 });
 
-router.post("/new", async (req, res) => {
+router.post("/new", isLoggedIn, async (req, res) => {
   try {
     const charName = req.body.name;
     let imgUrl;
@@ -77,7 +78,7 @@ router.post("/new", async (req, res) => {
     console.log(error);
   }
 });
-router.get("/:id/details", async (req, res) => {
+router.get("/:id/details", isLoggedIn, async (req, res) => {
   try {
     const character = await Character.findById(req.params.id);
     res.render("profileViews/characterDetails", { character });
@@ -86,7 +87,7 @@ router.get("/:id/details", async (req, res) => {
   }
 });
 
-router.get("/:id/update", async (req, res) => {
+router.get("/:id/update", isLoggedIn, async (req, res) => {
   try {
     const character = await Character.findById(req.params.id);
     res.render("profileViews/characterUpdate", { character });
@@ -95,7 +96,7 @@ router.get("/:id/update", async (req, res) => {
   }
 });
 
-router.post("/:id/update", async (req, res) => {
+router.post("/:id/update", isLoggedIn, async (req, res) => {
   try {
     await Character.findByIdAndUpdate(req.params.id, {
       name: req.body.name,
@@ -108,7 +109,7 @@ router.post("/:id/update", async (req, res) => {
   }
 });
 
-router.get(":id/delete", async (req, res) => {
+router.get(":id/delete", isLoggedIn, async (req, res) => {
   try {
     const toDelete = await Character.findById(req.params.id);
     res.render("profileViews/characterDelete", { toDelete });
@@ -117,7 +118,7 @@ router.get(":id/delete", async (req, res) => {
   }
 });
 
-router.get("/:id/deleteValid", async (req, res) => {
+router.get("/:id/deleteValid", isLoggedIn, async (req, res) => {
   try {
     await Character.findByIdAndDelete(req.params.id);
     res.redirect("/characters");
