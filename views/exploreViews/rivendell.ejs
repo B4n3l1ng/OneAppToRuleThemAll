@@ -1,6 +1,18 @@
 <nav>
+  <% if (change) { %>
   <a href="/profile">Back to the Prancing Pony</a>
-  <a href="/profile/explore">Back to Middle-Earth</a>
+  <a href="/characters">Your characters!</a>
+  <a href="/characters/new">Create a new character!</a>
+  <a href="/profile/shop">Visit Eginhard's Emporium</a>
+  <a href="/profile/inventory">Take stock of your supplies!</a>
+  <a href="/profile/dealer">Talk to the Dealer</a>
+  <a href="/profile/wealth">Head to Bodrig's Bank</a>
+  <a href="/profile/explore">Explore Middle-earth</a>
+  <a href="/logout">Logout</a>
+  <% } else { %>
+  <a href="/login">Log in!</a>
+  <a href="/signup">Create an account!</a>
+  <% } %>
 </nav>
 
 <h2>Rivendell</h2>

@@ -1,5 +1,11 @@
 <nav>
   <a href="/profile">Back to the Prancing Pony</a>
+  <a href="/characters">Your characters!</a>
+  <a href="/characters/new">Create a new character!</a>
+  <a href="/profile/inventory">Take stock of your supplies!</a>
+  <a href="/profile/dealer">Talk to the Dealer</a>
+  <a href="/profile/wealth">Head to Bodrig's Bank</a>
+  <a href="/profile/explore">Explore Middle-earth!</a>
 </nav>
 
 <h1>WELCOME TO EGINHARD'S EMPORIUM</h1>
@@ -10,8 +16,8 @@
 </p>
 
 <% if (typeof errorMessage !== 'undefined') { %>
-  <p style="font-weight: bold"><%= errorMessage %></p>
-  <% } %>
+<p style="font-weight: bold"><%= errorMessage %></p>
+<% } %>
 
 <div>
   <% shopItems.forEach((item) => { %>

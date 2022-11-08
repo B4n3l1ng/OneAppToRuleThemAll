@@ -1,6 +1,6 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: transparent;
 }
 
 a {
@@ -122,4 +122,34 @@ h2 {
   text-align: center;
   text-decoration: none;
   color: black
+}
+
+.navButtonImage {
+  width: 100px;
+  height: 100px;
+  margin: 0px;
+  padding: 0px
+}
+
+.button{
+  border: 1px solid black;
+  border-radius: 6px;
+  margin: 0px;
+  padding: 0px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+  display:flex; 
+  flex-direction: column;
+}
+
+.profilePage {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }

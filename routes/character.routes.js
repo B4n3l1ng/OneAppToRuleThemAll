@@ -7,7 +7,6 @@ router.get("/", isLoggedIn, async (req, res) => {
   try {
     const currentUser = req.session.user;
     const characters = await Character.find({ owner: currentUser });
-    console.log(characters);
     res.render("profileViews/characters", { characters });
   } catch (error) {
     console.log(error);

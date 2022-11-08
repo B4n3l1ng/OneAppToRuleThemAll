@@ -3,6 +3,13 @@ const router = express.Router();
 const Shop = require("../models/Shop.model");
 const User = require("../models/User.model");
 const isLoggedIn = require("../middleware/routes");
+function logChanges(req) {
+  if (req.session.user) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 router.get("/", isLoggedIn, (req, res) => {
   const user = req.session.user;
@@ -44,9 +51,8 @@ router.post("/shop/:id", isLoggedIn, async (req, res) => {
     } else {
       await User.findByIdAndUpdate(currentUser._id, { $push: { basket: id } });
       res.redirect("/profile/basket");
-      }
     }
-  catch (error) {
+  } catch (error) {
     console.log(error);
   }
 });
@@ -122,14 +128,13 @@ router.get("/basket", isLoggedIn, async (req, res) => {
 
 router.post("/basket/clear", isLoggedIn, async (req, res) => {
   try {
-const currentUser = req.session.user;
-await User.findByIdAndUpdate(currentUser._id, { $set: { basket: [] } }); 
-      res.redirect("/profile/basket");
-    }
-  catch (error) {
+    const currentUser = req.session.user;
+    await User.findByIdAndUpdate(currentUser._id, { $set: { basket: [] } });
+    res.redirect("/profile/basket");
+  } catch (error) {
     console.log(error);
   }
-}); 
+});
 
 router.post("/checkout", isLoggedIn, async (req, res) => {
   try {
@@ -246,94 +251,117 @@ router.post("/inventory/:id", isLoggedIn, async (req, res) => {
   })
 
 router.get("/explore", (req, res) => {
-  res.render("profileViews/explore");
+  const change = logChanges(req);
+  res.render("profileViews/explore", { change });
 });
 
 router.get("/explore/Gandalf", (req, res) => {
-  res.render("exploreViews/gandalf");
+  const change = logChanges(req);
+  res.render("exploreViews/gandalf", { change });
 });
 router.get("/explore/Aragorn", (req, res) => {
-  res.render("exploreViews/aragorn");
+  const change = logChanges(req);
+  res.render("exploreViews/aragorn", { change });
 });
 
 router.get("/explore/Legolas", (req, res) => {
-  res.render("exploreViews/legolas");
+  const change = logChanges(req);
+  res.render("exploreViews/legolas", { change });
 });
 
 router.get("/explore/Frodo", (req, res) => {
-  res.render("exploreViews/frodo");
+  const change = logChanges(req);
+  res.render("exploreViews/frodo", { change });
 });
 
 router.get("/explore/Sam", (req, res) => {
-  res.render("exploreViews/sam");
+  const change = logChanges(req);
+  res.render("exploreViews/sam", { change });
 });
 
 router.get("/explore/Gimli", (req, res) => {
-  res.render("exploreViews/gimli");
+  const change = logChanges(req);
+  res.render("exploreViews/gimli", { change });
 });
 
 router.get("/explore/MerryPippin", (req, res) => {
-  res.render("exploreViews/merryAndPippin");
+  const change = logChanges(req);
+  res.render("exploreViews/merryAndPippin", { change });
 });
 
 router.get("/explore/Galadriel", (req, res) => {
-  res.render("exploreViews/galadriel");
+  const change = logChanges(req);
+  res.render("exploreViews/galadriel", { change });
 });
 
 router.get("/explore/Elrond", (req, res) => {
-  res.render("exploreViews/elrond");
+  const change = logChanges(req);
+  res.render("exploreViews/elrond", { change });
 });
 
 router.get("/explore/Gollum", (req, res) => {
-  res.render("exploreViews/smeagolGollum");
+  const change = logChanges(req);
+  res.render("exploreViews/smeagolGollum", { change });
 });
 
 router.get("/explore/Saruman", (req, res) => {
-  res.render("exploreViews/saruman");
+  const change = logChanges(req);
+  res.render("exploreViews/saruman", { change });
 });
 
 router.get("/explore/Sauron", (req, res) => {
-  res.render("exploreViews/sauron");
+  const change = logChanges(req);
+  res.render("exploreViews/sauron", { change });
 });
 
 router.get("/explore/Shire", (req, res) => {
-  res.render("exploreViews/shire");
+  const change = logChanges(req);
+  res.render("exploreViews/shire", { change });
 });
 
 router.get("/explore/Rivendell", (req, res) => {
-  res.render("exploreViews/rivendell");
+  const change = logChanges(req);
+  res.render("exploreViews/rivendell", { change });
 });
 
 router.get("/explore/Gondor", (req, res) => {
-  res.render("exploreViews/gondor");
+  const change = logChanges(req);
+  res.render("exploreViews/gondor", { change });
 });
 
 router.get("/explore/Rohan", (req, res) => {
-  res.render("exploreViews/rohan");
+  const change = logChanges(req);
+  res.render("exploreViews/rohan", { change });
 });
 
 router.get("/explore/Mirkwood", (req, res) => {
-  res.render("exploreViews/mirkwood");
+  const change = logChanges(req);
+  res.render("exploreViews/mirkwood", { change });
 });
 
 router.get("/explore/Moria", (req, res) => {
-  res.render("exploreViews/moria");
+  const change = logChanges(req);
+  res.render("exploreViews/moria", { change });
 });
 
 router.get("/explore/Isengard", (req, res) => {
-  res.render("exploreViews/isengard");
+  const change = logChanges(req);
+  res.render("exploreViews/isengard", { change });
 });
 
 router.get("/explore/Doom", (req, res) => {
-  res.render("exploreViews/doom");
+  const change = logChanges(req);
+  res.render("exploreViews/doom", { change });
 });
 
 router.get("/explore/Mordor", (req, res) => {
-  res.render("exploreViews/onedoesnotsimply");
+  const change = logChanges(req);
+  res.render("exploreViews/onedoesnotsimply", { change });
 });
 
 router.get("/explore/Mordor/true", (req, res) => {
-  res.render("exploreViews/mordor");
+  const change = logChanges(req);
+  res.render("exploreViews/mordor", { change });
 });
 
 router.get("/wealth", isLoggedIn, async (req, res) => {

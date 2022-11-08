@@ -1,10 +1,20 @@
-<form action="/signup" method="POST">
-  <label>Username:<input type="text" required name="username" /></label>
-  <label>Email:<input type="email" name="email" /></label>
-  <label>Password:<input type="password" name="password" /></label>
-  <button>Sign up!</button>
-</form>
+<nav>
+  <a href="/login">Already have an account? Login here!</a>
+  <a href="/profile/explore">Explore Middle-earth!</a>
+</nav>
 
-<% if (typeof errorMessage !== "undefined") { %>
-<p class="error"><%= errorMessage %></p>
-<% } %>
+<h1>Create a new account and leap into the world of Middle-earth!</h1>
+
+<div>
+  <form action="/signup" method="POST">
+    <label>Username:<input type="text" required name="username" /></label>
+    <label>Email:<input type="email" name="email" /></label>
+    <label>Password:<input type="password" name="password" /></label>
+    <button>Sign up!</button>
+  </form>
+</div>
+<div>
+  <% if (typeof errorMessage !== "undefined") { %>
+  <p class="error"><%= errorMessage %></p>
+  <% } %>
+</div>
