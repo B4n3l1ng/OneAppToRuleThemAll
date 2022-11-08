@@ -1,9 +1,7 @@
 <nav><a href="/logout">Logout</a></nav>
 <h1>Welcome To The Prancing Pony, <%= user.username%></h1>
 
-<div
-  style="display: flex; flex-direction: column; justify-content: space-around"
->
+<div class="profilePage">
   <a href="/characters" class="button"
     ><img
       src="/images/charListIcon.jpg"
@@ -24,6 +22,8 @@
     <img src="/images/shopIcon.png" alt="shopIcon" class="navButtonImage" />
     Visit Eginhard's Emporium</a
   >
+</div>
+<div class="profilePage">
   <a href="/profile/inventory" class="button">
     <img
       src="/images/inventoryIcon.png"
@@ -40,11 +40,14 @@
     <img src="/images/bankIcon.png" alt="bankIcon" class="navButtonImage" />
     Head to Bodrig's Bank</a
   >
+</div>
+<div class="profilePage">
   <a href="/profile/explore" class="button">
     <img
       src="/images/exploreIcon.png"
       alt="exploreIcon"
       class="navButtonImage"
+      style="height: 100px"
     />
     Explore Middle Earth</a
   >
