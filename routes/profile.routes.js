@@ -4,7 +4,8 @@ const Shop = require("../models/Shop.model");
 const User = require("../models/User.model");
 
 router.get("/", (req, res) => {
-  res.render("profile", { user: req.session.user });
+  const user = req.session.user;
+  res.render("profile", { user });
 });
 
 router.get("/shop", async (req, res) => {
@@ -108,53 +109,56 @@ router.get("/inventory", async (req, res) => {
       "inventory"
     );
     const currentUserInv = currentUserObj.inventory;
-    const strengthPotions = []
-    const healthPotions = []
-    const mithrils = []
-    const breads = []
-    const cloaks = []
-    const canoes = []
-    const bows = []
-    const longSwords = []
-    const shortSwords = []
-    const staffs = []
-    const axes = []
+    const strengthPotions = [];
+    const healthPotions = [];
+    const mithrils = [];
+    const breads = [];
+    const cloaks = [];
+    const canoes = [];
+    const bows = [];
+    const longSwords = [];
+    const shortSwords = [];
+    const staffs = [];
+    const axes = [];
     currentUserInv.forEach((element) => {
-      if(element.name === "Strength Potion") {
-        strengthPotions.push(element)
+      if (element.name === "Strength Potion") {
+        strengthPotions.push(element);
+      } else if (element.name === "Healing Potion") {
+        healthPotions.push(element);
+      } else if (element.name === "Mithril") {
+        mithrils.push(element);
+      } else if (element.name === "Lembas Bread") {
+        breads.push(element);
+      } else if (element.name === "Travelling Cloak") {
+        cloaks.push(element);
+      } else if (element.name === "Canoe") {
+        canoes.push(element);
+      } else if (element.name === "Elden Ring Bow") {
+        bows.push(element);
+      } else if (element.name === "Giant Slayer") {
+        shortSwords.push(element);
+      } else if (element.name === "Goblin Slayer") {
+        longSwords.push(element);
+      } else if (element.name === "Staff of Power") {
+        staffs.push(element);
+      } else if (element.name === "Berserker Axe") {
+        axes.push(element);
       }
-      else if(element.name === "Healing Potion") {
-        healthPotions.push(element)
-      }
-      else if(element.name === "Mithril") {
-        mithrils.push(element)
-      }
-      else if(element.name === "Lembas Bread") {
-        breads.push(element)
-      }
-      else if(element.name === "Travelling Cloak") {
-        cloaks.push(element)
-      }
-      else if(element.name === "Canoe") {
-        canoes.push(element)
-      }
-      else if(element.name === "Elden Ring Bow") {
-        bows.push(element)
-      }
-      else if(element.name === "Giant Slayer") {
-        shortSwords.push(element)
-      }
-      else if(element.name === "Goblin Slayer") {
-        longSwords.push(element)
-      }
-      else if(element.name === "Staff of Power") {
-        staffs.push(element)
-      }
-      else if(element.name === "Berserker Axe") {
-        axes.push(element)
-      }
-    })
-    res.render("profileViews/inventory", { currentUserInv, strengthPotions, healthPotions, mithrils, breads, cloaks, canoes, bows, shortSwords, longSwords, staffs, axes });
+    });
+    res.render("profileViews/inventory", {
+      currentUserInv,
+      strengthPotions,
+      healthPotions,
+      mithrils,
+      breads,
+      cloaks,
+      canoes,
+      bows,
+      shortSwords,
+      longSwords,
+      staffs,
+      axes,
+    });
   } catch (error) {
     console.log(error);
   }
@@ -209,6 +213,46 @@ router.get("/explore/Saruman", (req, res) => {
 
 router.get("/explore/Sauron", (req, res) => {
   res.render("exploreViews/sauron");
+});
+
+router.get("/explore/Shire", (req, res) => {
+  res.render("exploreViews/shire");
+});
+
+router.get("/explore/Rivendell", (req, res) => {
+  res.render("exploreViews/rivendell");
+});
+
+router.get("/explore/Gondor", (req, res) => {
+  res.render("exploreViews/gondor");
+});
+
+router.get("/explore/Rohan", (req, res) => {
+  res.render("exploreViews/rohan");
+});
+
+router.get("/explore/Mirkwood", (req, res) => {
+  res.render("exploreViews/mirkwood");
+});
+
+router.get("/explore/Moria", (req, res) => {
+  res.render("exploreViews/moria");
+});
+
+router.get("/explore/Isengard", (req, res) => {
+  res.render("exploreViews/isengard");
+});
+
+router.get("/explore/Doom", (req, res) => {
+  res.render("exploreViews/doom");
+});
+
+router.get("/explore/Mordor", (req, res) => {
+  res.render("exploreViews/onedoesnotsimply");
+});
+
+router.get("/explore/Mordor/true", (req, res) => {
+  res.render("exploreViews/mordor");
 });
 
 router.get("/wealth", async (req, res) => {
