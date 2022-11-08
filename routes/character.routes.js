@@ -7,7 +7,6 @@ router.get("/", isLoggedIn, async (req, res) => {
   try {
     const currentUser = req.session.user;
     const characters = await Character.find({ owner: currentUser });
-    console.log(characters);
     res.render("profileViews/characters", { characters });
   } catch (error) {
     console.log(error);
@@ -109,7 +108,7 @@ router.post("/:id/update", isLoggedIn, async (req, res) => {
   }
 });
 
-router.get(":id/delete", isLoggedIn, async (req, res) => {
+router.get("/:id/delete", isLoggedIn, async (req, res) => {
   try {
     const toDelete = await Character.findById(req.params.id);
     res.render("profileViews/characterDelete", { toDelete });

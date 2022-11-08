@@ -1,14 +1,51 @@
 <nav><a href="/logout">Logout</a></nav>
 <h1>Welcome To The Prancing Pony, <%= user.username%></h1>
 
-<div style="display: flex; flex-direction: column">
-  <a href="/characters"
-    ><img src="/images/characterIcon.png" alt="charIcon" />Your Characters</a
+<div
+  style="display: flex; flex-direction: column; justify-content: space-around"
+>
+  <a href="/characters" class="button"
+    ><img
+      src="/images/charListIcon.jpg"
+      alt="charIcon"
+      class="navButtonImage"
+    />Your Characters</a
   >
-  <a href="/characters/new">Create a New Character</a>
-  <a href="/profile/shop">Visit Eginhard's Emporium</a>
-  <a href="/profile/inventory">Take Stock of Your Supplies</a>
-  <a href="/profile/dealer">Talk To The Dealer</a>
-  <a href="/profile/explore">Explore Middle Earth</a>
-  <a href="/profile/wealth">Head to Bodrig's Bank</a>
+
+  <a href="/characters/new" class="button">
+    <img
+      src="/images/newCharIcon.png"
+      alt="newCharIcon"
+      class="navButtonImage"
+    />
+    Create a New Character</a
+  >
+  <a href="/profile/shop" class="button">
+    <img src="/images/shopIcon.png" alt="shopIcon" class="navButtonImage" />
+    Visit Eginhard's Emporium</a
+  >
+  <a href="/profile/inventory" class="button">
+    <img
+      src="/images/inventoryIcon.png"
+      alt="inventoryIcon"
+      class="navButtonImage"
+    />
+    Take Stock of Your Supplies</a
+  >
+  <a href="/profile/dealer" class="button">
+    <img src="/images/dealerIcon.png" alt="dealerIcon" class="navButtonImage" />
+    Talk To The Dealer</a
+  >
+  <a href="/profile/wealth" class="button">
+    <img src="/images/bankIcon.png" alt="bankIcon" class="navButtonImage" />
+    Head to Bodrig's Bank</a
+  >
+  <a href="/profile/explore" class="button">
+    <img
+      src="/images/exploreIcon.png"
+      alt="exploreIcon"
+      class="navButtonImage"
+    />
+    Explore Middle Earth</a
+  >
 </div>
