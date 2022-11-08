@@ -178,13 +178,20 @@ router.get("/inventory", isLoggedIn, async (req, res) => {
 
 router.post("/inventory/:id", isLoggedIn, async (req, res) => {
   try {
+    let saleAmount = 0;
     const { id } = req.params;
     const currentUser = req.session.user;
-    await User.findById(currentUser._id).populate("inventory"); 
-    const currentUserInv = currentUser.inventory
-    console.log("OH", currentUserInv)
+    const currentUserObj = await User.findById(currentUser._id).populate("inventory"); 
+    const currentUserInv = currentUserObj.inventory
+    currentUserInv.forEach((item) => {
+     if(item.id === id) {
+      saleAmount += item.price
+     }
+    })
+    const cash = currentUserObj.money
+  await User.findByIdAndUpdate(currentUser._id, { money: cash + saleAmount})
     await User.findByIdAndUpdate(currentUser._id, { $pull: { inventory: id } })
-    res.render("profileViews/sale")
+    res.render("profileViews/sale", {saleAmount})
     }
     catch(error) {
       console.log(error)
