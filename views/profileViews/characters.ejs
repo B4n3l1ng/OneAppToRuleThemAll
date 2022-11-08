@@ -1,16 +1,16 @@
 <nav>
   <a href="/profile">Back to the Prancing Pony</a>
 </nav>
-<a href="/characters/new">Create a new character!</a>
+<a href="/characters/new">Create a New Character!</a>
 <div>
   <% characters.forEach(element => { %>
   <div>
     <p><%= element.name %></p>
     <a href="/characters/<%= element.id %>/details"
-      ><%= element.name %>'s details!</a
+      ><%= element.name %>'s Details</a
     >
     <a href="/characters/<%= element.id %>/update"
-      >Change <%= element.name %>'s details!</a
+      >Change <%= element.name %>'s Details</a
     >
     <a href="/characters/<%= element.id %>/delete"
       >Delete <%= element.name %></a

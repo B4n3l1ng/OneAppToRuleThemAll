@@ -14,7 +14,7 @@ router.get("/", isLoggedIn, async (req, res) => {
   }
 });
 
-router.get("/new", (req, res) => {
+router.get("/new", isLoggedIn, (req, res) => {
   res.render("profileViews/newCharacter");
 });
 
@@ -109,7 +109,7 @@ router.post("/:id/update", isLoggedIn, async (req, res) => {
   }
 });
 
-router.get(":id/delete", isLoggedIn, async (req, res) => {
+router.get("/:id/delete", isLoggedIn, async (req, res) => {
   try {
     const toDelete = await Character.findById(req.params.id);
     res.render("profileViews/characterDelete", { toDelete });

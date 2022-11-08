@@ -20,11 +20,79 @@
 </form>
 
 <div>
-  <% currentUserBasket.forEach((element) => { %>
-  <div>
-    <p><%= element.name %></p>
-    <p><%= element.price %> Castar</p>
-    <p><img src="<%= element.image %>" /></p>
-  </div>
-  <% }) %>
+  <% if(strengthPotions.length !== 0) { %>
+<p><%=strengthPotions[0].name%></p>
+<p>You have <%=strengthPotions.length%> in your basket, costing a total of <%=strengthPotions[0].price * strengthPotions.length%> Castar</p>
+<p><img src="<%= strengthPotions[0].image %>" /></p>
+  <% } %>
+</div>
+<div>
+  <% if(healthPotions.length !== 0) { %>
+<p><%=healthPotions[0].name%></p>
+<p>You have <%=healthPotions.length%> in your basket, costing a total of <%=healthPotions[0].price * healthPotions.length%> Castar</p>
+<p><img src="<%= healthPotions[0].image %>" /></p>
+  <% } %>
+</div>
+<div>
+  <% if(mithrils.length !== 0) { %>
+<p><%=mithrils[0].name%></p>
+<p>You have <%=mithrils.length%> in your basket, costing a total of <%=mithrils[0].price * mithrils.length%> Castar</p>
+<p><img src="<%= mithrils[0].image %>" /></p>
+  <% } %>
+</div>
+<div>
+  <% if(breads.length !== 0) { %>
+<p><%=breads[0].name%></p>
+<p>You have <%=breads.length%> in your basket, costing a total of <%=breads[0].price * breads.length%> Castar</p>
+<p><img src="<%= breads[0].image %>" /></p>
+  <% } %>
+</div>
+<div>
+  <% if(cloaks.length !== 0) { %>
+<p><%=cloaks[0].name%></p>
+<p>You have <%=cloaks.length%> in your basket, costing a total of <%=cloaks[0].price * cloaks.length%> Castar</p>
+<p><img src="<%= cloaks[0].image %>" /></p>
+  <% } %>
+</div>
+<div>
+  <% if(canoes.length !== 0) { %>
+<p><%=canoes[0].name%></p>
+<p>You have <%=canoes.length%> in your basket, costing a total of <%=canoes[0].price * canoes.length%> Castar</p>
+<p><img src="<%= canoes[0].image %>" /></p>
+  <% } %>
+</div>
+<div>
+  <% if(bows.length !== 0) { %>
+<p><%=bows[0].name%></p>
+<p>You have <%=bows.length%> in your basket, costing a total of <%=bows[0].price * bows.length%> Castar</p>
+<p><img src="<%= bows[0].image %>" /></p>
+  <% } %>
+</div>
+<div>
+  <% if(longSwords.length !== 0) { %>
+<p><%=longSwords[0].name%></p>
+<p>You have <%=longSwords.length%> in your basket, costing a total of <%=longSwords[0].price * longSwords.length%> Castar</p>
+<p><img src="<%= longSwords[0].image %>" /></p>
+  <% } %>
+</div>
+<div>
+  <% if(shortSwords.length !== 0) { %>
+<p><%=shortSwords[0].name%></p>
+<p>You have <%=shortSwords.length%> in your basket, costing a total of <%=shortSwords[0].price * shortSwords.length%> Castar</p>
+<p><img src="<%= shortSwords[0].image %>" /></p>
+  <% } %>
+</div>
+<div>
+  <% if(staffs.length !== 0) { %>
+<p><%=staffs[0].name%></p>
+<p>You have <%=staffs.length%> in your basket, costing a total of <%=staffs[0].price * staffs.length%> Castar</p>
+<p><img src="<%= staffs[0].image %>" /></p>
+  <% } %>
+</div>
+<div>
+  <% if(axes.length !== 0) { %>
+<p><%=axes[0].name%></p>
+<p>You have <%=axes.length%> in your basket, costing a total of <%=axes[0].price * axes.length%> Castar</p>
+<p><img src="<%= axes[0].image %>" /></p>
+  <% } %>
 </div>

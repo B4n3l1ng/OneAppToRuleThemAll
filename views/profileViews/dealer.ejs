@@ -2,22 +2,22 @@
   <a href="/profile">Back to the Prancing Pony</a>
 </nav>
 
-<h2>Let's play the dice!</h2>
+<h2>Let's play dice!</h2>
 <p>
-  Roll a 6 sided dice against the dealer. If the number on your dice is higher
+  Roll a 6-sided dice against the dealer. If the number on your dice is higher
   than the dealer's, you win 100 Castar!
 </p>
 
-<a href="/profile/dealer/dice">Let's roll!</a>
+<a href="/profile/dealer/dice">Let's Roll!</a>
 
 <% if (result) { %> <% if (result==="player") { %>
 <p>You won! 100 Castar was added to your bank! The dealer salutes you!</p>
 
 <% } else if (result==="dealer") { %>
-<p>You lost! Better luck next time, for you can always try again!</p>
+<p>You lost! Better luck next time, for you may always try again!</p>
 
 <% } else if (result==="draw") { %>
-<p>A draw! Would you like to go again, traveller?</p>
+<p>A draw! Would you like to roll again, traveller?</p>
 
 <% } %> <% } %>
-<p>Your coin: <%= user.money %></p>
+<p>Your coins: <%= user.money %></p>

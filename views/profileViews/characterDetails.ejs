@@ -1,15 +1,15 @@
 <nav>
-  <a href="/characters">Characters page</a>
+  <a href="/characters">Characters Page</a>
 </nav>
 
 <div>
   <div><img src="<%=character.image %>" alt="characterImage" /></div>
-  <h2><%= character.name %>'s details:</h2>
+  <h2><%= character.name %>'s Details:</h2>
   <p>
     <%= character.gender %> <%= character.species %> <%= character.occupation %>
   </p>
-  <p>Allied with <%= character.allegiance %></p>
+  <p>Allied with: <%= character.allegiance %></p>
   <p>Prefered weapon: <%= character.weapons %></p>
 </div>
 
-<a href="/characters/<%= character.id %>/update">Change your character</a>
+<a href="/characters/<%= character.id %>/update">Change Your Character</a>

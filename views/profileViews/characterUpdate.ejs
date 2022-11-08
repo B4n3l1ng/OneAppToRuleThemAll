@@ -1,8 +1,7 @@
 <nav><a href="/profile">Back to the Prancing Pony</a></nav>
 <div>
   <h3>
-    You can change your character's name, occupation and allegiance using the
-    form below:
+    Change your character's name, occupation and allegiance below:
   </h3>
   <form action="/characters/<%= character.id %>/update" method="POST">
     <label
@@ -20,7 +19,7 @@
         name="allegiance"
         value="<%= character.allegiance %>"
     /></label>
-    <button type="submit">Apply changes!</button>
+    <button type="submit">Apply Changes!</button>
   </form>
   <a href="/characters/<%= character.id%>/details">Cancel</a>
 </div>
