@@ -15,6 +15,10 @@
 
 <div>Total to Pay: <%= totalBasket %> Castar</div>
 
+<form method="POST" action="/profile/basket/clear">
+  <button type="submit">Clear Basket</button>
+</form>
+
 <div>
   <% currentUserBasket.forEach((element) => { %>
   <div>

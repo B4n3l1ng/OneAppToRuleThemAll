@@ -32,7 +32,6 @@ router.post("/shop/:id", async (req, res) => {
     });
     const selectedItem = await Shop.findById(id);
     const selectedItemPrice = selectedItem.price;
-    console.log(selectedItemPrice);
     if (totalBasket + selectedItemPrice > currentUserObj.money) {
       const shopItems = await Shop.find();
       res.render("profileViews/shop", {
@@ -43,8 +42,9 @@ router.post("/shop/:id", async (req, res) => {
     } else {
       await User.findByIdAndUpdate(currentUser._id, { $push: { basket: id } });
       res.redirect("/profile/basket");
+      }
     }
-  } catch (error) {
+  catch (error) {
     console.log(error);
   }
 });
@@ -70,6 +70,17 @@ router.get("/basket", async (req, res) => {
     console.log(error);
   }
 });
+
+router.post("/basket/clear", async (req, res) => {
+  try {
+const currentUser = req.session.user;
+await User.findByIdAndUpdate(currentUser._id, { $set: { basket: [] } }); 
+      res.redirect("/profile/basket");
+    }
+  catch (error) {
+    console.log(error);
+  }
+}); 
 
 router.post("/checkout", async (req, res) => {
   try {
