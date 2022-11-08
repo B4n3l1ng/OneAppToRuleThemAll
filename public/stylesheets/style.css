@@ -96,3 +96,30 @@ h2 {
 .sauron-image {
   width: 700px;
 }
+
+.locationImage {
+  width: 700px
+}
+
+.coatOfArms{
+  width:269px
+}
+
+.meme{
+  display: flex;
+  justify-content: center;
+  padding: 10px
+}
+
+.answers {
+  text-align: center;
+}
+
+.answers a {
+  border: 1px solid black;
+  margin: 5px;
+  width: 10vw;
+  text-align: center;
+  text-decoration: none;
+  color: black
+}

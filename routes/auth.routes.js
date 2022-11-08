@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const User = require("../models/User.model");
+const isLoggedIn = require("../middleware/routes");
 
 router.get("/login", (req, res) => {
   res.render("auth/login");
@@ -68,5 +69,3 @@ router.post("/signup", async (req, res) => {
 });
 
 module.exports = router;
-
-
