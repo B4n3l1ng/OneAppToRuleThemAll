@@ -41,12 +41,14 @@ h2 {
 }
 
 .places a {
-  border: 1px solid black;
+  border: 1px solid white;
+  border-radius: 50% 20% / 10% 40%;
   margin: 5px;
   width: 10vw;
   text-align: center;
   text-decoration: none;
-  color: black
+  color: rgb(6, 58, 19);
+  background-color: white;
 }
 
 .characters {
@@ -56,12 +58,14 @@ h2 {
 }
 
 .characters a {
-  border: 1px solid black;
+  border: 1px solid white;
+  border-radius: 50% 20% / 10% 40%;
   margin: 5px;
   width: 10vw;
   text-align: center;
   text-decoration: none;
-  color: black
+  color: rgb(6, 58, 19);
+  background-color: white;
 }
 .about-page {
   display: flex;
@@ -115,6 +119,12 @@ h2 {
 .coatOfArms{
   width:269px
 }
+.locationImageG {
+  width: 400px
+}
+.coatOfArmsG{
+  width:156px
+}
 
 .meme{
   display: flex;
@@ -123,17 +133,9 @@ h2 {
 }
 
 .answers {
-  text-align: center;
+  margin-bottom: 15px;
 }
 
-.answers a {
-  border: 1px solid black;
-  margin: 5px;
-  width: 10vw;
-  text-align: center;
-  text-decoration: none;
-  color: black
-}
 
 .navButtonImage {
   width: 100px;
@@ -303,7 +305,7 @@ button {
 
 .charactersBackground{
   background: rgb(241, 236, 163);
-  height: 100vh
+  height: 100%
 }
 
 .characterButtons{
@@ -334,6 +336,20 @@ button {
   margin: 10px;
   text-decoration: none;
   color: rgb(6, 58, 19);
+}
+
+.exploreBox {
+  margin-top: 10px;
+  margin-left: 250px;
+  border: 5px solid white;
+  background-color: rgba(6, 58, 19, 0.7);
+  width:70vw;
+}
+
+.exploreText {
+  font-size: 15px;
+  text-align: center;
+  color: white;
 }
 
 
