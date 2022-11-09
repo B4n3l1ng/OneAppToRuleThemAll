@@ -394,6 +394,17 @@ margin-top: 50px;
   color: white;
 }
 
+.dealerBackground {
+  background-image: url("/images/dealer.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.bankBackground {
+  background-image: url("/images/bank.jpeg");
+  background-size: cover;
+  height: 100vh;
+}
 
 
 
