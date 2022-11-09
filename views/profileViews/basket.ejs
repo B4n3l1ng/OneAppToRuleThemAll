@@ -26,7 +26,7 @@
 <div>Total to Pay: <%= totalBasket %> Castar</div>
 
 <form method="POST" action="/profile/basket/clear">
-  <button type="submit">Clear Basket</button>
+  <button type="submit">Clear Entire Basket</button>
 </form>
 
 <div>
@@ -34,6 +34,9 @@
 <p><%=strengthPotions[0].name%></p>
 <p>You have <%=strengthPotions.length%> in your basket, costing a total of <%=strengthPotions[0].price * strengthPotions.length%> Castar</p>
 <p><img src="<%= strengthPotions[0].image %>" /></p>
+<form method="POST" action="/profile/basket/<%= strengthPotions[0].id %>">
+  <button type="submit">Remove One From Basket</button>
+</form>
   <% } %>
 </div>
 <div>
@@ -41,6 +44,9 @@
 <p><%=healthPotions[0].name%></p>
 <p>You have <%=healthPotions.length%> in your basket, costing a total of <%=healthPotions[0].price * healthPotions.length%> Castar</p>
 <p><img src="<%= healthPotions[0].image %>" /></p>
+<form method="POST" action="/profile/basket/<%= healthPotions[0].id %>">
+  <button type="submit">Remove One From Basket</button>
+</form>
   <% } %>
 </div>
 <div>
@@ -48,6 +54,9 @@
 <p><%=mithrils[0].name%></p>
 <p>You have <%=mithrils.length%> in your basket, costing a total of <%=mithrils[0].price * mithrils.length%> Castar</p>
 <p><img src="<%= mithrils[0].image %>" /></p>
+<form method="POST" action="/profile/basket/<%= mithrils[0].id %>">
+  <button type="submit">Remove One From Basket</button>
+</form>
   <% } %>
 </div>
 <div>
@@ -55,6 +64,9 @@
 <p><%=breads[0].name%></p>
 <p>You have <%=breads.length%> in your basket, costing a total of <%=breads[0].price * breads.length%> Castar</p>
 <p><img src="<%= breads[0].image %>" /></p>
+<form method="POST" action="/profile/basket/<%= breads[0].id %>">
+  <button type="submit">Remove One From Basket</button>
+</form>
   <% } %>
 </div>
 <div>
@@ -62,6 +74,9 @@
 <p><%=cloaks[0].name%></p>
 <p>You have <%=cloaks.length%> in your basket, costing a total of <%=cloaks[0].price * cloaks.length%> Castar</p>
 <p><img src="<%= cloaks[0].image %>" /></p>
+<form method="POST" action="/profile/basket/<%= cloaks[0].id %>">
+  <button type="submit">Remove One From Basket</button>
+</form>
   <% } %>
 </div>
 <div>
@@ -69,6 +84,9 @@
 <p><%=canoes[0].name%></p>
 <p>You have <%=canoes.length%> in your basket, costing a total of <%=canoes[0].price * canoes.length%> Castar</p>
 <p><img src="<%= canoes[0].image %>" /></p>
+<form method="POST" action="/profile/basket/<%= canoes[0].id %>">
+  <button type="submit">Remove One From Basket</button>
+</form>
   <% } %>
 </div>
 <div>
@@ -76,6 +94,9 @@
 <p><%=bows[0].name%></p>
 <p>You have <%=bows.length%> in your basket, costing a total of <%=bows[0].price * bows.length%> Castar</p>
 <p><img src="<%= bows[0].image %>" /></p>
+<form method="POST" action="/profile/basket/<%= bows[0].id %>">
+  <button type="submit">Remove One From Basket</button>
+</form>
   <% } %>
 </div>
 <div>
@@ -83,6 +104,9 @@
 <p><%=longSwords[0].name%></p>
 <p>You have <%=longSwords.length%> in your basket, costing a total of <%=longSwords[0].price * longSwords.length%> Castar</p>
 <p><img src="<%= longSwords[0].image %>" /></p>
+<form method="POST" action="/profile/basket/<%= longSwords[0].id %>">
+  <button type="submit">Remove One From Basket</button>
+</form>
   <% } %>
 </div>
 <div>
@@ -90,6 +114,9 @@
 <p><%=shortSwords[0].name%></p>
 <p>You have <%=shortSwords.length%> in your basket, costing a total of <%=shortSwords[0].price * shortSwords.length%> Castar</p>
 <p><img src="<%= shortSwords[0].image %>" /></p>
+<form method="POST" action="/profile/basket/<%= shortSwords[0].id %>">
+  <button type="submit">Remove One From Basket</button>
+</form>
   <% } %>
 </div>
 <div>
@@ -97,6 +124,9 @@
 <p><%=staffs[0].name%></p>
 <p>You have <%=staffs.length%> in your basket, costing a total of <%=staffs[0].price * staffs.length%> Castar</p>
 <p><img src="<%= staffs[0].image %>" /></p>
+<form method="POST" action="/profile/basket/<%= staffs[0].id %>">
+  <button type="submit">Remove One From Basket</button>
+</form>
   <% } %>
 </div>
 <div>
@@ -104,5 +134,8 @@
 <p><%=axes[0].name%></p>
 <p>You have <%=axes.length%> in your basket, costing a total of <%=axes[0].price * axes.length%> Castar</p>
 <p><img src="<%= axes[0].image %>" /></p>
+<form method="POST" action="/profile/basket/<%= axes[0].id %>">
+  <button type="submit">Remove One From Basket</button>
+</form>
   <% } %>
 </div>

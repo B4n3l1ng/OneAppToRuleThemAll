@@ -136,6 +136,32 @@ router.post("/basket/clear", isLoggedIn, async (req, res) => {
   }
 });
 
+router.post("/basket/:id", isLoggedIn, async (req, res) => {
+  try {
+const { id } = req.params;
+const currentUser = req.session.user;
+const currentUserObj = await User.findById(currentUser._id).populate("basket");
+const currentUserBasket = currentUserObj.basket;
+console.log("BEFORE", currentUserBasket)
+for (let i = 0; i < currentUserBasket.length; i++ ) {
+  const item = currentUserBasket[i];
+  if(item.id === id) {
+    const itemToDeleteIndex = currentUserBasket.indexOf(item);
+    currentUserBasket.splice(itemToDeleteIndex, 1);
+    break;
+  }
+  else {
+    continue;
+  }
+}
+await User.findByIdAndUpdate(currentUser._id, { $set: { basket: [] } });
+await User.findByIdAndUpdate(currentUser._id, { $push: { basket: currentUserBasket } });
+res.redirect("/profile/basket")
+  } catch(error) {
+    console.log(error)
+  }
+})
+
 router.post("/checkout", isLoggedIn, async (req, res) => {
   try {
     const currentUser = req.session.user;
