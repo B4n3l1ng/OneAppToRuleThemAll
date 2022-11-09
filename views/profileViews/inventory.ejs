@@ -25,9 +25,11 @@
   <form method="POST" action="/profile/inventory/sellone/<%=strengthPotions[0]._id%>">
     <button type="submit">Sell One At the Market</button>
   </form>
+<%  if (strengthPotions.length > 1) { %>
 <form method="POST" action="/profile/inventory/<%=strengthPotions[0]._id%>">
   <button type="submit">Sell All At the Market</button>
 </form>
+<% } %>
 </div>
   <% } %>
 </div>
@@ -40,9 +42,11 @@
   <form method="POST" action="/profile/inventory/sellone/<%=healthPotions[0]._id%>">
     <button type="submit">Sell One At the Market</button>
   </form>
-<form method="POST" action="/profile/inventory/<%=healthPotions[0]._id%>">
-  <button type="submit">Sell All At the Market</button>
-</form>
+  <%  if (healthPotions.length > 1) { %>
+    <form method="POST" action="/profile/inventory/<%=healthPotions[0]._id%>">
+      <button type="submit">Sell All At the Market</button>
+    </form>
+    <% } %>
 </div>
   <% } %>
 </div>
@@ -55,9 +59,11 @@
   <form method="POST" action="/profile/inventory/sellone/<%=mithrils[0]._id%>">
     <button type="submit">Sell One At the Market</button>
   </form>
-<form method="POST" action="/profile/inventory/<%=mithrils[0]._id%>">
-  <button type="submit">Sell All At the Market</button>
-</form>
+  <%  if (mithrils.length > 1) { %>
+    <form method="POST" action="/profile/inventory/<%=mithrils[0]._id%>">
+      <button type="submit">Sell All At the Market</button>
+    </form>
+    <% } %>
 </div>
   <% } %>
 </div>
@@ -70,9 +76,11 @@
   <form method="POST" action="/profile/inventory/sellone/<%=breads[0]._id%>">
     <button type="submit">Sell One At the Market</button>
   </form>
-<form method="POST" action="/profile/inventory/<%=breads[0]._id%>">
-  <button type="submit">Sell All At the Market</button>
-</form>
+  <%  if (breads.length > 1) { %>
+    <form method="POST" action="/profile/inventory/<%=breads[0]._id%>">
+      <button type="submit">Sell All At the Market</button>
+    </form>
+    <% } %>
 </div>
   <% } %>
 </div>
@@ -85,9 +93,11 @@
   <form method="POST" action="/profile/inventory/sellone/<%=cloaks[0]._id%>">
     <button type="submit">Sell One At the Market</button>
   </form>
-<form method="POST" action="/profile/inventory/<%=cloaks[0]._id%>">
-  <button type="submit">Sell All At the Market</button>
-</form>
+  <%  if (cloaks.length > 1) { %>
+    <form method="POST" action="/profile/inventory/<%=cloaks[0]._id%>">
+      <button type="submit">Sell All At the Market</button>
+    </form>
+    <% } %>
 </div>
   <% } %>
 </div>
@@ -100,9 +110,11 @@
   <form method="POST" action="/profile/inventory/sellone/<%=canoes[0]._id%>">
     <button type="submit">Sell One At the Market</button>
   </form>
-<form method="POST" action="/profile/inventory/<%=canoes[0]._id%>">
-  <button type="submit">Sell All At the Market</button>
-</form>
+  <%  if (canoes.length > 1) { %>
+    <form method="POST" action="/profile/inventory/<%=canoes[0]._id%>">
+      <button type="submit">Sell All At the Market</button>
+    </form>
+    <% } %>
 </div>
   <% } %>
 </div>
@@ -115,9 +127,11 @@
   <form method="POST" action="/profile/inventory/sellone/<%=bows[0]._id%>">
     <button type="submit">Sell One At the Market</button>
   </form>
-<form method="POST" action="/profile/inventory/<%=bows[0]._id%>">
-  <button type="submit">Sell All At the Market</button>
-</form>
+  <%  if (bows.length > 1) { %>
+    <form method="POST" action="/profile/inventory/<%=bows[0]._id%>">
+      <button type="submit">Sell All At the Market</button>
+    </form>
+    <% } %>
 </div>
   <% } %>
 </div>
@@ -130,9 +144,11 @@
   <form method="POST" action="/profile/inventory/sellone/<%=longSwords[0]._id%>">
     <button type="submit">Sell One At the Market</button>
   </form>
-<form method="POST" action="/profile/inventory/<%=longSwords[0]._id%>">
-  <button type="submit">Sell All At the Market</button>
-</form>
+  <%  if (longSwords.length > 1) { %>
+    <form method="POST" action="/profile/inventory/<%=longSwords[0]._id%>">
+      <button type="submit">Sell All At the Market</button>
+    </form>
+    <% } %>
 </div>
   <% } %>
 </div>
@@ -145,9 +161,11 @@
   <form method="POST" action="/profile/inventory/sellone/<%=shortSwords[0]._id%>">
     <button type="submit">Sell One At the Market</button>
   </form>
-<form method="POST" action="/profile/inventory/<%=shortSwords[0]._id%>">
-  <button type="submit">Sell All At the Market</button>
-</form>
+  <%  if (shortSwords.length > 1) { %>
+    <form method="POST" action="/profile/inventory/<%=shortSwords[0]._id%>">
+      <button type="submit">Sell All At the Market</button>
+    </form>
+    <% } %>
 </div>
   <% } %>
 </div>
@@ -160,9 +178,11 @@
   <form method="POST" action="/profile/inventory/sellone/<%=staffs[0]._id%>">
     <button type="submit">Sell One At the Market</button>
   </form>
-<form method="POST" action="/profile/inventory/<%=staffs[0]._id%>">
-  <button type="submit">Sell All At the Market</button>
-</form>
+  <%  if (staffs.length > 1) { %>
+    <form method="POST" action="/profile/inventory/<%=staffs[0]._id%>">
+      <button type="submit">Sell All At the Market</button>
+    </form>
+    <% } %>
 </div>
   <% } %>
 </div>
@@ -175,9 +195,11 @@
   <form method="POST" action="/profile/inventory/sellone/<%=axes[0]._id%>">
     <button type="submit">Sell One At the Market</button>
   </form>
-<form method="POST" action="/profile/inventory/<%=axes[0]._id%>">
-  <button type="submit">Sell All At the Market</button>
-</form>
+  <%  if (axes.length > 1) { %>
+    <form method="POST" action="/profile/inventory/<%=axes[0]._id%>">
+      <button type="submit">Sell All At the Market</button>
+    </form>
+    <% } %>
 </div>
   <% } %>
 </div>
