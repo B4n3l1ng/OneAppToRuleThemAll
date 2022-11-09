@@ -175,7 +175,7 @@ h2 {
 .shopBackground {
   background-image: url("/images/shopBackground.jpg");
   background-size: cover;
-  height: 113vh;
+  height: 100vh;
 }
 
 .shopBox {
@@ -207,7 +207,11 @@ h2 {
   background-color: rgb(241, 236, 163);
   font-size: 18px;
   text-align: center;
-  height: 110%;
+  height: 100vh;
+}
+
+.basketBtn {
+  padding-bottom: 50px;
 }
 
 .basketCtr {
