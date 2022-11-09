@@ -1,3 +1,4 @@
+<body class="inventoryBackground">
 <nav>
   <a href="/profile">Back to the Prancing Pony</a>
   <a href="/characters">Your characters!</a>
@@ -8,6 +9,7 @@
   <a href="/profile/explore">Explore Middle-earth!</a>
 </nav>
 
+<div class="shopBox">
 <h1>TAKE STOCK OF YOUR INVENTORY</h1>
 
 <% if (currentUserInv.length === 0) { %>
@@ -16,6 +18,7 @@
 <p>You have stores that even Smaug would envy, kind traveller. Here you can marvel at your good fortune. Or perhaps you would like to sell your goods? I hear there is a famous market at Bree...</p>
 <%}%>
 
+<div class="shopItems">
 <div>
   <% if(strengthPotions.length !== 0) { %>
 <p><%=strengthPotions[0].name%></p>
@@ -203,7 +206,9 @@
 </div>
   <% } %>
 </div>
-
+</div>
+</div>
+</body>
 
 
 
