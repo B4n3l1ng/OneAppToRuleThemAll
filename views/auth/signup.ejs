@@ -1,20 +1,26 @@
-<nav>
-  <a href="/login">Already have an account? Login here!</a>
-  <a href="/profile/explore">Explore Middle-earth!</a>
-</nav>
+<div class="indexBackground">
+  <nav>
+    <a href="/login">Already have an account? Login here</a>
+    <a href="/profile/explore">Explore Middle-earth</a>
+  </nav>
+  <div class="box">
+    <div class="pageText">
+      <h1>Create a new account and leap into the world of Middle-earth!</h1>
 
-<h1>Create a new account and leap into the world of Middle-earth!</h1>
+      <form action="/signup" method="POST" class="authentication">
+        <label>Username: <input type="text" required name="username" /></label>
+        <label>Email: <input type="email" required name="email" /></label>
+        <label
+          >Password: <input type="password" required name="password"
+        /></label>
+        <button>Sign up!</button>
+      </form>
 
-<div>
-  <form action="/signup" method="POST">
-    <label>Username:<input type="text" required name="username" /></label>
-    <label>Email:<input type="email" name="email" /></label>
-    <label>Password:<input type="password" name="password" /></label>
-    <button>Sign up!</button>
-  </form>
-</div>
-<div>
-  <% if (typeof errorMessage !== "undefined") { %>
-  <p class="error"><%= errorMessage %></p>
-  <% } %>
+      <div>
+        <% if (typeof errorMessage !== "undefined") { %>
+        <p class="error"><%= errorMessage %></p>
+        <% } %>
+      </div>
+    </div>
+  </div>
 </div>

@@ -102,7 +102,7 @@ router.post("/:id/update", isLoggedIn, async (req, res) => {
       occupation: req.body.occupation,
       allegiance: req.body.allegiance,
     });
-    res.redirect(`/${req.params.id}/details`);
+    res.redirect(`/characters/${req.params.id}/details`);
   } catch (error) {
     console.log(error);
   }
