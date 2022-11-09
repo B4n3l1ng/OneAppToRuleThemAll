@@ -255,7 +255,60 @@ button {
   width:70vw;
 }
 
+.characterImg {
+  width: 150px;
+}
 
+.charactersBackground{
+  background: rgb(241, 236, 163);
+}
+
+.characterButtons{
+  display: flex;
+  justify-content: center;
+}
+
+.characterButtons a {
+  border: 5px solid white;
+  border-radius: 16px;
+  background-color: white;
+  margin: 10px;
+  text-decoration: none;
+  color: rgb(6, 58, 19);
+}
+
+.updateBackground {
+  background-image: url("/images/characters.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.detailsPage {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.detailsImg{
+  height: 500px
+}
+
+.detailsPage a {
+  border: 5px solid white;
+  border-radius: 16px;
+  background-color: white;
+  margin: 10px;
+  text-decoration: none;
+  color: rgb(6, 58, 19);
+}
+
+.whiteButton {
+  border: 5px solid white;
+  border-radius: 16px;
+  background-color: white;
+  margin: 10px;
+  text-decoration: none;
+  color: rgb(6, 58, 19);
+}
 
 
 
