@@ -142,7 +142,6 @@ const { id } = req.params;
 const currentUser = req.session.user;
 const currentUserObj = await User.findById(currentUser._id).populate("basket");
 const currentUserBasket = currentUserObj.basket;
-console.log("BEFORE", currentUserBasket)
 for (let i = 0; i < currentUserBasket.length; i++ ) {
   const item = currentUserBasket[i];
   if(item.id === id) {
@@ -275,6 +274,35 @@ router.post("/inventory/:id", isLoggedIn, async (req, res) => {
       console.log(error)
     }
   })
+
+  router.post("/inventory/sellone/:id", isLoggedIn, async (req, res) => {
+    try {
+      let saleAmount = 0;
+      const { id } = req.params;
+const currentUser = req.session.user;
+const currentUserObj = await User.findById(currentUser._id).populate("inventory");
+const currentUserInv = currentUserObj.inventory;
+for (let i = 0; i < currentUserInv.length; i++ ) {
+  const item = currentUserInv[i];
+  if(item.id === id) {
+    const itemToDeleteIndex = currentUserInv.indexOf(item);
+    saleAmount += item.price;
+    currentUserInv.splice(itemToDeleteIndex, 1);
+    break;
+  }
+  else {
+    continue;
+  }
+}
+const cash = currentUserObj.money
+await User.findByIdAndUpdate(currentUser._id, { money: cash + saleAmount})
+await User.findByIdAndUpdate(currentUser._id, { $set: { inventory: [] } });
+await User.findByIdAndUpdate(currentUser._id, { $push: { inventory: currentUserInv } });
+ res.render("profileViews/sale", {saleAmount})
+    } catch(error) {
+      console.log(error)
+    }
+  });
 
 router.get("/explore", (req, res) => {
   const change = logChanges(req);

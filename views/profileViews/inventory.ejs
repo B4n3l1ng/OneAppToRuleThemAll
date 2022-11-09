@@ -21,9 +21,14 @@
 <p><%=strengthPotions[0].name%></p>
 <p>You have <%=strengthPotions.length%> in your stores, worth a total of <%=strengthPotions[0].price * strengthPotions.length%> Castar</p>
 <p><img src="<%= strengthPotions[0].image %>" /></p>
+<div style="display: flex;">
+  <form method="POST" action="/profile/inventory/sellone/<%=strengthPotions[0]._id%>">
+    <button type="submit">Sell One At the Market</button>
+  </form>
 <form method="POST" action="/profile/inventory/<%=strengthPotions[0]._id%>">
-  <button type="submit">Sell at the Market</button>
+  <button type="submit">Sell All At the Market</button>
 </form>
+</div>
   <% } %>
 </div>
 <div>
@@ -31,9 +36,14 @@
 <p><%=healthPotions[0].name%></p>
 <p>You have <%=healthPotions.length%> in your stores, worth a total of <%=healthPotions[0].price * healthPotions.length%> Castar</p>
 <p><img src="<%= healthPotions[0].image %>" /></p>
+<div style="display: flex;">
+  <form method="POST" action="/profile/inventory/sellone/<%=healthPotions[0]._id%>">
+    <button type="submit">Sell One At the Market</button>
+  </form>
 <form method="POST" action="/profile/inventory/<%=healthPotions[0]._id%>">
-  <button type="submit">Sell at the Market</button>
+  <button type="submit">Sell All At the Market</button>
 </form>
+</div>
   <% } %>
 </div>
 <div>
@@ -41,9 +51,14 @@
 <p><%=mithrils[0].name%></p>
 <p>You have <%=mithrils.length%> in your stores, worth a total of <%=mithrils[0].price * mithrils.length%> Castar</p>
 <p><img src="<%= mithrils[0].image %>" /></p>
+<div style="display: flex;">
+  <form method="POST" action="/profile/inventory/sellone/<%=mithrils[0]._id%>">
+    <button type="submit">Sell One At the Market</button>
+  </form>
 <form method="POST" action="/profile/inventory/<%=mithrils[0]._id%>">
-  <button type="submit">Sell at the Market</button>
+  <button type="submit">Sell All At the Market</button>
 </form>
+</div>
   <% } %>
 </div>
 <div>
@@ -51,17 +66,29 @@
 <p><%=breads[0].name%></p>
 <p>You have <%=breads.length%> in your stores, worth a total of <%=breads[0].price * breads.length%> Castar</p>
 <p><img src="<%= breads[0].image %>" /></p>
+<div style="display: flex;">
+  <form method="POST" action="/profile/inventory/sellone/<%=breads[0]._id%>">
+    <button type="submit">Sell One At the Market</button>
+  </form>
 <form method="POST" action="/profile/inventory/<%=breads[0]._id%>">
-  <button type="submit">Sell at the Market</button>
+  <button type="submit">Sell All At the Market</button>
 </form>
+</div>
   <% } %>
 </div>
 <div>
   <% if(cloaks.length !== 0) { %>
-  <p><%=cloaks[0].name%></p>
-  <p><%=cloaks[0].price%> Castar</p>
-  <p><img src="<%= cloaks[0].image %>" /></p>
-  <p>You have <%=cloaks.length%> in your stores.</p>
+<p><%=cloaks[0].name%></p>
+<p>You have <%=cloaks.length%> in your stores, worth a total of <%=cloaks[0].price * cloaks.length%> Castar</p>
+<p><img src="<%= cloaks[0].image %>" /></p>
+<div style="display: flex;">
+  <form method="POST" action="/profile/inventory/sellone/<%=cloaks[0]._id%>">
+    <button type="submit">Sell One At the Market</button>
+  </form>
+<form method="POST" action="/profile/inventory/<%=cloaks[0]._id%>">
+  <button type="submit">Sell All At the Market</button>
+</form>
+</div>
   <% } %>
 </div>
 <div>
@@ -69,9 +96,14 @@
 <p><%=canoes[0].name%></p>
 <p>You have <%=canoes.length%> in your stores, worth a total of <%=canoes[0].price * canoes.length%> Castar</p>
 <p><img src="<%= canoes[0].image %>" /></p>
+<div style="display: flex;">
+  <form method="POST" action="/profile/inventory/sellone/<%=canoes[0]._id%>">
+    <button type="submit">Sell One At the Market</button>
+  </form>
 <form method="POST" action="/profile/inventory/<%=canoes[0]._id%>">
-  <button type="submit">Sell at the Market</button>
+  <button type="submit">Sell All At the Market</button>
 </form>
+</div>
   <% } %>
 </div>
 <div>
@@ -79,9 +111,14 @@
 <p><%=bows[0].name%></p>
 <p>You have <%=bows.length%> in your stores, worth a total of <%=bows[0].price * bows.length%> Castar</p>
 <p><img src="<%= bows[0].image %>" /></p>
+<div style="display: flex;">
+  <form method="POST" action="/profile/inventory/sellone/<%=bows[0]._id%>">
+    <button type="submit">Sell One At the Market</button>
+  </form>
 <form method="POST" action="/profile/inventory/<%=bows[0]._id%>">
-  <button type="submit">Sell at the Market</button>
+  <button type="submit">Sell All At the Market</button>
 </form>
+</div>
   <% } %>
 </div>
 <div>
@@ -89,9 +126,14 @@
 <p><%=longSwords[0].name%></p>
 <p>You have <%=longSwords.length%> in your stores, worth a total of <%=longSwords[0].price * longSwords.length%> Castar</p>
 <p><img src="<%= longSwords[0].image %>" /></p>
+<div style="display: flex;">
+  <form method="POST" action="/profile/inventory/sellone/<%=longSwords[0]._id%>">
+    <button type="submit">Sell One At the Market</button>
+  </form>
 <form method="POST" action="/profile/inventory/<%=longSwords[0]._id%>">
-  <button type="submit">Sell at the Market</button>
+  <button type="submit">Sell All At the Market</button>
 </form>
+</div>
   <% } %>
 </div>
 <div>
@@ -99,9 +141,14 @@
 <p><%=shortSwords[0].name%></p>
 <p>You have <%=shortSwords.length%> in your stores, worth a total of <%=shortSwords[0].price * shortSwords.length%> Castar</p>
 <p><img src="<%= shortSwords[0].image %>" /></p>
+<div style="display: flex;">
+  <form method="POST" action="/profile/inventory/sellone/<%=shortSwords[0]._id%>">
+    <button type="submit">Sell One At the Market</button>
+  </form>
 <form method="POST" action="/profile/inventory/<%=shortSwords[0]._id%>">
-  <button type="submit">Sell at the Market</button>
+  <button type="submit">Sell All At the Market</button>
 </form>
+</div>
   <% } %>
 </div>
 <div>
@@ -109,9 +156,14 @@
 <p><%=staffs[0].name%></p>
 <p>You have <%=staffs.length%> in your stores, worth a total of <%=staffs[0].price * staffs.length%> Castar</p>
 <p><img src="<%= staffs[0].image %>" /></p>
+<div style="display: flex;">
+  <form method="POST" action="/profile/inventory/sellone/<%=staffs[0]._id%>">
+    <button type="submit">Sell One At the Market</button>
+  </form>
 <form method="POST" action="/profile/inventory/<%=staffs[0]._id%>">
-  <button type="submit">Sell at the Market</button>
+  <button type="submit">Sell All At the Market</button>
 </form>
+</div>
   <% } %>
 </div>
 <div>
@@ -119,11 +171,25 @@
 <p><%=axes[0].name%></p>
 <p>You have <%=axes.length%> in your stores, worth a total of <%=axes[0].price * axes.length%> Castar</p>
 <p><img src="<%= axes[0].image %>" /></p>
+<div style="display: flex;">
+  <form method="POST" action="/profile/inventory/sellone/<%=axes[0]._id%>">
+    <button type="submit">Sell One At the Market</button>
+  </form>
 <form method="POST" action="/profile/inventory/<%=axes[0]._id%>">
-  <button type="submit">Sell at the Market</button>
+  <button type="submit">Sell All At the Market</button>
 </form>
+</div>
   <% } %>
 </div>
+
+
+
+
+
+
+
+
+
 
 
 
