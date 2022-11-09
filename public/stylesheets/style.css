@@ -147,13 +147,14 @@ h2 {
   border-radius: 6px;
   margin: 0px;
   padding: 0px;
-  width: 100px;
   text-align: center;
   text-decoration: none;
   color: rgb(6, 58, 19);
   background-color: white;
   display:flex; 
   flex-direction: column;
+  align-items: center;
+  width: 160px;
 }
 
 .profilePage {
@@ -174,7 +175,7 @@ h2 {
 .shopBackground {
   background-image: url("/images/shopBackground.jpg");
   background-size: cover;
-  height: 120vh;
+  height: 113vh;
 }
 
 .shopBox {
@@ -200,6 +201,38 @@ h2 {
 .shopItem {
   margin-right: 60px;
   margin-left: 60px;
+}
+
+.basketBackground {
+  background-color: rgb(241, 236, 163);
+  font-size: 18px;
+  text-align: center;
+  height: 110%;
+}
+
+.basketCtr {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px; 
+}
+
+.basketText {
+font-size: 25px;
+margin: 40px;
+}
+
+.basketLink {
+  color: rgba(6, 58, 19, 0.7);
+  text-decoration: none;
+  border-radius: 50% 20% / 10% 40%;
+  background-color: white;
+  font-size: 20px;
+}
+
+.linkCtr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -290,7 +323,7 @@ button {
 }
 
 .profileBox {
-  margin-top: 110px;
+margin-top: 50px;
   margin-left: 250px;
   border: 5px solid white;
   background-color: rgba(6, 58, 19, 0.7);
