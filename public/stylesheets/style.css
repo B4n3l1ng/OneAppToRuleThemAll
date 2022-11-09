@@ -1,6 +1,8 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: transparent;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -153,3 +155,77 @@ h2 {
   padding-bottom: 20px;
   padding-top: 20px;
 }
+
+.indexBackground {
+  background-image: url("/images/map.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+.box {
+  margin-top: 150px;
+  margin-left: 250px;
+  border: 5px solid white;
+  background-color: rgba(6, 58, 19, 0.7);
+  width:70vw;
+}
+
+.pageText {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ .buttons {
+  display: flex;
+  justify-content: center;
+ }
+
+ .buttons a {
+  border: 5px solid white;
+  border-radius: 16px;
+  background-color: white;
+  margin: 10px;
+  text-decoration: none;
+  color: rgb(6, 58, 19);
+ }
+ nav {
+  height: 4vh;
+  background-color: rgb(6,58,19);
+  border: 1px solid rgb(6,58,19);
+  display: flex;
+  justify-content: flex-start;
+ }
+ nav a {
+  text-decoration: none;
+  margin: 5px;
+  text-align: center;
+  color: white;
+ }
+.authentication {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.authentication label {
+  margin-bottom: 20px;
+}
+.authentication input {
+  border-radius: 6px;
+  border: 1px solid white;
+}
+
+button {
+  border: 5px solid white;
+  border-radius: 16px;
+  background-color: white;
+  margin: 10px;
+  text-decoration: none;
+  color: rgb(6, 58, 19);
+}
+
+ .error {
+  color: tomato;
+ }
