@@ -188,6 +188,7 @@ h2 {
   color: white;
   font-size: 20px;
   text-align: center;
+  height: 100vh;
 }
 
 .shopItems {
@@ -200,9 +201,22 @@ h2 {
   flex-wrap: wrap;
 }
 
+.inventoryItems {
+  color: white;
+  font-size: 15px; 
+  display: flex;
+flex-direction: column;
+
+}
+
 .shopItem {
   margin-right: 60px;
   margin-left: 60px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px black solid;
 }
 
 .basketBackground {
@@ -242,8 +256,7 @@ margin: 40px;
 }
 
 .inventoryBackground {
-  background-image: url("/images/inventoryBackground.jpg");
-  background-size: cover;
+  background-color: rgb(241, 236, 163);
   height: 100vh;
 } 
 
@@ -382,7 +395,7 @@ margin-top: 50px;
 
 .exploreBox {
   margin-top: 10px;
-  margin-left: 250px;
+  margin-left: 260px;
   border: 5px solid white;
   background-color: rgba(6, 58, 19, 0.7);
   width:70vw;
