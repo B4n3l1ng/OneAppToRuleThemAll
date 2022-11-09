@@ -1,3 +1,4 @@
+<div class="shopBackground">
 <nav>
   <a href="/profile">Back to the Prancing Pony</a>
   <a href="/characters">Your characters!</a>
@@ -8,6 +9,7 @@
   <a href="/profile/explore">Explore Middle-earth!</a>
 </nav>
 
+<div class="shopBox">
 <h1>WELCOME TO EGINHARD'S EMPORIUM</h1>
 
 <p>
@@ -16,12 +18,12 @@
 </p>
 
 <% if (typeof errorMessage !== 'undefined') { %>
-<p style="font-weight: bold"><%= errorMessage %></p>
+<p style="font-weight: bold; color: yellow"><%= errorMessage %></p>
 <% } %>
 
-<div>
+<div class="shopItems">
   <% shopItems.forEach((item) => { %>
-  <div>
+  <div class="shopItem">
     <p><%= item.name %></p>
     <p><%= item.price %> Castar</p>
     <p><img src="<%= item.image %>" /></p>
@@ -30,4 +32,6 @@
     </form>
   </div>
   <% }) %>
+</div>
+</div>
 </div>
