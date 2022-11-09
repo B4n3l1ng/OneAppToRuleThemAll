@@ -268,14 +268,6 @@ button {
   justify-content: center;
 }
 
-.characterButtons a {
-  border: 5px solid white;
-  border-radius: 16px;
-  background-color: white;
-  margin: 10px;
-  text-decoration: none;
-  color: rgb(6, 58, 19);
-}
 
 .updateBackground {
   background-image: url("/images/characters.jpg");
@@ -290,15 +282,6 @@ button {
 
 .detailsImg{
   height: 500px
-}
-
-.detailsPage a {
-  border: 5px solid white;
-  border-radius: 16px;
-  background-color: white;
-  margin: 10px;
-  text-decoration: none;
-  color: rgb(6, 58, 19);
 }
 
 .whiteButton {
