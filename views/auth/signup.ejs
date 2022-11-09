@@ -8,12 +8,23 @@
       <h1>Create a new account and leap into the world of Middle-earth!</h1>
 
       <form action="/signup" method="POST" class="authentication">
-        <label>Username: <input type="text" required name="username" /></label>
-        <label>Email: <input type="email" required name="email" /></label>
-        <label
-          >Password: <input type="password" required name="password"
-        /></label>
-        <button>Sign up!</button>
+        <ul class="wrapper">
+          <li class="form-row">
+            <label>Username:</label>
+            <input type="text" required name="username" />
+          </li>
+          <li class="form-row">
+            <label>Email:</label>
+            <input type="email" required name="email" />
+          </li>
+          <li class="form-row">
+            <label>Password:</label>
+            <input type="password" required name="password" />
+          </li>
+          <li class="form-row">
+            <button>Sign up!</button>
+          </li>
+        </ul>
       </form>
 
       <div>

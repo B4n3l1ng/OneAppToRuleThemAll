@@ -203,19 +203,27 @@ h2 {
   margin: 5px;
   text-align: center;
   color: white;
+  border-right: solid 1px white;
+  padding-right: 10px
  }
-.authentication {
+
+ .wrapper {
+  list-style-type: none;
+  padding:0;
+ }
+
+ .form-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.authentication label {
-  margin-bottom: 20px;
-}
-.authentication input {
-  border-radius: 6px;
-  border: 1px solid white;
-}
+  justify-content: center;
+  padding: .5em;
+ }
+
+ .form-row label {
+  padding: .5em 1em .5em 0;
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+ }
 
 button {
   border: 5px solid white;
