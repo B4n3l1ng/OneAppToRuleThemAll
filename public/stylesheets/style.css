@@ -261,6 +261,7 @@ button {
 
 .charactersBackground{
   background: rgb(241, 236, 163);
+  height: 100vh
 }
 
 .characterButtons{
