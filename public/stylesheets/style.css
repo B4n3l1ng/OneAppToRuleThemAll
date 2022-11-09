@@ -150,8 +150,8 @@ h2 {
   width: 100px;
   text-align: center;
   text-decoration: none;
-  color: black;
-  background-color: transparent;
+  color: rgb(6, 58, 19);
+  background-color: white;
   display:flex; 
   flex-direction: column;
 }
@@ -276,6 +276,89 @@ button {
   color: rgb(6, 58, 19);
 }
 
- .error {
+ 
+.profileBackground {
+  background-image: url("/images/tavern.jpg");
+  background-size: cover;
+  height: 100vh
+}
+
+.profileText{
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.profileBox {
+  margin-top: 110px;
+  margin-left: 250px;
+  border: 5px solid white;
+  background-color: rgba(6, 58, 19, 0.7);
+  width:70vw;
+}
+
+.characterImg {
+  width: 150px;
+}
+
+.charactersBackground{
+  background: rgb(241, 236, 163);
+  height: 100vh
+}
+
+.characterButtons{
+  display: flex;
+  justify-content: center;
+}
+
+
+.updateBackground {
+  background-image: url("/images/characters.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.detailsPage {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.detailsImg{
+  height: 500px
+}
+
+.whiteButton {
+  border: 5px solid white;
+  border-radius: 16px;
+  background-color: white;
+  margin: 10px;
+  text-decoration: none;
+  color: rgb(6, 58, 19);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.error {
   color: tomato;
  }

@@ -1,55 +1,71 @@
+<div class="profileBackground">
+  <nav><a href="/logout">Logout</a></nav>
+  <div class="profileText">
+    <h1>Welcome To The Prancing Pony, <%= user.username%></h1>
+    <div class="profileBox">
+      <div class="profilePage">
+        <a href="/characters" class="button"
+          ><img
+            src="/images/charListIcon.jpg"
+            alt="charIcon"
+            class="navButtonImage"
+          />Your Characters</a
+        >
 
-<nav><a href="/logout">Logout</a></nav>
-<h1>Welcome To The Prancing Pony, <%= user.username%></h1>
-
-<div class="profilePage">
-  <a href="/characters" class="button"
-    ><img
-      src="/images/charListIcon.jpg"
-      alt="charIcon"
-      class="navButtonImage"
-    />Your Characters</a
-  >
-
-  <a href="/characters/new" class="button">
-    <img
-      src="/images/newCharIcon.png"
-      alt="newCharIcon"
-      class="navButtonImage"
-    />
-    Create a New Character</a
-  >
-  <a href="/profile/shop" class="button">
-    <img src="/images/shopIcon.png" alt="shopIcon" class="navButtonImage" />
-    Visit Eginhard's Emporium</a
-  >
-</div>
-<div class="profilePage">
-  <a href="/profile/inventory" class="button">
-    <img
-      src="/images/inventoryIcon.png"
-      alt="inventoryIcon"
-      class="navButtonImage"
-    />
-    Take Stock of Your Supplies</a
-  >
-  <a href="/profile/dealer" class="button">
-    <img src="/images/dealerIcon.png" alt="dealerIcon" class="navButtonImage" />
-    Talk To The Dealer</a
-  >
-  <a href="/profile/wealth" class="button">
-    <img src="/images/bankIcon.png" alt="bankIcon" class="navButtonImage" />
-    Head to Bodrig's Bank</a
-  >
-</div>
-<div class="profilePage">
-  <a href="/profile/explore" class="button">
-    <img
-      src="/images/exploreIcon.png"
-      alt="exploreIcon"
-      class="navButtonImage"
-      style="height: 100px"
-    />
-    Explore Middle Earth</a
-  >
+        <a href="/characters/new" class="button">
+          <img
+            src="/images/newCharIcon.png"
+            alt="newCharIcon"
+            class="navButtonImage"
+          />
+          Create a New Character</a
+        >
+        <a href="/profile/shop" class="button">
+          <img
+            src="/images/shopIcon.png"
+            alt="shopIcon"
+            class="navButtonImage"
+          />
+          Visit Eginhard's Emporium</a
+        >
+      </div>
+      <div class="profilePage">
+        <a href="/profile/inventory" class="button">
+          <img
+            src="/images/inventoryIcon.png"
+            alt="inventoryIcon"
+            class="navButtonImage"
+          />
+          Take Stock of Your Supplies</a
+        >
+        <a href="/profile/dealer" class="button">
+          <img
+            src="/images/dealerIcon.png"
+            alt="dealerIcon"
+            class="navButtonImage"
+          />
+          Talk To The Dealer</a
+        >
+        <a href="/profile/wealth" class="button">
+          <img
+            src="/images/bankIcon.png"
+            alt="bankIcon"
+            class="navButtonImage"
+          />
+          Head to Bodrig's Bank</a
+        >
+      </div>
+      <div class="profilePage">
+        <a href="/profile/explore" class="button">
+          <img
+            src="/images/exploreIcon.png"
+            alt="exploreIcon"
+            class="navButtonImage"
+            style="height: 100px"
+          />
+          Explore Middle Earth</a
+        >
+      </div>
+    </div>
+  </div>
 </div>
