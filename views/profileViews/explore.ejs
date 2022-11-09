@@ -1,49 +1,56 @@
-<nav>
-  <% if (change) { %>
-  <a href="/profile">Back to the Prancing Pony</a>
-  <a href="/characters">Your characters!</a>
-  <a href="/characters/new">Create a new character!</a>
-  <a href="/profile/shop">Visit Eginhard's Emporium</a>
-  <a href="/profile/inventory">Take stock of your supplies!</a>
-  <a href="/profile/dealer">Talk to the Dealer</a>
-  <a href="/profile/wealth">Head to Bodrig's Bank</a>
-  <a href="/logout">Logout</a>
-  <% } else { %>
-  <a href="/login">Log in!</a>
-  <a href="/signup">Create an account!</a>
-  <% } %>
-</nav>
+<div class="indexBackground">
+  <nav>
+    <% if (change) { %>
+    <a href="/profile">Back to the Prancing Pony</a>
+    <a href="/characters">Your characters!</a>
+    <a href="/characters/new">Create a new character!</a>
+    <a href="/profile/shop">Visit Eginhard's Emporium</a>
+    <a href="/profile/inventory">Take stock of your supplies!</a>
+    <a href="/profile/dealer">Talk to the Dealer</a>
+    <a href="/profile/wealth">Head to Bodrig's Bank</a>
+    <a href="/logout">Logout</a>
+    <% } else { %>
+    <a href="/login">Log in!</a>
+    <a href="/signup">Create an account!</a>
+    <% } %>
+  </nav>
+  <div class="exploreBox">
+    <div class="exploreText">
+      <h1>EXPLORE THIS MIDDLE-EARTH</h1>
 
-<h1>EXPLORE THIS MIDDLE-EARTH</h1>
+      <div class="explore-page">
+        <div class="characters">
+          <h2>Important characters of Middle-earth</h2>
 
-<div class="explore-page">
-  <div class="characters">
-    <h2>Important characters of Middle-earth</h2>
+          <a href="/profile/explore/Gandalf">Gandalf, the Grey</a>
+          <a href="/profile/explore/Aragorn">Aragorn, the Strider</a>
+          <a href="/profile/explore/Legolas">Legolas, Prince of Mirkwood</a>
+          <a href="/profile/explore/Frodo">Frodo Baggins</a>
+          <a href="/profile/explore/Sam">Samwise Gamgee</a>
+          <a href="/profile/explore/Gimli">Gimli, son of Glóin</a>
+          <a href="/profile/explore/MerryPippin"
+            >Merry Brandybuck and Pippin Took</a
+          >
+          <a href="/profile/explore/Galadriel">Galadriel, Lady of the Woods</a>
+          <a href="/profile/explore/Elrond">Elrond Half-elven</a>
+          <a href="/profile/explore/Gollum">Gollum and Sméagol</a>
+          <a href="/profile/explore/Saruman">Saruman, the White</a>
+          <a href="/profile/explore/Sauron">Sauron</a>
+        </div>
+        <div class="places">
+          <h2>Important places in Middle-earth</h2>
 
-    <a href="/profile/explore/Gandalf">Gandalf, the Grey</a>
-    <a href="/profile/explore/Aragorn">Aragorn, the Strider</a>
-    <a href="/profile/explore/Legolas">Legolas, Prince of Mirkwood</a>
-    <a href="/profile/explore/Frodo">Frodo Baggins</a>
-    <a href="/profile/explore/Sam">Samwise Gamgee</a>
-    <a href="/profile/explore/Gimli">Gimli, son of Glóin</a>
-    <a href="/profile/explore/MerryPippin">Merry Brandybuck and Pippin Took</a>
-    <a href="/profile/explore/Galadriel">Galadriel, Lady of the Woods</a>
-    <a href="/profile/explore/Elrond">Elrond Half-elven</a>
-    <a href="/profile/explore/Gollum">Gollum and Sméagol</a>
-    <a href="/profile/explore/Saruman">Saruman, the White</a>
-    <a href="/profile/explore/Sauron">Sauron</a>
-  </div>
-  <div class="places">
-    <h2>Important places in Middle-earth</h2>
-
-    <a href="/profile/explore/Shire">The Shire</a>
-    <a href="/profile/explore/Rivendell">Rivendell</a>
-    <a href="/profile/explore/Gondor">The Kingdom of Gondor</a>
-    <a href="/profile/explore/Rohan">The Kingdom of Rohan</a>
-    <a href="/profile/explore/Mirkwood">Mirkwood</a>
-    <a href="/profile/explore/Moria">Moria</a>
-    <a href="/profile/explore/Isengard">Isengard</a>
-    <a href="/profile/explore/Doom">Mount Doom</a>
-    <a href="/profile/explore/Mordor">Mordor</a>
+          <a href="/profile/explore/Shire">The Shire</a>
+          <a href="/profile/explore/Rivendell">Rivendell</a>
+          <a href="/profile/explore/Gondor">The Kingdom of Gondor</a>
+          <a href="/profile/explore/Rohan">The Kingdom of Rohan</a>
+          <a href="/profile/explore/Mirkwood">Mirkwood</a>
+          <a href="/profile/explore/Moria">Moria</a>
+          <a href="/profile/explore/Isengard">Isengard</a>
+          <a href="/profile/explore/Doom">Mount Doom</a>
+          <a href="/profile/explore/Mordor">Mordor</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

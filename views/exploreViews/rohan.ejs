@@ -1,91 +1,100 @@
-<nav>
-  <% if (change) { %>
-  <a href="/profile">Back to the Prancing Pony</a>
-  <a href="/characters">Your characters!</a>
-  <a href="/characters/new">Create a new character!</a>
-  <a href="/profile/shop">Visit Eginhard's Emporium</a>
-  <a href="/profile/inventory">Take stock of your supplies!</a>
-  <a href="/profile/dealer">Talk to the Dealer</a>
-  <a href="/profile/wealth">Head to Bodrig's Bank</a>
-  <a href="/profile/explore">Explore Middle-earth</a>
-  <a href="/logout">Logout</a>
-  <% } else { %>
-  <a href="/login">Log in!</a>
-  <a href="/signup">Create an account!</a>
-  <% } %>
-</nav>
-<h2>Kingdom of Rohan</h2>
+<div class="indexBackground">
+  <nav>
+    <% if (change) { %>
+    <a href="/profile">Back to the Prancing Pony</a>
+    <a href="/characters">Your characters!</a>
+    <a href="/characters/new">Create a new character!</a>
+    <a href="/profile/shop">Visit Eginhard's Emporium</a>
+    <a href="/profile/inventory">Take stock of your supplies!</a>
+    <a href="/profile/dealer">Talk to the Dealer</a>
+    <a href="/profile/wealth">Head to Bodrig's Bank</a>
+    <a href="/profile/explore">Explore Middle-earth</a>
+    <a href="/logout">Logout</a>
+    <% } else { %>
+    <a href="/login">Log in!</a>
+    <a href="/signup">Create an account!</a>
+    <a href="/profile/explore">Explore Middle-earth</a>
+    <% } %>
+  </nav>
+  <div class="exploreBox">
+    <div class="exploreText">
+      <h2>Kingdom of Rohan</h2>
 
-<div class="about-page">
-  <div class="image">
-    <img
-      src="/images/rohan-city.png"
-      alt="City of Rohan"
-      class="locationImage"
-      style="height: 479px"
-    />
-  </div>
-  <div class="image">
-    <img
-      src="/images/rohan-coat-of-arms.png"
-      alt="Rohan Coat of Arms"
-      class="coatOfArms"
-    />
-  </div>
+      <div class="about-page">
+        <div class="image">
+          <img
+            src="/images/rohan-city.png"
+            alt="City of Rohan"
+            style="width: 300px; height: 200px"
+          />
+        </div>
+        <div class="image">
+          <img
+            src="/images/rohan-coat-of-arms.png"
+            alt="Rohan Coat of Arms"
+            style="height: 200px"
+          />
+        </div>
 
-  <div class="about">
-    <p>
-      Rohan was a great kingdom of Men situated in the plains between the Misty
-      Mountains and the White Mountains. The land of Rohan extended from the
-      banks of the River Isen in the west, up to the East wall of Rohan and
-      shores of the River Anduin in the east. The forest of Fangorn lay on its
-      border, and the Elven forest of Lothlórien lay north of the River
-      Limlight.
-    </p>
-    <p>
-      The province of Calenardhon was given in gift to Eorl and his people by
-      Cirion, Steward of Gondor, in thanks for their service to Gondor in battle
-      against the Balchoth. Eorl swore an oath of friendship, and of aid when
-      summoned, to the Lords of Gondor, and thus the Rohirrim became the
-      greatest ally of the Men of Gondor from the later part of the Third Age
-      and beyond.
-    </p>
-    <p>
-      During The War of the Ring, Théoden Ednew's mind was invaded by Saruman,
-      using spells and his servant Gríma Wormtongue. Saruman then began to probe
-      the border of Rohan with his army of Orcs and Uruk-hai. Théodred, son of
-      Théoden, along with his cousin Éomer, took charge of the Mark and its
-      defenses against the growing threat of Isengard.
-    </p>
-    <p>
-      Aragorn and his companions chanced to meet up with Éomer and his Éored
-      upon the plains of Rohan near Fangorn Forest, and there revealed himself
-      to be the heir of Isildur, and asked for news and aid from Éomer. The
-      Rohirrim were returning from battle with a legion of Uruk-hai that had
-      captured Merry and Pippin, and Éomer gave what tidings he could of his
-      doings and the condition of Rohan to Aragorn. Lending the companions a
-      pair of horses, Éomer then led his men to continue their task of gathering
-      Eastemnet's herd folk to safety. Upon his return to Edoras, Gríma had
-      Éomer imprisoned for defying Saruman's orders spoken through Theoden.
-    </p>
-    <p>
-      Gandalf finally managed to break through to the mind of the king, and
-      Théoden finally saw reason. Calling all able men to bear arms, Théoden set
-      out for Hornbug, where he made a stand against Saruman's army. The battle
-      raged through the night, with the knights being able to repel the main
-      forces for the most part. At dawn, Saruman revealed his greatest weapon,
-      and blasted a hole in the walls of the fortress. The Rohirrim responded by riding out
-      of the fortress and battling the invading army in open field.
-    </p>
-    <p>
-      With their powers combined, the army of Gondor and Rohan rode to the Black
-      Gate, bringing the fight to Sauron.
-    </p>
-    <p>
-      In the years that followed the War of the Ring, Éomer Éadig ruled the
-      Rohirrim with dignity, and the kingdom prospered once again. In the coming
-      years, whenever King Elessar went with war to subdue the last remnants of
-      his enemies, so too went his friend King Éomer.
-    </p>
+        <div class="about">
+          <p>
+            Rohan was a great kingdom of Men situated in the plains between the
+            Misty Mountains and the White Mountains. The land of Rohan extended
+            from the banks of the River Isen in the west, up to the East wall of
+            Rohan and shores of the River Anduin in the east. The forest of
+            Fangorn lay on its border, and the Elven forest of Lothlórien lay
+            north of the River Limlight.
+          </p>
+          <p>
+            The province of Calenardhon was given in gift to Eorl and his people
+            by Cirion, Steward of Gondor, in thanks for their service to Gondor
+            in battle against the Balchoth. Eorl swore an oath of friendship,
+            and of aid when summoned, to the Lords of Gondor, and thus the
+            Rohirrim became the greatest ally of the Men of Gondor from the
+            later part of the Third Age and beyond.
+          </p>
+          <p>
+            During The War of the Ring, Théoden Ednew's mind was invaded by
+            Saruman, using spells and his servant Gríma Wormtongue. Saruman then
+            began to probe the border of Rohan with his army of Orcs and
+            Uruk-hai. Théodred, son of Théoden, along with his cousin Éomer,
+            took charge of the Mark and its defenses against the growing threat
+            of Isengard.
+          </p>
+          <p>
+            Aragorn and his companions chanced to meet up with Éomer and his
+            Éored upon the plains of Rohan near Fangorn Forest, and there
+            revealed himself to be the heir of Isildur, and asked for news and
+            aid from Éomer. The Rohirrim were returning from battle with a
+            legion of Uruk-hai that had captured Merry and Pippin, and Éomer
+            gave what tidings he could of his doings and the condition of Rohan
+            to Aragorn. Lending the companions a pair of horses, Éomer then led
+            his men to continue their task of gathering Eastemnet's herd folk to
+            safety. Upon his return to Edoras, Gríma had Éomer imprisoned for
+            defying Saruman's orders spoken through Theoden.
+          </p>
+          <p>
+            Gandalf finally managed to break through to the mind of the king,
+            and Théoden finally saw reason. Calling all able men to bear arms,
+            Théoden set out for Hornbug, where he made a stand against Saruman's
+            army. The battle raged through the night, with the knights being
+            able to repel the main forces for the most part. At dawn, Saruman
+            revealed his greatest weapon, and blasted a hole in the walls of the
+            fortress. The Rohirrim responded by riding out of the fortress and
+            battling the invading army in open field.
+          </p>
+          <p>
+            With their powers combined, the army of Gondor and Rohan rode to the
+            Black Gate, bringing the fight to Sauron.
+          </p>
+          <p>
+            In the years that followed the War of the Ring, Éomer Éadig ruled
+            the Rohirrim with dignity, and the kingdom prospered once again. In
+            the coming years, whenever King Elessar went with war to subdue the
+            last remnants of his enemies, so too went his friend King Éomer.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

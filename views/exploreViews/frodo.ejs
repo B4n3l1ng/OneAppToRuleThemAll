@@ -1,56 +1,64 @@
-<nav>
-  <% if (change) { %>
-  <a href="/profile">Back to the Prancing Pony</a>
-  <a href="/characters">Your characters!</a>
-  <a href="/characters/new">Create a new character!</a>
-  <a href="/profile/shop">Visit Eginhard's Emporium</a>
-  <a href="/profile/inventory">Take stock of your supplies!</a>
-  <a href="/profile/dealer">Talk to the Dealer</a>
-  <a href="/profile/wealth">Head to Bodrig's Bank</a>
-  <a href="/profile/explore">Explore Middle-earth</a>
-  <a href="/logout">Logout</a>
-  <% } else { %>
-  <a href="/login">Log in!</a>
-  <a href="/signup">Create an account!</a>
-  <% } %>
-</nav>
+<div class="indexBackground">
+  <nav>
+    <% if (change) { %>
+    <a href="/profile">Back to the Prancing Pony</a>
+    <a href="/characters">Your characters!</a>
+    <a href="/characters/new">Create a new character!</a>
+    <a href="/profile/shop">Visit Eginhard's Emporium</a>
+    <a href="/profile/inventory">Take stock of your supplies!</a>
+    <a href="/profile/dealer">Talk to the Dealer</a>
+    <a href="/profile/wealth">Head to Bodrig's Bank</a>
+    <a href="/profile/explore">Explore Middle-earth</a>
+    <a href="/logout">Logout</a>
+    <% } else { %>
+    <a href="/login">Log in!</a>
+    <a href="/signup">Create an account!</a>
+    <a href="/profile/explore">Explore Middle-earth</a>
+    <% } %>
+  </nav>
+  <div class="exploreBox">
+    <div class="exploreText">
+      <h1>Frodo Baggins</h1>
+      <div class="about-page">
+        <div class="image">
+          <img src="/images/frodo.png" alt="Frodo" class="frodo-image" />
+        </div>
 
-<h2>Frodo Baggins</h2>
-<div class="about-page">
-  <div class="image">
-    <img src="/images/frodo.png" alt="Frodo" class="frodo-image" />
-  </div>
+        <div class="about">
+          <h3>Biography:</h3>
+          <p>
+            Frodo Baggins, son of Drogo Baggins, was a hobbit of the Shire in
+            the late Third Age. A member of the Fellowship of the Ring, he bore
+            the One Ring to Mount Doom, where it was destroyed. A ring bearer,
+            best friend to his gardener, Samwise Gamgee, and one of three
+            hobbits who sailed from Middle-earth to the Uttermost West at the
+            end of the Third Age.
+          </p>
+          <h3>Titles:</h3>
+          <ul>
+            <li>Bearer of the One Ring</li>
+            <li>Elf-friend</li>
+            <li>Deputy Mayor of the Shire</li>
+          </ul>
 
-  <div class="about">
-    <h3>Biography:</h3>
-    <p>
-      Frodo Baggins, son of Drogo Baggins, was a hobbit of the Shire in the late
-      Third Age. A member of the Fellowship of the Ring, he bore the One Ring to
-      Mount Doom, where it was destroyed. A ring bearer, best friend to his
-      gardener, Samwise Gamgee, and one of three hobbits who sailed from
-      Middle-earth to the Uttermost West at the end of the Third Age.
-    </p>
-    <h3>Titles:</h3>
-    <ul>
-      <li>Bearer of the One Ring</li>
-      <li>Elf-friend</li>
-      <li>Deputy Mayor of the Shire</li>
-    </ul>
-
-    <h3>Quotes:</h3>
-    <p>
-      "I will take the ring to Mordor. Although I don't know the way." Frodo,
-      shouted over the confusion in the meeting to decide the fate of the One
-      Ring.
-    </p>
-    <p>
-      "Frodo wouldn't have gotten far without Sam, would he?" Frodo to Sam, his
-      best friend and companion throughout the entire journey to Mount Doom.
-    </p>
-    <p>
-      "There is no real going back" Frodo, when he realizes that the trauma and
-      the things he has seen on his journey are too much for him to lead a
-      normal life.
-    </p>
+          <h3>Quotes:</h3>
+          <p>
+            "I will take the ring to Mordor. Although I don't know the way."
+            Frodo, shouted over the confusion in the meeting to decide the fate
+            of the One Ring.
+          </p>
+          <p>
+            "Frodo wouldn't have gotten far without Sam, would he?" Frodo to
+            Sam, his best friend and companion throughout the entire journey to
+            Mount Doom.
+          </p>
+          <p>
+            "There is no real going back" Frodo, when he realizes that the
+            trauma and the things he has seen on his journey are too much for
+            him to lead a normal life.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
