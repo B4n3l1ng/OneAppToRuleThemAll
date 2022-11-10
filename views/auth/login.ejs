@@ -4,30 +4,30 @@
     <a href="/profile/explore">Explore Middle-earth</a>
   </nav>
   <div class="pageCtr">
-  <div class="box">
-    <div class="pageText">
-      <h1>Log In to access your world</h1>
+    <div class="box">
+      <div class="pageText">
+        <h1>Log In to access your world</h1>
 
-      <ul class="wrapper">
-        <form method="POST" action="/login">
-          <li class="form-row">
-            <label>Username:</label>
-            <input name="username" type="text" required />
-          </li>
-          <li class="form-row">
-            <label>Password:</label>
-            <input name="password" type="password" required />
-          </li>
-          <button type="submit">Log In</button>
-        </form>
-      </ul>
+        <ul class="wrapper">
+          <form method="POST" action="/login">
+            <li class="form-row">
+              <label>Username:</label>
+              <input name="username" type="text" required />
+            </li>
+            <li class="form-row">
+              <label>Password:</label>
+              <input name="password" type="password" required />
+            </li>
+            <button type="submit">Log In</button>
+          </form>
+        </ul>
 
-      <div>
-        <% if (typeof errorMessage !== "undefined") {%>
-        <p><%= errorMessage%></p>
-        <% } %>
+        <div class="error">
+          <% if (typeof errorMessage !== "undefined") {%>
+          <p><%= errorMessage%></p>
+          <% } %>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </div>

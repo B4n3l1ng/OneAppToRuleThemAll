@@ -10,57 +10,63 @@
     <a href="/logout">Logout</a>
   </nav>
   <div class="pageCtr">
-  <div class="box">
-    <div class="pageText">
-      <h1>Create a new character!</h1>
-      <form action="/characters/new" method="POST">
-        <ul class="wrapper">
-          <li class="form-row">
-            <label>Name:</label><input type="text" required name="name" />
-          </li>
-          <li class="form-row">
-            <label>Species:</label>
-            <select name="species" required>
-              <option value="Human">Human</option>
-              <option value="Elf">Elf</option>
-              <option value="Orc">Orc</option>
-              <option value="Ent">Ent</option>
-              <option value="Wizard">Wizard</option>
-              <option value="Dwarf">Dwarf</option>
-              <option value="Hobbit">Hobbit</option>
-            </select>
-          </li>
-          <li class="form-row">
-            <label>Gender:</label>
-            <select name="gender" required>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-          </li>
-          <li class="form-row">
-            <label>Occupation:</label>
-            <input type="text" name="occupation" required />
-          </li>
-          <li class="form-row">
-            <label>Allegiance:</label>
-            <input type="text" name="allegiance" required />
-          </li>
-          <li class="form-row">
-            <label>Weapon of choice:</label>
-            <select name="weapons">
-              <option value="Longsword">You have my longsword!</option>
-              <option value="Bow">And my bow!</option>
-              <option value="Short Sword">Short Sword</option>
-              <option value="Staff">Staff</option>
-              <option value="Axe">...And my axe!</option>
-            </select>
-          </li>
-          <li class="form-row">
-            <button type="submit">Hop into Middle Earth!</button>
-          </li>
-        </ul>
-      </form>
+    <div class="box">
+      <div class="pageText">
+        <h1>Create a new character!</h1>
+        <form action="/characters/new" method="POST">
+          <ul class="wrapper">
+            <li class="form-row">
+              <label>Name:</label><input type="text" required name="name" />
+            </li>
+            <li class="form-row">
+              <label>Species:</label>
+              <select name="species" required>
+                <option value="Human">Human</option>
+                <option value="Elf">Elf</option>
+                <option value="Orc">Orc</option>
+                <option value="Ent">Ent</option>
+                <option value="Wizard">Wizard</option>
+                <option value="Dwarf">Dwarf</option>
+                <option value="Hobbit">Hobbit</option>
+              </select>
+            </li>
+            <li class="form-row">
+              <label>Gender:</label>
+              <select name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </li>
+            <li class="form-row">
+              <label>Occupation:</label>
+              <input type="text" name="occupation" required />
+            </li>
+            <li class="form-row">
+              <label>Allegiance:</label>
+              <input type="text" name="allegiance" required />
+            </li>
+            <li class="form-row">
+              <label>Weapon of choice:</label>
+              <select name="weapons">
+                <option value="Longsword">You have my longsword!</option>
+                <option value="Bow">And my bow!</option>
+                <option value="Short Sword">Short Sword</option>
+                <option value="Staff">Staff</option>
+                <option value="Axe">...And my axe!</option>
+              </select>
+            </li>
+            <li class="form-row">
+              <button type="submit">Hop into Middle Earth!</button>
+            </li>
+          </ul>
+
+          <div class="error">
+            <% if (typeof errorMessage !== "undefined") {%>
+            <p><%= errorMessage%></p>
+            <% } %>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
   </div>
 </div>
