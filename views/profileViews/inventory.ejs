@@ -10,8 +10,8 @@
     <a href="/logout">Logout</a>
   </nav>
 
+  <div class="invCtr">
   <h1 style="color: white; padding-top: 30px">TAKE STOCK OF YOUR INVENTORY</h1>
-
   <% if (currentUserInv.length === 0) { %>
   <p class="inventoryText">
     Your stores are looking pretty meagre, my friend. Perhaps you wish to
@@ -23,6 +23,8 @@
     marvel at your good fortune. Or perhaps you would like to sell your goods? I
     hear there is a famous market at Bree...
   </p>
+</div>
+
   <%}%> <% if(strengthPotions.length !== 0) { %>
   <div class="inventoryItem">
     <h2><%=strengthPotions[0].name%></h2>

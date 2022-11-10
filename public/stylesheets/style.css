@@ -250,6 +250,13 @@ border: 1px solid black
 color: white;
 font-size: 20px;
 text-align: center;
+width: 75%;
+}
+
+.invCtr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .basketBackground {
