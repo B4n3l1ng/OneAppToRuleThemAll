@@ -180,6 +180,12 @@ h2 {
   height: 110%;
 }
 
+.saleBackground {
+  background-image: url("/images/saleBackground.png");
+  background-size: cover;
+  height: 110%;
+}
+
 .shopBox {
   margin: 50px;
   border: 5px solid white;
@@ -280,6 +286,17 @@ margin: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.linkCtr2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marketLink {
+padding-left: 50px;
+padding-right: 50px;
 }
 
 .inventoryBackground {
