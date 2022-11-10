@@ -7,17 +7,23 @@
   font-family: CustomFont;
 }
 
+.pageCtr {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+padding-top: 100px;
+}
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: transparent;
   margin: 0;
   padding: 0;
 }
 
 a {
-  color: #00b7ff;
   padding: 5px;
-}
+} 
 
 h1 {
   text-align: center;
@@ -200,7 +206,10 @@ h2 {
 .indexBackground {
   background-image: url("/images/map.jpg");
   background-size: cover;
+width: 100vw;
   height: 100vh;
+  padding: 0px;
+  margin: 0;
 }
 
 .shopBackground {
@@ -341,8 +350,6 @@ padding-right: 50px;
 } 
 
 .box {
-  margin-top: 150px;
-  margin-left: 250px;
   border: 5px solid white;
   background-color: rgba(6, 58, 19, 0.7);
   width:70vw;
@@ -474,7 +481,7 @@ margin-top: 50px;
 }
 
 .exploreBox {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 260px;
   border: 5px solid white;
   background-color: rgba(6, 58, 19, 0.7);
