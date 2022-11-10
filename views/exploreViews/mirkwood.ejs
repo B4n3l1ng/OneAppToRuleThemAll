@@ -23,6 +23,16 @@
       <div class="about-page">
         <div class="image">
           <img src="/images/mirkwood.png" alt="Mirkwood" style="width: 600px" />
+          <audio
+            src="/audio/mirkwood.mp3"
+            controls="true"
+            loop
+            class="audio"
+          ></audio>
+          <script>
+            const audio = document.querySelector(".audio");
+            audio.volume = 0.05;
+          </script>
         </div>
 
         <div class="about">

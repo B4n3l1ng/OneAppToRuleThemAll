@@ -4,7 +4,6 @@ const characterSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
   },
 
   species: {

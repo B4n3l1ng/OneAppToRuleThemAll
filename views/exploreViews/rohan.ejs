@@ -27,13 +27,21 @@
             alt="City of Rohan"
             style="width: 300px; height: 200px"
           />
-        </div>
-        <div class="image">
           <img
             src="/images/rohan-coat-of-arms.png"
             alt="Rohan Coat of Arms"
             style="height: 200px"
           />
+          <audio
+            src="/audio/rohan.mp3"
+            controls="true"
+            loop
+            class="audio"
+          ></audio>
+          <script>
+            const audio = document.querySelector(".audio");
+            audio.volume = 0.05;
+          </script>
         </div>
 
         <div class="about">
