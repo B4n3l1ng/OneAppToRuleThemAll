@@ -7,17 +7,23 @@
   font-family: CustomFont;
 }
 
+.pageCtr {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+padding-top: 100px;
+}
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: transparent;
   margin: 0;
   padding: 0;
 }
 
 a {
-  color: #00b7ff;
   padding: 5px;
-}
+} 
 
 h1 {
   text-align: center;
@@ -76,6 +82,8 @@ h2 {
 
 .about-image{
   width: 60vw;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 .about-image img {
   width: 500px;
@@ -89,41 +97,68 @@ h2 {
 
 .gimli-picture{
   width: 500px;
-  height: 400px
+  height: 400px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .frodo-image {
-  width: 500px
+  width: 500px;
+  margin-left: 10px;
+}
+
+.sam-image {
+  margin-left: 10px;
+}
+
+.elrond-image {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.saruman-image {
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .merryPippinImage{
   width:550px;
+  margin-left: 10px;
 }
 .galadriel-image {
   width: 620px;
-  height: 390px
+  height: 390px;
+  margin-left: 10px;
 }
 
 .smeagol-image {
   width: 700px;
+  margin-left: 10px;
 }
 
 .sauron-image {
   width: 700px;
+  margin-left: 10px;
 }
 
 .locationImage {
-  width: 700px
+  width: 700px;
+  margin-left: 10px;
 }
 
 .coatOfArms{
   width:269px
 }
 .locationImageG {
-  width: 400px
+  width: 400px;
+  margin-left: 10px;
 }
 .coatOfArmsG{
-  width:156px
+  width:156px;
+}
+.locationImageR {
+  width: 400px;
+  margin-left: 10px;
 }
 
 .meme{
@@ -171,7 +206,10 @@ h2 {
 .indexBackground {
   background-image: url("/images/map.jpg");
   background-size: cover;
+width: 100vw;
   height: 100vh;
+  padding: 0px;
+  margin: 0;
 }
 
 .shopBackground {
@@ -312,8 +350,6 @@ padding-right: 50px;
 } 
 
 .box {
-  margin-top: 150px;
-  margin-left: 250px;
   border: 5px solid white;
   background-color: rgba(6, 58, 19, 0.7);
   width:70vw;
@@ -445,7 +481,7 @@ margin-top: 50px;
 }
 
 .exploreBox {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 260px;
   border: 5px solid white;
   background-color: rgba(6, 58, 19, 0.7);
