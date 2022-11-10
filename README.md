@@ -1,7 +1,7 @@
 # Project2_One_App_To_Rule_Them_All
 
 A simple backend SSR web application built using ES6, node.js, HTTP, express, ejs, mongoose, cookies and session & auth.
-Click here to see deployed application: https://one-app-to-rule-them-all.cyclic.app/
+Click here to see deployed application: https://projone-app-to-rule-them-all.herokuapp.com/
 
 ## Description
 
