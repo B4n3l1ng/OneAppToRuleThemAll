@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Character = require("/var/task/models/Character.model.js"); //comment
+const Character = require("../models/Character.model.js"); //comment
 const isLoggedIn = require("../middleware/routes");
 
 router.get("/", isLoggedIn, async (req, res) => {
