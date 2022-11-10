@@ -180,4 +180,4 @@ One App To Rule Them All is a simple web application allowing the user to access
 
 Trello - https://trello.com/b/nSV8ho0j/project-2
 GitHub - https://github.com/B4n3l1ng/OneAppToRuleThemAll
-Slides - https://docs.google.com/presentation/d/1ol4Fh5LV5pmmtLXIFrS300f-j6tiI59abDop2s5Z9GY/edit#slide=id.p
+Slides - https://docs.google.com/presentation/d/1MoqdR08b0C-CzAfhsoSfR2MkQyZbUvBy8vV1D1Zjqes/edit?usp=sharing
