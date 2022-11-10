@@ -471,6 +471,12 @@ margin-top: 50px;
 }
 
 
+.charactersBox {
+  margin-top: 150px;
+  margin-left: 250px;
+  background-color: rgba(6, 58, 19, 0.7);
+  width:70vw;
+}
 
 
 
