@@ -22,6 +22,17 @@
       <div class="about-page">
         <div class="image">
           <img src="/images/rivendell.png" class="locationImage" />
+
+          <audio
+            src="/audio/rivendell.mp3"
+            controls="true"
+            loop
+            class="audio"
+          ></audio>
+          <script>
+            const audio = document.querySelector(".audio");
+            audio.volume = 0.05;
+          </script>
         </div>
 
         <div class="about">

@@ -27,15 +27,25 @@
             alt="City of Minas Tirith"
             class="locationImageG"
           />
-        </div>
-        <div class="image">
-          <img
-            src="/images/gondor-coat-of-arms.png"
-            alt="Gondor Coat of arms"
-            class="coatOfArmsG"
-          />
-        </div>
 
+          <div class="image">
+            <img
+              src="/images/gondor-coat-of-arms.png"
+              alt="Gondor Coat of arms"
+              class="coatOfArmsG"
+            />
+          </div>
+          <audio
+            src="/audio/gondor.mp3"
+            controls="true"
+            loop
+            class="audio"
+          ></audio>
+          <script>
+            const audio = document.querySelector(".audio");
+            audio.volume = 0.05;
+          </script>
+        </div>
         <div class="about">
           <p>
             Gondor was the most prominent kingdom of Men in Middle-earth,
