@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Character = require("/models/Character.model");
+const Character = require("/models/Character.model"); //comment
 const isLoggedIn = require("../middleware/routes");
 
 router.get("/", isLoggedIn, async (req, res) => {
