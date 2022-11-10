@@ -1,37 +1,38 @@
 <body class="shopBackground">
-<nav>
-  <a href="/profile">Back to the Prancing Pony</a>
-  <a href="/characters">Your characters!</a>
-  <a href="/characters/new">Create a new character!</a>
-  <a href="/profile/inventory">Take stock of your supplies!</a>
-  <a href="/profile/dealer">Talk to the Dealer</a>
-  <a href="/profile/wealth">Head to Bodrig's Bank</a>
-  <a href="/profile/explore">Explore Middle-earth!</a>
-</nav>
+  <nav>
+    <a href="/profile">Back to the Prancing Pony</a>
+    <a href="/characters">Your characters!</a>
+    <a href="/characters/new">Create a new character!</a>
+    <a href="/profile/inventory">Take stock of your supplies!</a>
+    <a href="/profile/dealer">Talk to the Dealer</a>
+    <a href="/profile/wealth">Head to Bodrig's Bank</a>
+    <a href="/profile/explore">Explore Middle-earth!</a>
+    <a href="/logout">Logout</a>
+  </nav>
 
-<div class="shopBox">
-<h1>WELCOME TO EGINHARD'S EMPORIUM</h1>
+  <div class="shopBox">
+    <h1>WELCOME TO EGINHARD'S EMPORIUM</h1>
 
-<p>
-  Welcome, weary traveller. Please, take a look around my little emporium. If
-  you need me, I will be in the back...
-</p>
+    <p>
+      Welcome, weary traveller. Please, take a look around my little emporium.
+      If you need me, I will be in the back...
+    </p>
 
-<% if (typeof errorMessage !== 'undefined') { %>
-<p style="font-weight: bold; color: yellow"><%= errorMessage %></p>
-<% } %>
+    <% if (typeof errorMessage !== 'undefined') { %>
+    <p style="font-weight: bold; color: yellow"><%= errorMessage %></p>
+    <% } %>
 
-<div class="shopItems">
-  <% shopItems.forEach((item) => { %>
-  <div class="shopItem">
-    <p><%= item.name %></p>
-    <p><%= item.price %> Castar</p>
-    <p><img src="<%= item.image %>" /></p>
-    <form method="POST" action="/profile/shop/<%=item._id%>">
-      <button type="submit">Purchase</button>
-    </form>
+    <div class="shopItems">
+      <% shopItems.forEach((item) => { %>
+      <div class="shopItem">
+        <p><%= item.name %></p>
+        <p><%= item.price %> Castar</p>
+        <p><img src="<%= item.image %>" /></p>
+        <form method="POST" action="/profile/shop/<%=item._id%>">
+          <button type="submit">Purchase</button>
+        </form>
+      </div>
+      <% }) %>
+    </div>
   </div>
-  <% }) %>
-</div>
-</div>
 </body>

@@ -1,23 +1,26 @@
 <body class="shopBackground">
-<nav>
-  <a href="/profile">Back to the Prancing Pony</a>
-  <a href="/characters">Your characters!</a>
-  <a href="/characters/new">Create a new character!</a>
-  <a href="/profile/shop">Visit Eginhard's Emporium</a>
-  <a href="/profile/dealer">Talk to the Dealer</a>
-  <a href="/profile/wealth">Head to Bodrig's Bank</a>
-  <a href="/profile/explore">Explore Middle-earth!</a>
-</nav>
+  <nav>
+    <a href="/profile">Back to the Prancing Pony</a>
+    <a href="/characters">Your characters!</a>
+    <a href="/characters/new">Create a new character!</a>
+    <a href="/profile/shop">Visit Eginhard's Emporium</a>
+    <a href="/profile/dealer">Talk to the Dealer</a>
+    <a href="/profile/wealth">Head to Bodrig's Bank</a>
+    <a href="/profile/explore">Explore Middle-earth!</a>
+    <a href="/logout">Logout</a>
+  </nav>
 
-<div class="checkoutBox basketBtn" style="margin-top: 200px">
-<p class="basketText">
-  Thank you for your purchase! Please come again soon, and remember Eginhard for
-  all your future needs.
-</p>
-<p>Amount spent today: <%=amount%> Castar</p>
-<p>You now have <%= updatedUser.money %> Castar in the bank</p>
-<p class="basketText">Still plenty left to buy a pint of Southfarthing at the Prancing Pony!</p>
+  <div class="checkoutBox basketBtn" style="margin-top: 200px">
+    <p class="basketText">
+      Thank you for your purchase! Please come again soon, and remember Eginhard
+      for all your future needs.
+    </p>
+    <p>Amount spent today: <%=amount%> Castar</p>
+    <p>You now have <%= updatedUser.money %> Castar in the bank</p>
+    <p class="basketText">
+      Still plenty left to buy a pint of Southfarthing at the Prancing Pony!
+    </p>
 
-<a class="basketLink" href="/profile/inventory">Head to your stores</a>
-</div>
+    <a class="basketLink" href="/profile/inventory">Head to your stores</a>
+  </div>
 </body>

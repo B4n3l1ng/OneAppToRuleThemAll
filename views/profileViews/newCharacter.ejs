@@ -1,42 +1,64 @@
-<nav>
-  <a href="/profile">Back to the Prancing Pony</a>
-  <a href="/characters">Your characters!</a>
-  <a href="/profile/shop">Visit Eginhard's Emporium</a>
-  <a href="/profile/inventory">Take stock of your supplies!</a>
-  <a href="/profile/dealer">Talk to the Dealer</a>
-  <a href="/profile/wealth">Head to Bodrig's Bank</a>
-  <a href="/profile/explore">Explore Middle-earth!</a>
-</nav>
-
-<div>
-  <h2>Create a new character!</h2>
-  <form action="/characters/new" method="POST">
-    <label>Name:<input type="text" required name="name" /></label>
-    <label>Species:</label>
-    <select name="species" required>
-      <option value="Human">Human</option>
-      <option value="Elf">Elf</option>
-      <option value="Orc">Orc</option>
-      <option value="Ent">Ent</option>
-      <option value="Wizard">Wizard</option>
-      <option value="Dwarf">Dwarf</option>
-      <option value="Hobbit">Hobbit</option>
-    </select>
-    <label>Gender:</label>
-    <select name="gender" required>
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-    </select>
-    <label>Occupation: <input type="text" name="occupation" required /></label>
-    <label>Allegiance: <input type="text" name="allegiance" required /></label>
-    <label>Weapon of choice:</label>
-    <select name="weapons">
-      <option value="Longsword">You have my longsword!</option>
-      <option value="Bow">And my bow!</option>
-      <option value="Short Sword">Short Sword</option>
-      <option value="Staff">Staff</option>
-      <option value="Axe">...And my axe!</option>
-    </select>
-    <button type="submit">Hop into Middle Earth!</button>
-  </form>
+<div class="updateBackground">
+  <nav>
+    <a href="/profile">Back to the Prancing Pony</a>
+    <a href="/characters">Your characters!</a>
+    <a href="/profile/shop">Visit Eginhard's Emporium</a>
+    <a href="/profile/inventory">Take stock of your supplies!</a>
+    <a href="/profile/dealer">Talk to the Dealer</a>
+    <a href="/profile/wealth">Head to Bodrig's Bank</a>
+    <a href="/profile/explore">Explore Middle-earth!</a>
+    <a href="/logout">Logout</a>
+  </nav>
+  <div class="box">
+    <div class="pageText">
+      <h1>Create a new character!</h1>
+      <form action="/characters/new" method="POST">
+        <ul class="wrapper">
+          <li class="form-row">
+            <label>Name:</label><input type="text" required name="name" />
+          </li>
+          <li class="form-row">
+            <label>Species:</label>
+            <select name="species" required>
+              <option value="Human">Human</option>
+              <option value="Elf">Elf</option>
+              <option value="Orc">Orc</option>
+              <option value="Ent">Ent</option>
+              <option value="Wizard">Wizard</option>
+              <option value="Dwarf">Dwarf</option>
+              <option value="Hobbit">Hobbit</option>
+            </select>
+          </li>
+          <li class="form-row">
+            <label>Gender:</label>
+            <select name="gender" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </li>
+          <li class="form-row">
+            <label>Occupation:</label>
+            <input type="text" name="occupation" required />
+          </li>
+          <li class="form-row">
+            <label>Allegiance:</label>
+            <input type="text" name="allegiance" required />
+          </li>
+          <li class="form-row">
+            <label>Weapon of choice:</label>
+            <select name="weapons">
+              <option value="Longsword">You have my longsword!</option>
+              <option value="Bow">And my bow!</option>
+              <option value="Short Sword">Short Sword</option>
+              <option value="Staff">Staff</option>
+              <option value="Axe">...And my axe!</option>
+            </select>
+          </li>
+          <li class="form-row">
+            <button type="submit">Hop into Middle Earth!</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
 </div>
