@@ -5,17 +5,17 @@ const shopItems = [
   {
     name: "Strength Potion",
     price: 60,
-    image: "/images/strength_potion.png"
+    image: "/images/strength_potion.png",
   },
   {
     name: "Healing Potion",
     price: 80,
-    image: "/images/health_potion.png"
+    image: "/images/health_potion.png",
   },
   {
     name: "Mithril",
     price: 200,
-    image: "/images/mithril.png"
+    image: "/images/mithril.png",
   },
   {
     name: "Lembas Bread",
