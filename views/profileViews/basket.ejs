@@ -10,225 +10,253 @@
     <a href="/logout">Logout</a>
   </nav>
 
-  
-    <div class="basketCtr">
-      <p class="basketText">
-        Some excellent selections, my good traveller. Can I interest you in
-        anything further?
-      </p>
-      <div class="linkCtr">
-        <div>
-          <a class="basketLink" href="/profile/shop">Keep Looking</a>
-        </div>
-        <div>
-          <form method="POST" action="/profile/checkout">
-            <button class="basketLink" type="sumbit">Pay Eginhard</button>
-          </form>
-        </div>
-      </div>
-      <div class="basketText">Total to Pay: <%= totalBasket %> Castar</div>
-
-      <form method="POST" action="/profile/basket/clear">
-        <button class="basketLink" type="submit">Clear Entire Basket</button>
-      </form>
-    </div>
-
-    
-      <% if(strengthPotions.length !== 0) { %>
+  <div class="basketCtr">
+    <p class="basketText">
+      Some excellent selections, my good traveller. Can I interest you in
+      anything further?
+    </p>
+    <div class="linkCtr">
       <div>
-      <h2><%=strengthPotions[0].name%></h2>
-      <p>
-        You have <span style="font-size: 30px; font-weight: bold;"><%=strengthPotions.length%></span> in your basket, costing a total of
-        <%=strengthPotions[0].price * strengthPotions.length%> Castar
-      </p>
-      <p><img src="<%= strengthPotions[0].image %>" /></p>
-      <form
-        class="basketBtn"
-        method="POST"
-        action="/profile/basket/<%= strengthPotions[0].id %>"
-      >
-        <button type="submit">Remove One From Basket</button>
-      </form>
-      <% } %>
+        <a class="basketLink" href="/profile/shop">Keep Looking</a>
+      </div>
+      <div>
+        <form method="POST" action="/profile/checkout">
+          <button class="basketLink caching" type="sumbit">Pay Eginhard</button>
+        </form>
+      </div>
     </div>
-    
-      <% if(healthPotions.length !== 0) { %>
-        <div>
-      <h2><%=healthPotions[0].name%></h2>
-      <p>
-        You have <span style="font-size: 30px; font-weight: bold;"><%=healthPotions.length%></span> in your basket, costing a total of
-        <%=healthPotions[0].price * healthPotions.length%> Castar
-      </p>
-      <p><img src="<%= healthPotions[0].image %>" /></p>
-      <form
-        class="basketBtn"
-        method="POST"
-        action="/profile/basket/<%= healthPotions[0].id %>"
+    <div class="basketText">Total to Pay: <%= totalBasket %> Castar</div>
+
+    <form method="POST" action="/profile/basket/clear">
+      <button class="basketLink" type="submit">Clear Entire Basket</button>
+    </form>
+  </div>
+
+  <% if(strengthPotions.length !== 0) { %>
+  <div>
+    <h2><%=strengthPotions[0].name%></h2>
+    <p>
+      You have
+      <span style="font-size: 30px; font-weight: bold"
+        ><%=strengthPotions.length%></span
       >
-        <button type="submit">Remove One From Basket</button>
-      </form>
-      <% } %>
-    </div>
-    
-      <% if(mithrils.length !== 0) { %>
-        <div>
-      <h2><%=mithrils[0].name%></h2>
-      <p>
-        You have <span style="font-size: 30px; font-weight: bold;"><%=mithrils.length%></span> in your basket, costing a total of
-        <%=mithrils[0].price * mithrils.length%> Castar
-      </p>
-      <p><img src="<%= mithrils[0].image %>" /></p>
-      <form
-        class="basketBtn"
-        method="POST"
-        action="/profile/basket/<%= mithrils[0].id %>"
+      in your basket, costing a total of <%=strengthPotions[0].price *
+      strengthPotions.length%> Castar
+    </p>
+    <p><img src="<%= strengthPotions[0].image %>" /></p>
+    <form
+      class="basketBtn"
+      method="POST"
+      action="/profile/basket/<%= strengthPotions[0].id %>"
+    >
+      <button type="submit">Remove One From Basket</button>
+    </form>
+    <% } %>
+  </div>
+
+  <% if(healthPotions.length !== 0) { %>
+  <div>
+    <h2><%=healthPotions[0].name%></h2>
+    <p>
+      You have
+      <span style="font-size: 30px; font-weight: bold"
+        ><%=healthPotions.length%></span
       >
-        <button type="submit">Remove One From Basket</button>
-      </form>
-      <% } %>
-    </div>
-    
-      <% if(breads.length !== 0) { %>
-        <div>
-      <h2><%=breads[0].name%></h2>
-      <p>
-        You have <span style="font-size: 30px; font-weight: bold;"><%=breads.length%></span> in your basket, costing a total of
-        <%=breads[0].price * breads.length%> Castar
-      </p>
-      <p><img src="<%= breads[0].image %>" /></p>
-      <form
-        class="basketBtn"
-        method="POST"
-        action="/profile/basket/<%= breads[0].id %>"
+      in your basket, costing a total of <%=healthPotions[0].price *
+      healthPotions.length%> Castar
+    </p>
+    <p><img src="<%= healthPotions[0].image %>" /></p>
+    <form
+      class="basketBtn"
+      method="POST"
+      action="/profile/basket/<%= healthPotions[0].id %>"
+    >
+      <button type="submit">Remove One From Basket</button>
+    </form>
+    <% } %>
+  </div>
+
+  <% if(mithrils.length !== 0) { %>
+  <div>
+    <h2><%=mithrils[0].name%></h2>
+    <p>
+      You have
+      <span style="font-size: 30px; font-weight: bold"
+        ><%=mithrils.length%></span
       >
-        <button type="submit">Remove One From Basket</button>
-      </form>
-      <% } %>
-    </div>
-    
-      <% if(cloaks.length !== 0) { %>
-        <div>
-      <h2><%=cloaks[0].name%></h2>
-      <p>
-        You have <span style="font-size: 30px; font-weight: bold;"><%=cloaks.length%></span> in your basket, costing a total of
-        <%=cloaks[0].price * cloaks.length%> Castar
-      </p>
-      <p><img src="<%= cloaks[0].image %>" /></p>
-      <form
-        class="basketBtn"
-        method="POST"
-        action="/profile/basket/<%= cloaks[0].id %>"
+      in your basket, costing a total of <%=mithrils[0].price *
+      mithrils.length%> Castar
+    </p>
+    <p><img src="<%= mithrils[0].image %>" /></p>
+    <form
+      class="basketBtn"
+      method="POST"
+      action="/profile/basket/<%= mithrils[0].id %>"
+    >
+      <button type="submit">Remove One From Basket</button>
+    </form>
+    <% } %>
+  </div>
+
+  <% if(breads.length !== 0) { %>
+  <div>
+    <h2><%=breads[0].name%></h2>
+    <p>
+      You have
+      <span style="font-size: 30px; font-weight: bold"><%=breads.length%></span>
+      in your basket, costing a total of <%=breads[0].price * breads.length%>
+      Castar
+    </p>
+    <p><img src="<%= breads[0].image %>" /></p>
+    <form
+      class="basketBtn"
+      method="POST"
+      action="/profile/basket/<%= breads[0].id %>"
+    >
+      <button type="submit">Remove One From Basket</button>
+    </form>
+    <% } %>
+  </div>
+
+  <% if(cloaks.length !== 0) { %>
+  <div>
+    <h2><%=cloaks[0].name%></h2>
+    <p>
+      You have
+      <span style="font-size: 30px; font-weight: bold"><%=cloaks.length%></span>
+      in your basket, costing a total of <%=cloaks[0].price * cloaks.length%>
+      Castar
+    </p>
+    <p><img src="<%= cloaks[0].image %>" /></p>
+    <form
+      class="basketBtn"
+      method="POST"
+      action="/profile/basket/<%= cloaks[0].id %>"
+    >
+      <button type="submit">Remove One From Basket</button>
+    </form>
+    <% } %>
+  </div>
+
+  <% if(canoes.length !== 0) { %>
+  <div>
+    <h2><%=canoes[0].name%></h2>
+    <p>
+      You have
+      <span style="font-size: 30px; font-weight: bold"><%=canoes.length%></span>
+      in your basket, costing a total of <%=canoes[0].price * canoes.length%>
+      Castar
+    </p>
+    <p><img src="<%= canoes[0].image %>" /></p>
+    <form
+      class="basketBtn"
+      method="POST"
+      action="/profile/basket/<%= canoes[0].id %>"
+    >
+      <button type="submit">Remove One From Basket</button>
+    </form>
+    <% } %>
+  </div>
+
+  <% if(bows.length !== 0) { %>
+  <div>
+    <h2><%=bows[0].name%></h2>
+    <p>
+      You have
+      <span style="font-size: 30px; font-weight: bold"><%=bows.length%></span>
+      in your basket, costing a total of <%=bows[0].price * bows.length%> Castar
+    </p>
+    <p><img src="<%= bows[0].image %>" /></p>
+    <form
+      class="basketBtn"
+      method="POST"
+      action="/profile/basket/<%= bows[0].id %>"
+    >
+      <button type="submit">Remove One From Basket</button>
+    </form>
+    <% } %>
+  </div>
+
+  <% if(longSwords.length !== 0) { %>
+  <div>
+    <h2><%=longSwords[0].name%></h2>
+    <p>
+      You have
+      <span style="font-size: 30px; font-weight: bold"
+        ><%=longSwords.length%></span
       >
-        <button type="submit">Remove One From Basket</button>
-      </form>
-      <% } %>
-    </div>
-    
-      <% if(canoes.length !== 0) { %>
-        <div>
-      <h2><%=canoes[0].name%></h2>
-      <p>
-        You have <span style="font-size: 30px; font-weight: bold;"><%=canoes.length%></span> in your basket, costing a total of
-        <%=canoes[0].price * canoes.length%> Castar
-      </p>
-      <p><img src="<%= canoes[0].image %>" /></p>
-      <form
-        class="basketBtn"
-        method="POST"
-        action="/profile/basket/<%= canoes[0].id %>"
+      in your basket, costing a total of <%=longSwords[0].price *
+      longSwords.length%> Castar
+    </p>
+    <p><img src="<%= longSwords[0].image %>" /></p>
+    <form
+      class="basketBtn"
+      method="POST"
+      action="/profile/basket/<%= longSwords[0].id %>"
+    >
+      <button type="submit">Remove One From Basket</button>
+    </form>
+    <% } %>
+  </div>
+
+  <% if(shortSwords.length !== 0) { %>
+  <div>
+    <h2><%=shortSwords[0].name%></h2>
+    <p>
+      You have
+      <span style="font-size: 30px; font-weight: bold"
+        ><%=shortSwords.length%></span
       >
-        <button type="submit">Remove One From Basket</button>
-      </form>
-      <% } %>
-    </div>
-    
-      <% if(bows.length !== 0) { %>
-        <div>
-      <h2><%=bows[0].name%></h2>
-      <p>
-        You have <span style="font-size: 30px; font-weight: bold;"><%=bows.length%></span> in your basket, costing a total of
-        <%=bows[0].price * bows.length%> Castar
-      </p>
-      <p><img src="<%= bows[0].image %>" /></p>
-      <form
-        class="basketBtn"
-        method="POST"
-        action="/profile/basket/<%= bows[0].id %>"
-      >
-        <button type="submit">Remove One From Basket</button>
-      </form>
-      <% } %>
-    </div>
-    
-      <% if(longSwords.length !== 0) { %>
-        <div>
-      <h2><%=longSwords[0].name%></h2>
-      <p>
-        You have <span style="font-size: 30px; font-weight: bold;"><%=longSwords.length%></span> in your basket, costing a total of
-        <%=longSwords[0].price * longSwords.length%> Castar
-      </p>
-      <p><img src="<%= longSwords[0].image %>" /></p>
-      <form
-        class="basketBtn"
-        method="POST"
-        action="/profile/basket/<%= longSwords[0].id %>"
-      >
-        <button type="submit">Remove One From Basket</button>
-      </form>
-      <% } %>
-    </div>
-    
-      <% if(shortSwords.length !== 0) { %>
-        <div>
-      <h2><%=shortSwords[0].name%></h2>
-      <p>
-        You have <span style="font-size: 30px; font-weight: bold;"><%=shortSwords.length%></span> in your basket, costing a total of
-        <%=shortSwords[0].price * shortSwords.length%> Castar
-      </p>
-      <p><img src="<%= shortSwords[0].image %>" /></p>
-      <form
-        class="basketBtn"
-        method="POST"
-        action="/profile/basket/<%= shortSwords[0].id %>"
-      >
-        <button type="submit">Remove One From Basket</button>
-      </form>
-      <% } %>
-    </div>
-    
-      <% if(staffs.length !== 0) { %>
-        <div>
-      <h2><%=staffs[0].name%></h2>
-      <p>
-        You have <span style="font-size: 30px; font-weight: bold;"><%=staffs.length%></span> in your basket, costing a total of
-        <%=staffs[0].price * staffs.length%> Castar
-      </p>
-      <p><img src="<%= staffs[0].image %>" /></p>
-      <form
-        class="basketBtn"
-        method="POST"
-        action="/profile/basket/<%= staffs[0].id %>"
-      >
-        <button type="submit">Remove One From Basket</button>
-      </form>
-      <% } %>
-    </div>
-    
-      <% if(axes.length !== 0) { %>
-        <div >
-      <h2><%=axes[0].name%></h2>
-      <p>
-        You have <span style="font-size: 30px; font-weight: bold;"><%=axes.length%></span> in your basket, costing a total of
-        <%=axes[0].price * axes.length%> Castar
-      </p>
-      <p><img src="<%= axes[0].image %>" /></p>
-      <form
-        class="basketBtn"
-        method="POST"
-        action="/profile/basket/<%= axes[0].id %>"
-      >
-        <button type="submit">Remove One From Basket</button>
-      </form>
-      <% } %>
-    </div>
+      in your basket, costing a total of <%=shortSwords[0].price *
+      shortSwords.length%> Castar
+    </p>
+    <p><img src="<%= shortSwords[0].image %>" /></p>
+    <form
+      class="basketBtn"
+      method="POST"
+      action="/profile/basket/<%= shortSwords[0].id %>"
+    >
+      <button type="submit">Remove One From Basket</button>
+    </form>
+    <% } %>
+  </div>
+
+  <% if(staffs.length !== 0) { %>
+  <div>
+    <h2><%=staffs[0].name%></h2>
+    <p>
+      You have
+      <span style="font-size: 30px; font-weight: bold"><%=staffs.length%></span>
+      in your basket, costing a total of <%=staffs[0].price * staffs.length%>
+      Castar
+    </p>
+    <p><img src="<%= staffs[0].image %>" /></p>
+    <form
+      class="basketBtn"
+      method="POST"
+      action="/profile/basket/<%= staffs[0].id %>"
+    >
+      <button type="submit">Remove One From Basket</button>
+    </form>
+    <% } %>
+  </div>
+
+  <% if(axes.length !== 0) { %>
+  <div>
+    <h2><%=axes[0].name%></h2>
+    <p>
+      You have
+      <span style="font-size: 30px; font-weight: bold"><%=axes.length%></span>
+      in your basket, costing a total of <%=axes[0].price * axes.length%> Castar
+    </p>
+    <p><img src="<%= axes[0].image %>" /></p>
+    <form
+      class="basketBtn"
+      method="POST"
+      action="/profile/basket/<%= axes[0].id %>"
+    >
+      <button type="submit">Remove One From Basket</button>
+    </form>
+    <% } %>
+  </div>
 </body>
