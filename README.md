@@ -1,7 +1,7 @@
 # Project2_One_App_To_Rule_Them_All
 
 A simple backend SSR web application built using ES6, node.js, HTTP, express, ejs, mongoose, cookies and session & auth.
-Click here to see deployed application: https://one-app-to-rule-them-all.cyclic.app/
+Click here to see deployed application: https://projone-app-to-rule-them-all.herokuapp.com/
 
 ## Description
 
@@ -180,4 +180,4 @@ One App To Rule Them All is a simple web application allowing the user to access
 
 Trello - https://trello.com/b/nSV8ho0j/project-2
 GitHub - https://github.com/B4n3l1ng/OneAppToRuleThemAll
-Slides - https://docs.google.com/presentation/d/1ol4Fh5LV5pmmtLXIFrS300f-j6tiI59abDop2s5Z9GY/edit#slide=id.p
+Slides - https://docs.google.com/presentation/d/1MoqdR08b0C-CzAfhsoSfR2MkQyZbUvBy8vV1D1Zjqes/edit?usp=sharing
