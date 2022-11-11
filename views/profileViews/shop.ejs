@@ -27,7 +27,7 @@
       <div class="shopItem">
         <p><%= item.name %></p>
         <p><%= item.price %> Castar</p>
-        <p><img src="<%= item.image %>" /></p>
+        <div class="shopItemBackground"><img src="<%= item.image %>" /></div>
         <form method="POST" action="/profile/shop/<%=item._id%>">
           <button type="submit">Purchase</button>
         </form>

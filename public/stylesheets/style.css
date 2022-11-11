@@ -218,6 +218,12 @@ width: 100vw;
   height: 110%;
 }
 
+.shopItemBackground {
+  background-color: rgb(192, 192, 192, 0.5);
+  padding: 10px;
+  border-radius: 50% 20% / 10% 40%;;
+}
+
 .saleBackground {
   background-image: url("/images/saleBackground.png");
   background-size: cover;
