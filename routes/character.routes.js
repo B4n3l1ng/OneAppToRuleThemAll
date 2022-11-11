@@ -28,7 +28,6 @@ router.get("/:Id/", isLoggedIn, async (req, res) => {
 
 router.post("/new", isLoggedIn, async (req, res) => {
   try {
-    const charName = req.body.name;
     let imgUrl;
     if (req.body.species === "Human" && req.body.gender === "Male") {
       imgUrl = "/images/male_human.png";
@@ -57,22 +56,17 @@ router.post("/new", isLoggedIn, async (req, res) => {
     } else if (req.body.species === "Hobbit" && req.body.gender === "Female") {
       imgUrl = "/images/female_hobbit.png";
     }
-    if (await Character.findOne({ name: charName })) {
-      const errorMessage = "Name is already in use";
-      res.render("profileViews/newCharacter", { errorMessage });
-    } else {
-      const created = await Character.create({
-        name: req.body.name,
-        species: req.body.species,
-        gender: req.body.gender,
-        occupation: req.body.occupation,
-        allegiance: req.body.allegiance,
-        weapons: req.body.weapons,
-        image: imgUrl,
-        owner: req.session.user,
-      });
-      res.redirect(`/characters/${created.id}/details`);
-    }
+    const created = await Character.create({
+      name: req.body.name,
+      species: req.body.species,
+      gender: req.body.gender,
+      occupation: req.body.occupation,
+      allegiance: req.body.allegiance,
+      weapons: req.body.weapons,
+      image: imgUrl,
+      owner: req.session.user,
+    });
+    res.redirect(`/characters/${created.id}/details`);
   } catch (error) {
     console.log(error);
   }
