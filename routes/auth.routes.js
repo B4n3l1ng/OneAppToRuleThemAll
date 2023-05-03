@@ -17,6 +17,7 @@ router.post("/login", async (req, res) => {
       res.render("auth/login", { errorMessage: "Username does not exist" });
     } else {
       if (bcrypt.compareSync(password, currentUser.password)) {
+        currentUser.password="";
         req.session.user = currentUser;
         res.redirect("/profile");
       } else {
