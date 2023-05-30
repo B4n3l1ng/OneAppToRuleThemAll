@@ -242,7 +242,7 @@ width: 100vw;
 .shopBackground {
   background-image: url("/images/shopBackground.jpg");
   background-size: cover;
-  height: 110%;
+  height: 100%;
 }
 
 .shopItemBackground {
@@ -258,7 +258,9 @@ width: 100vw;
 }
 
 .shopBox {
-  margin: 50px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 5px solid white;
   background-color: rgba(6, 58, 19, 0.7);
   width: 95%;
@@ -266,7 +268,7 @@ width: 100vw;
   font-size: 20px;
   text-align: center;
   padding-bottom: 50px;
-  height: 100vh;
+  height: 100%;
 }
 
 .checkoutBox {
@@ -281,6 +283,15 @@ width: 100vw;
   text-align: center;
 }
 
+.charBox {
+  border: 5px solid white;
+  background-color: rgba(6, 58, 19, 0.7);
+  width:70%;
+  height: 62%;
+  position: fixed;
+  top: 20%;
+  margin: auto;
+}
 .shopItems {
  
   color: white;
