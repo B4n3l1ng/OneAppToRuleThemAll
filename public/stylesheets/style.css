@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-padding-top: 100px;
+  padding-top: 100px;
 }
 
 body {
@@ -34,22 +34,44 @@ h2 {
   padding: 10px
 }
 
+.headingCtr {
+display: flex;
+justify-content: space-around;
+}
+
+.exploreBox {
+  margin: auto;
+  margin-top: 50px;
+  border: 5px solid white;
+  background-color: rgba(6, 58, 19, 0.7);
+  width:70vw;
+  height: 75vh;
+}
+
+.exploreText {
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+
 .explore-page {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
-.places {
+.itemList {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  max-height: 460px;
+  flex-wrap: wrap;
 }
 
-.places a {
+.itemList a {
   border: 1px solid white;
   border-radius: 50% 20% / 10% 40%;
-  margin: 5px;
+  margin: 20px;
   width: 10vw;
   text-align: center;
   text-decoration: none;
@@ -57,22 +79,6 @@ h2 {
   background-color: white;
 }
 
-.characters {
-  display: flex;
-  flex-direction:column;
-  justify-content: space-evenly;
-}
-
-.characters a {
-  border: 1px solid white;
-  border-radius: 50% 20% / 10% 40%;
-  margin: 5px;
-  width: 10vw;
-  text-align: center;
-  text-decoration: none;
-  color: rgb(6, 58, 19);
-  background-color: white;
-}
 .about-page {
   display: flex;
   justify-content: center;
@@ -86,13 +92,11 @@ h2 {
   margin-bottom: 10px;
 }
 .about-image img {
-  width: 500px;
+  max-width: 450px;
 }
 .about {
   margin-left: 20px;
-  text-align: left;
-  margin-top: 0px;
-  padding-top: 0px
+  text-align: left
 }
 
 .gimli-picture{
@@ -100,6 +104,14 @@ h2 {
   height: 400px;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+.aragornImg {
+width: 270px;
+}
+
+.legolasImg {
+width: 270px;
 }
 
 .frodo-image {
@@ -370,6 +382,7 @@ padding-right: 50px;
   justify-content: center;
   align-items: center;
 }
+
  .buttons {
   display: flex;
   justify-content: center;
@@ -486,19 +499,7 @@ margin-top: 50px;
   color: rgb(6, 58, 19);
 }
 
-.exploreBox {
-  margin-top: 20px;
-  margin-left: 260px;
-  border: 5px solid white;
-  background-color: rgba(6, 58, 19, 0.7);
-  width:70vw;
-}
 
-.exploreText {
-  font-size: 15px;
-  text-align: center;
-  color: white;
-}
 
 .dealerBackground {
   background-image: url("/images/dealer.jpg");
@@ -512,7 +513,6 @@ margin-top: 50px;
   height: 100vh;
 }
 
-
 .charactersBox {
   margin-top: 150px;
   margin-left: 250px;
@@ -520,26 +520,63 @@ margin-top: 50px;
   width:70vw;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .error {
   color: tomato;
  }
+
+ @media (max-width: 1300px) or (max-height: 800px) {
+  .pageText {
+    font-size: 15px;
+  }
+  .box {
+    margin-top: auto;
+  }
+  nav {
+    font-size: 70%;
+  }
+  .exploreText {
+    font-size: 13px;
+  }
+  .exploreBox {
+   width: 80vw;
+  }
+  .itemList a {
+    margin: 15px
+   }
+   .about-image img {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 1000px) or (max-height: 700px) {
+  .pageText {
+    font-size: 12px;
+  }
+  .box {
+    margin-top: auto;
+  }
+  nav {
+    font-size: 60%;
+  }
+  .exploreBox {
+    width: 90vw;
+   }
+   .itemList a {
+    margin: 8px
+   }
+   .about-image img {
+    max-width: 300px;
+  }
+}
+
+@media (max-height: 650px) {
+  .about-image img {
+    display: none;
+  }
+  .about-page {
+display: inline;
+  }
+  .about {
+    font-size: 75%;
+  }
+}
