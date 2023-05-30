@@ -101,13 +101,12 @@ justify-content: space-around;
 
 .gimli-picture{
   width: 500px;
-  height: 400px;
   margin-left: 10px;
   margin-bottom: 10px;
 }
 
 .aragornImg {
-width: 270px;
+width: 250px;
 }
 
 .legolasImg {
@@ -121,6 +120,7 @@ width: 270px;
 
 .sam-image {
   margin-left: 10px;
+  width: 300px
 }
 
 .elrond-image {
@@ -128,18 +128,15 @@ width: 270px;
   margin-bottom: 10px;
 }
 
-.saruman-image {
-  margin-left: 10px;
-  margin-bottom: 10px;
+.sarumanImg {
+  width: 200px
 }
 
 .merryPippinImage{
-  width:550px;
-  margin-left: 10px;
+  width:500px;
 }
 .galadriel-image {
   width: 620px;
-  height: 390px;
   margin-left: 10px;
 }
 
@@ -159,24 +156,35 @@ width: 270px;
 }
 
 .coatOfArms{
-  width:269px
+  width:269px;
 }
 .locationImageG {
-  width: 400px;
+  width: 200px;
   margin-left: 10px;
 }
 .coatOfArmsG{
-  width:156px;
+  width:120px;
+}
+.coatOfArmsR{
+  width:120px;
 }
 .locationImageR {
-  width: 400px;
+  width: 200px;
   margin-left: 10px;
 }
 
 .meme{
   display: flex;
   justify-content: center;
-  padding: 10px
+  padding: 50px
+}
+
+.meme img {
+  max-width: 900px
+}
+
+.mordorImg {
+  width: 300px
 }
 
 .answers {
@@ -214,6 +222,14 @@ width: 270px;
   padding-bottom: 20px;
   padding-top: 20px;
 }
+
+.profileBox {
+  margin-top: 50px;
+    margin-left: 250px;
+    border: 5px solid white;
+    background-color: rgba(6, 58, 19, 0.7);
+    width:70vw;
+  }
 
 .indexBackground {
   background-image: url("/images/map.jpg");
@@ -452,14 +468,6 @@ button {
   color: white;
 }
 
-.profileBox {
-margin-top: 50px;
-  margin-left: 250px;
-  border: 5px solid white;
-  background-color: rgba(6, 58, 19, 0.7);
-  width:70vw;
-}
-
 .characterImg {
   width: 150px;
 }
@@ -524,6 +532,24 @@ margin-top: 50px;
   color: tomato;
  }
 
+ @media (max-width: 1800px) {
+  .about-rohan {
+    font-size: 12px;
+  }
+  .about-mirk {
+    font-size: 12px;
+  }
+  .about-moria {
+    font-size: 12px;
+  }
+  .about-isengard {
+    font-size: 12px;
+  }
+  .about-mordor {
+    font-size: 12px;
+  }
+ }
+
  @media (max-width: 1300px) or (max-height: 800px) {
   .pageText {
     font-size: 15px;
@@ -546,6 +572,24 @@ margin-top: 50px;
    .about-image img {
     max-width: 400px;
   }
+  .about-rohan {
+    font-size: 11.5px;
+  }
+  .about-mirk {
+    font-size: 11.5px;
+  }
+  .about-moria {
+    font-size: 11.5px;
+  }
+  .about-isengard {
+    font-size: 11.5px;
+  }
+  .about-mordor {
+    font-size: 11px;
+  }
+  .meme img {
+    max-width: 700px
+  }
 }
 
 @media (max-width: 1000px) or (max-height: 700px) {
@@ -567,6 +611,15 @@ margin-top: 50px;
    .about-image img {
     max-width: 300px;
   }
+  .about-image-mp {
+    margin-left: 0;
+  }
+  .about-mp {
+    margin-left: 0;
+  }
+  .meme img {
+    max-width: 500px
+  }
 }
 
 @media (max-height: 650px) {
@@ -575,6 +628,10 @@ margin-top: 50px;
   }
   .about-page {
 display: inline;
+  }
+  .audio {
+    display: block;
+    height: 30px;
   }
   .about {
     font-size: 75%;

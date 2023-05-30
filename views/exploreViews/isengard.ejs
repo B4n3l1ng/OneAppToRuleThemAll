@@ -1,98 +1,89 @@
 <div class="indexBackground">
-  <nav>
-    <% if (change) { %>
-    <a href="/profile">Back to the Prancing Pony</a>
-    <a href="/characters">Your characters!</a>
-    <a href="/characters/new">Create a new character!</a>
-    <a href="/profile/shop">Visit Eginhard's Emporium</a>
-    <a href="/profile/inventory">Take stock of your supplies!</a>
-    <a href="/profile/dealer">Talk to the Dealer</a>
-    <a href="/profile/wealth">Head to Bodrig's Bank</a>
-    <a href="/profile/explore">Explore Middle-earth</a>
-    <a href="/logout">Logout</a>
-    <% } else { %>
-    <a href="/login">Log in!</a>
-    <a href="/signup">Create an account!</a>
-    <a href="/profile/explore">Explore Middle-earth</a>
-    <% } %>
-  </nav>
-  <div class="exploreBox">
-    <div class="exploreText">
-      <h1>Isengard</h1>
-      <div class="about-page">
-        <div class="locationImage">
-          <img
-            src="/images/isengard.png"
-            alt="Isengard"
-            style="width: 500px; height: 400px"
-          />
-          <audio
-            src="https://res.cloudinary.com/dtiihknqe/video/upload/v1668093125/isengard_kp3iok.mp3"
-            controls="true"
-            loop
-            class="audio"
-          ></audio>
-          <script>
-            const audio = document.querySelector(".audio");
-            audio.volume = 0.05;
-          </script>
-        </div>
+    <nav>
+        <% if (change) { %>
+            <a href="/profile">Back to the Prancing Pony</a>
+            <a href="/characters">Your characters!</a>
+            <a href="/characters/new">Create a new character!</a>
+            <a href="/profile/shop">Visit Eginhard's Emporium</a>
+            <a href="/profile/inventory">Take stock of your supplies!</a>
+            <a href="/profile/dealer">Talk to the Dealer</a>
+            <a href="/profile/wealth">Head to Bodrig's Bank</a>
+            <a href="/profile/explore">Explore Middle-earth</a>
+            <a href="/logout">Logout</a>
+        <% } else { %>
+            <a href="/login">Log in!</a>
+            <a href="/signup">Create an account!</a>
+            <a href="/profile/explore">Explore Middle-earth</a>
+        <% } %>
+    </nav>
+    <div class="exploreBox">
+        <div class="exploreText">
+            <h1>Isengard</h1>
+            <div class="about-page">
+                <div class="about-image">
+                    <img src="/images/isengard.png" alt="Isengard"/>
+                    <audio src="https://res.cloudinary.com/dtiihknqe/video/upload/v1668093125/isengard_kp3iok.mp3" controls="true" loop class="audio"></audio>
+                    <script>
+                        const audio = document.querySelector(".audio");
+                        audio.volume = 0.05;
+                    </script>
+                </div>
 
-        <div class="about">
-          <p>
-            Isengard, also known as Angrenost ('Iron Fortress') in Sindarin, was
-            one of the three major fortresses of Gondor, and held within it one
-            of the realm's palantíri. However, in the latter half of the Third
-            Age, the stronghold came into the possession of Saruman, becoming
-            his home and personal domain until his defeat in the War of the
-            Ring.
-          </p>
-          <p>
-            Isengard was comprised of a black, circular, stone-wall surrounding
-            a broad plain, in the centre of which was the Tower of Orthanc.
-            Isengard had only one gate, which faced south. Isengard was, at
-            first, a green and beautiful tower complex, with many large trees
-            and grass fields, fed by the river until it was dammed by Saruman.
-            After the Wizard's defeat, however, Treebeard and the rest of the
-            Ents made it a vivid green area again, after destroying the walls
-            and dam, renaming it the Treegarth of Orthanc.
-          </p>
-          <p>
-            During the War of the Ring, Isengard was Saruman's base of
-            operations against the Rohirrim, and he defiled the valley, cutting
-            down its trees and grass and replacing them with stone and
-            machinery. He dammed and diverted the Isen, possibly for use as
-            hydropower. Isengard's valley was honeycombed with deep pits, used
-            for breeding Orcs and forging weapons. Eventually, an army of Ents
-            and Huorns led by Treebeard of Fangorn, attacked Isengard, wrecking
-            all of Saruman's industries, though unable to force entry into, or
-            damage, Orthanc.
-          </p>
-          <p>
-            The Hobbits Meriadoc Brandybuck and Peregrin Took, as the new
-            "doorwardens", received Théoden King of Rohan, Aragorn, and Gandalf
-            at the gates. Saruman was confronted but refused to beg for pardon,
-            and he was kept under Treebeard's guard together with his servant
-            Gríma Wormtongue. Saruman abandoned Isengard after Sauron's defeat,
-            playing off Treebeard's hatred of caging any living thing in order
-            to manipulate him into letting him leave. It was planned by Sauron
-            that Isengard would be given to his loyal ambassador, the Mouth of
-            Sauron, after Saruman's demise.
-          </p>
-          <p>
-            Early in the Fourth Age, Isengard was restored and Treebeard
-            replanted many trees. Orthanc again became a tower of the Reunited
-            Kingdom of King Aragorn II Elessar. Under the Ent dominion, the
-            ring-wall was torn down and the Ents planted the Watchwood there,
-            and renamed the new forest the "Treegarth of Orthanc". Saruman's
-            pits and caverns were filled, and the land was healed. The Valley
-            was now filled with trees and a small lake was constructed near
-            Orthanc. The valley of Nan Curunír was given to the Ents by Aragorn,
-            to do with as they wished, granted that they keep watch upon Orthanc
-            and prevent anyone without permission to enter it.
-          </p>
+                <div class="about about-isengard">
+                    <p>
+                        Isengard, also known as Angrenost ('Iron Fortress') in Sindarin, was
+                                                                                    one of the three major fortresses of Gondor, and held within it one
+                                                                                    of the realm's palantíri. However, in the latter half of the Third
+                                                                                    Age, the stronghold came into the possession of Saruman, becoming
+                                                                                    his home and personal domain until his defeat in the War of the
+                                                                                    Ring.
+                    </p>
+                    <p>
+                        Isengard was comprised of a black, circular, stone-wall surrounding
+                                                                                    a broad plain, in the centre of which was the Tower of Orthanc.
+                                                                                    Isengard had only one gate, which faced south. Isengard was, at
+                                                                                    first, a green and beautiful tower complex, with many large trees
+                                                                                    and grass fields, fed by the river until it was dammed by Saruman.
+                                                                                    After the Wizard's defeat, however, Treebeard and the rest of the
+                                                                                    Ents made it a vivid green area again, after destroying the walls
+                                                                                    and dam, renaming it the Treegarth of Orthanc.
+                    </p>
+                    <p>
+                        During the War of the Ring, Isengard was Saruman's base of
+                                                                                    operations against the Rohirrim, and he defiled the valley, cutting
+                                                                                    down its trees and grass and replacing them with stone and
+                                                                                    machinery. He dammed and diverted the Isen, possibly for use as
+                                                                                    hydropower. Isengard's valley was honeycombed with deep pits, used
+                                                                                    for breeding Orcs and forging weapons. Eventually, an army of Ents
+                                                                                    and Huorns led by Treebeard of Fangorn, attacked Isengard, wrecking
+                                                                                    all of Saruman's industries, though unable to force entry into, or
+                                                                                    damage, Orthanc.
+                    </p>
+                    <p>
+                        The Hobbits Meriadoc Brandybuck and Peregrin Took, as the new
+                                                                                    "doorwardens", received Théoden King of Rohan, Aragorn, and Gandalf
+                                                                                    at the gates. Saruman was confronted but refused to beg for pardon,
+                                                                                    and he was kept under Treebeard's guard together with his servant
+                                                                                    Gríma Wormtongue. Saruman abandoned Isengard after Sauron's defeat,
+                                                                                    playing off Treebeard's hatred of caging any living thing in order
+                                                                                    to manipulate him into letting him leave. It was planned by Sauron
+                                                                                    that Isengard would be given to his loyal ambassador, the Mouth of
+                                                                                    Sauron, after Saruman's demise.
+                    </p>
+                    <p>
+                        Early in the Fourth Age, Isengard was restored and Treebeard
+                                                                                    replanted many trees. Orthanc again became a tower of the Reunited
+                                                                                    Kingdom of King Aragorn II Elessar. Under the Ent dominion, the
+                                                                                    ring-wall was torn down and the Ents planted the Watchwood there,
+                                                                                    and renamed the new forest the "Treegarth of Orthanc". Saruman's
+                                                                                    pits and caverns were filled, and the land was healed. The Valley
+                                                                                    was now filled with trees and a small lake was constructed near
+                                                                                    Orthanc. The valley of Nan Curunír was given to the Ents by Aragorn,
+                                                                                    to do with as they wished, granted that they keep watch upon Orthanc
+                                                                                    and prevent anyone without permission to enter it.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
