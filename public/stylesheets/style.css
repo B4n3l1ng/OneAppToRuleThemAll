@@ -44,7 +44,7 @@ justify-content: space-around;
   margin-top: 50px;
   border: 5px solid white;
   background-color: rgba(6, 58, 19, 0.7);
-  width:70vw;
+  width:80%;
   height: 75vh;
 }
 
@@ -57,14 +57,14 @@ justify-content: space-around;
 .explore-page {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .itemList {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-height: 460px;
+  max-height: 90%;
   flex-wrap: wrap;
 }
 
@@ -224,8 +224,7 @@ width: 270px;
 }
 
 .profileBox {
-  margin-top: 50px;
-    margin-left: 250px;
+    margin:auto;
     border: 5px solid white;
     background-color: rgba(6, 58, 19, 0.7);
     width:70vw;
@@ -271,7 +270,9 @@ width: 100vw;
 }
 
 .checkoutBox {
-  margin: 50px;
+  position: fixed;
+  top: 25%;
+  margin-left: 2.5%;
   border: 5px solid white;
   background-color: rgba(6, 58, 19, 0.7);
   width: 95%;
@@ -386,7 +387,10 @@ padding-right: 50px;
 .box {
   border: 5px solid white;
   background-color: rgba(6, 58, 19, 0.7);
-  width:70vw;
+  width:70%;
+  position: fixed;
+  top: 30%;
+  margin-left: 15%;
 }
 
 .pageText {
@@ -418,6 +422,7 @@ padding-right: 50px;
   border: 1px solid rgb(6,58,19);
   display: flex;
   justify-content: flex-start;
+  align-items: center;
  }
  nav a {
   text-decoration: none;
@@ -480,6 +485,7 @@ button {
 .characterButtons{
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 
@@ -522,8 +528,9 @@ button {
 }
 
 .charactersBox {
-  margin-top: 150px;
-  margin-left: 250px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
   background-color: rgba(6, 58, 19, 0.7);
   width:70vw;
 }
@@ -558,7 +565,7 @@ button {
     margin-top: auto;
   }
   nav {
-    font-size: 70%;
+    font-size: 80%;
   }
   .exploreText {
     font-size: 13px;
@@ -590,6 +597,22 @@ button {
   .meme img {
     max-width: 700px
   }
+  .navButtonImage {
+    width: 80px;
+    height: 80px;
+  }
+  .button {
+    font-size: 15px;
+  }
+  .detailsImg{
+    height: 400px
+  }
+  nav {
+    height: 6vh;
+  }
+  .basketText {
+    font-size: 15 px;
+  }
 }
 
 @media (max-width: 1000px) or (max-height: 700px) {
@@ -600,7 +623,7 @@ button {
     margin-top: auto;
   }
   nav {
-    font-size: 60%;
+    font-size: 70%;
   }
   .exploreBox {
     width: 90vw;
@@ -620,7 +643,18 @@ button {
   .meme img {
     max-width: 500px
   }
+  .detailsImg{
+    height: 300px
+  }
+  .navButtonImage {
+    width: 60px;
+    height: 60px;
+  }
+  .button {
+    font-size: 12px;
+  }
 }
+ 
 
 @media (max-height: 650px) {
   .about-image img {
@@ -635,5 +669,8 @@ display: inline;
   }
   .about {
     font-size: 75%;
+  }
+  .headingCtr {
+    display: none;
   }
 }
