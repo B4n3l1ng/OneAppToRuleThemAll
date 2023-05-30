@@ -7,18 +7,18 @@
   font-family: CustomFont;
 }
 
+body {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
 .pageCtr {
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 100px;
-}
-
-body {
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
 }
 
 a {
@@ -28,6 +28,7 @@ a {
 h1 {
   text-align: center;
 }
+
 h2 {
   text-align: center;
   font-size: larger;
@@ -91,9 +92,11 @@ justify-content: space-around;
   margin-left: 10px;
   margin-bottom: 10px;
 }
+
 .about-image img {
   max-width: 450px;
 }
+
 .about {
   margin-left: 20px;
   text-align: left
@@ -132,9 +135,10 @@ width: 270px;
   width: 200px
 }
 
-.merryPippinImage{
+.merryPippinImage {
   width:500px;
 }
+
 .galadriel-image {
   width: 620px;
   margin-left: 10px;
@@ -155,25 +159,29 @@ width: 270px;
   margin-left: 10px;
 }
 
-.coatOfArms{
+.coatOfArms {
   width:269px;
 }
+
 .locationImageG {
   width: 200px;
   margin-left: 10px;
 }
-.coatOfArmsG{
+
+.coatOfArmsG {
   width:120px;
 }
-.coatOfArmsR{
+
+.coatOfArmsR {
   width:120px;
 }
+
 .locationImageR {
   width: 200px;
   margin-left: 10px;
 }
 
-.meme{
+.meme {
   display: flex;
   justify-content: center;
   padding: 50px
@@ -190,7 +198,6 @@ width: 270px;
 .answers {
   margin-bottom: 15px;
 }
-
 
 .navButtonImage {
   width: 100px;
@@ -224,16 +231,16 @@ width: 270px;
 }
 
 .profileBox {
-    margin:auto;
-    border: 5px solid white;
-    background-color: rgba(6, 58, 19, 0.7);
-    width:70vw;
-  }
+  margin:auto;
+  border: 5px solid white;
+  background-color: rgba(6, 58, 19, 0.7);
+  width:70vw;
+}
 
 .indexBackground {
   background-image: url("/images/map.jpg");
   background-size: cover;
-width: 100vw;
+  width: 100vw;
   height: 100vh;
   padding: 0px;
   margin: 0;
@@ -271,6 +278,24 @@ width: 100vw;
   height: 100%;
 }
 
+.shopItems {
+  color: white;
+  font-size: 15px; 
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.shopItem {
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .checkoutBox {
   position: fixed;
   top: 25%;
@@ -292,32 +317,14 @@ width: 100vw;
   top: 20%;
   margin: auto;
 }
-.shopItems {
- 
-  color: white;
-  font-size: 15px; 
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  flex-wrap: wrap;
-}
 
 .inventoryItems {
   color: white;
   font-size: 15px; 
   display: flex;
-flex-direction: column;
-padding-bottom: 50px;
-border: 1px solid black
-}
-
-.shopItem {
-  margin-right: 60px;
-  margin-left: 60px;
-  margin-top: 30px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-bottom: 50px;
+  border: 1px solid black
 }
 
 .inventoryItem {
@@ -427,6 +434,7 @@ padding-right: 50px;
   text-decoration: none;
   color: rgb(6, 58, 19);
  }
+
  nav {
   height: 4vh;
   background-color: rgb(6,58,19);
@@ -435,6 +443,7 @@ padding-right: 50px;
   justify-content: flex-start;
   align-items: center;
  }
+
  nav a {
   text-decoration: none;
   margin: 5px;
@@ -471,7 +480,6 @@ button {
   color: rgb(6, 58, 19);
 }
 
- 
 .profileBackground {
   background-image: url("/images/tavern.jpg");
   background-size: cover;
@@ -499,7 +507,6 @@ button {
   margin-bottom: 50px;
 }
 
-
 .updateBackground {
   background-image: url("/images/characters.jpg");
   background-size: cover;
@@ -523,8 +530,6 @@ button {
   text-decoration: none;
   color: rgb(6, 58, 19);
 }
-
-
 
 .dealerBackground {
   background-image: url("/images/dealer.jpg");
@@ -665,7 +670,6 @@ button {
     font-size: 12px;
   }
 }
- 
 
 @media (max-height: 650px) {
   .about-image img {
