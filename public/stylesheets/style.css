@@ -411,6 +411,15 @@ padding-right: 50px;
   margin-left: 15%;
 }
 
+.entryBox {
+  border: 5px solid white;
+  background-color: rgba(6, 58, 19, 0.7);
+  width:70%;
+  position: fixed;
+  top: 20%;
+  margin-left: 15%;
+}
+
 .pageText {
   font-size: 20px;
   text-align: center;
