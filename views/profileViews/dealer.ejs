@@ -1,37 +1,40 @@
 <div class="dealerBackground">
-  <nav>
-    <a href="/profile">Back to the Prancing Pony</a>
-    <a href="/characters">Your characters!</a>
-    <a href="/characters/new">Create a new character!</a>
-    <a href="/profile/shop">Visit Eginhard's Emporium</a>
-    <a href="/profile/inventory">Take stock of your supplies!</a>
-    <a href="/profile/wealth">Head to Bodrig's Bank</a>
-    <a href="/profile/explore">Explore Middle-earth!</a>
-    <a href="/logout">Logout</a>
-  </nav>
-  <div class="pageCtr">
-  <div class="box">
-    <div class="pageText">
-      <h1>Let's play dice!</h1>
-      <p>
-        Roll a 6-sided dice against the dealer. If the number on your dice is
-        higher than the dealer's, you win 100 Castar!
-      </p>
+    <nav>
+        <a href="/profile">Back to the Prancing Pony</a>
+        <a href="/characters">Your characters!</a>
+        <a href="/characters/new">Create a new character!</a>
+        <a href="/profile/shop">Visit Eginhard's Emporium</a>
+        <a href="/profile/inventory">Take stock of your supplies!</a>
+        <a href="/profile/wealth">Head to Bodrig's Bank</a>
+        <a href="/profile/explore">Explore Middle-earth!</a>
+        <a href="/logout">Logout</a>
+    </nav>
+    <div>
+        <div class="box">
+            <div class="pageText">
+                <h1>Let's play dice!</h1>
+                <p>
+                    Roll a 6-sided dice against the dealer. If the number on your dice is
+                            higher than the dealer's, you win 100 Castar!
+                </p>
 
-      <a class="basketLink" href="/profile/dealer/dice">Let's Roll!</a>
+                <a class="basketLink" href="/profile/dealer/dice">Let's Roll!</a>
 
-      <% if (result) { %> <% if (result==="player") { %>
-      <p>You won! 100 Castar was added to your bank! The dealer salutes you!</p>
+                <% if (result) { %>
+                    <% if (result==="player") { %>
+                        <p>You won! 100 Castar was added to your bank! The dealer salutes you!</p>
 
-      <% } else if (result==="dealer") { %>
-      <p>You lost! Better luck next time, for you may always try again!</p>
+                    <% } else if (result==="dealer") { %>
+                        <p>You lost! Better luck next time, for you may always try again!</p>
 
-      <% } else if (result==="draw") { %>
-      <p>A draw! Would you like to roll again, traveller?</p>
+                    <% } else if (result==="draw") { %>
+                        <p>A draw! Would you like to roll again, traveller?</p>
 
-      <% } %> <% } %>
-      <p>Your coins: <%= user.money %></p>
+                    <% } %>
+                <% } %>
+                <p>Your coins:
+                    <%= user.money %></p>
+            </div>
+        </div>
     </div>
-  </div>
-  </div>
 </div>

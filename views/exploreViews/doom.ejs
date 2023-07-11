@@ -1,79 +1,70 @@
 <div class="indexBackground">
-  <nav>
-    <% if (change) { %>
-    <a href="/profile">Back to the Prancing Pony</a>
-    <a href="/characters">Your characters!</a>
-    <a href="/characters/new">Create a new character!</a>
-    <a href="/profile/shop">Visit Eginhard's Emporium</a>
-    <a href="/profile/inventory">Take stock of your supplies!</a>
-    <a href="/profile/dealer">Talk to the Dealer</a>
-    <a href="/profile/wealth">Head to Bodrig's Bank</a>
-    <a href="/profile/explore">Explore Middle-earth</a>
-    <a href="/logout">Logout</a>
-    <% } else { %>
-    <a href="/login">Log in!</a>
-    <a href="/signup">Create an account!</a>
-    <a href="/profile/explore">Explore Middle-earth</a>
-    <% } %>
-  </nav>
-  <div class="exploreBox">
-    <div class="exploreText">
-      <h1>Mount Doom</h1>
+    <nav>
+        <% if (change) { %>
+            <a href="/profile">Back to the Prancing Pony</a>
+            <a href="/characters">Your characters!</a>
+            <a href="/characters/new">Create a new character!</a>
+            <a href="/profile/shop">Visit Eginhard's Emporium</a>
+            <a href="/profile/inventory">Take stock of your supplies!</a>
+            <a href="/profile/dealer">Talk to the Dealer</a>
+            <a href="/profile/wealth">Head to Bodrig's Bank</a>
+            <a href="/profile/explore">Explore Middle-earth</a>
+            <a href="/logout">Logout</a>
+        <% } else { %>
+            <a href="/login">Log in!</a>
+            <a href="/signup">Create an account!</a>
+            <a href="/profile/explore">Explore Middle-earth</a>
+        <% } %>
+    </nav>
+    <div class="exploreBox">
+        <div class="exploreText">
+            <h1>Mount Doom</h1>
 
-      <div class="about-page">
-        <div class="image">
-          <img
-            src="/images/mountDoom.jpg"
-            alt="Mount Doom"
-            class="locationImage"
-          />
-          <audio
-            src="https://res.cloudinary.com/dtiihknqe/video/upload/v1668093128/mount_doom_tiv9ri.mp3"
-            controls="true"
-            loop
-            class="audio"
-          ></audio>
-          <script>
-            const audio = document.querySelector(".audio");
-            audio.volume = 0.05;
-          </script>
-        </div>
+            <div class="about-page">
+                <div class="about-image">
+                    <img src="/images/mountDoom.jpg" alt="Mount Doom" class="locationImage"/>
+                    <audio src="https://res.cloudinary.com/dtiihknqe/video/upload/v1668093128/mount_doom_tiv9ri.mp3" controls="true" loop class="audio"></audio>
+                    <script>
+                        const audio = document.querySelector(".audio");
+                        audio.volume = 0.05;
+                    </script>
+                </div>
 
-        <div class="about">
-          <p>
-            Mount Doom, also known as Orodruin and Amon Amarth, was a volcano in
-            Mordor where the One Ring was forged, and the only place it could be
-            destroyed. It was the ultimate destination for Frodo Baggins and
-            Samwise Gamgee in the Quest of the Ring.
-          </p>
-          <p>
-            The Mount Doom was created by the first dark lord Melkor during the
-            First Age. During the Second Age, Sauron chose the land of Mordor as
-            his dwelling-place. He used the fire that welled there from the
-            heart of the earth in his sorceries and his forging. Sauron forged
-            the One Ring in the depths of the Cracks of Doom, which was built
-            within Mount Doom itself. Mount Doom erupted, signaling Sauron's
-            attack on Gondor, where it earned its name "Amon Amarth."
-          </p>
-          <p>
-            After the War of the Last Alliance and Sauron's disappearance, it
-            was dormant and only sprung into life after Sauron's return to
-            Mordor.
-          </p>
-          <p>
-            Frodo and Sam trekked up the slopes of Mount Doom and entered
-            Sammath Naur, on their quest to destroy the One Ring.
-          </p>
-          <p>
-            With the destruction of the Ring, Mount Doom erupted with great
-            force, sending massive lava floes down its sides and scattering the
-            area with volcanic debris. The cone of the volcano was ripped apart
-            by the eruption, and the Nazgûl and their mounts were destroyed in
-            the ejection of lava as they tried to reach Frodo to reclaim the
-            Ring.
-          </p>
+                <div class="about">
+                    <p>
+                        Mount Doom, also known as Orodruin and Amon Amarth, was a volcano in
+                                    Mordor where the One Ring was forged, and the only place it could be
+                                    destroyed. It was the ultimate destination for Frodo Baggins and
+                                    Samwise Gamgee in the Quest of the Ring.
+                    </p>
+                    <p>
+                        The Mount Doom was created by the first dark lord Melkor during the
+                                    First Age. During the Second Age, Sauron chose the land of Mordor as
+                                    his dwelling-place. He used the fire that welled there from the
+                                    heart of the earth in his sorceries and his forging. Sauron forged
+                                    the One Ring in the depths of the Cracks of Doom, which was built
+                                    within Mount Doom itself. Mount Doom erupted, signaling Sauron's
+                                    attack on Gondor, where it earned its name "Amon Amarth."
+                    </p>
+                    <p>
+                        After the War of the Last Alliance and Sauron's disappearance, it
+                                    was dormant and only sprung into life after Sauron's return to
+                                    Mordor.
+                    </p>
+                    <p>
+                        Frodo and Sam trekked up the slopes of Mount Doom and entered
+                                    Sammath Naur, on their quest to destroy the One Ring.
+                    </p>
+                    <p>
+                        With the destruction of the Ring, Mount Doom erupted with great
+                                    force, sending massive lava floes down its sides and scattering the
+                                    area with volcanic debris. The cone of the volcano was ripped apart
+                                    by the eruption, and the Nazgûl and their mounts were destroyed in
+                                    the ejection of lava as they tried to reach Frodo to reclaim the
+                                    Ring.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>

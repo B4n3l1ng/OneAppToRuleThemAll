@@ -1,109 +1,100 @@
 <div class="indexBackground">
-  <nav>
-    <% if (change) { %>
-    <a href="/profile">Back to the Prancing Pony</a>
-    <a href="/characters">Your characters!</a>
-    <a href="/characters/new">Create a new character!</a>
-    <a href="/profile/shop">Visit Eginhard's Emporium</a>
-    <a href="/profile/inventory">Take stock of your supplies!</a>
-    <a href="/profile/dealer">Talk to the Dealer</a>
-    <a href="/profile/wealth">Head to Bodrig's Bank</a>
-    <a href="/profile/explore">Explore Middle-earth</a>
-    <a href="/logout">Logout</a>
-    <% } else { %>
-    <a href="/login">Log in!</a>
-    <a href="/signup">Create an account!</a>
-    <a href="/profile/explore">Explore Middle-earth</a>
-    <% } %>
-  </nav>
-  <div class="exploreBox">
-    <div class="exploreText">
-      <h1>Mordor</h1>
+    <nav>
+        <% if (change) { %>
+            <a href="/profile">Back to the Prancing Pony</a>
+            <a href="/characters">Your characters!</a>
+            <a href="/characters/new">Create a new character!</a>
+            <a href="/profile/shop">Visit Eginhard's Emporium</a>
+            <a href="/profile/inventory">Take stock of your supplies!</a>
+            <a href="/profile/dealer">Talk to the Dealer</a>
+            <a href="/profile/wealth">Head to Bodrig's Bank</a>
+            <a href="/profile/explore">Explore Middle-earth</a>
+            <a href="/logout">Logout</a>
+        <% } else { %>
+            <a href="/login">Log in!</a>
+            <a href="/signup">Create an account!</a>
+            <a href="/profile/explore">Explore Middle-earth</a>
+        <% } %>
+    </nav>
+    <div class="exploreBox">
+        <div class="exploreText">
+            <h1>Mordor</h1>
 
-      <div class="about-page">
-        <div class="locationImage">
-          <img
-            src="/images/mordor.jpg"
-            alt="Mordor"
-            style="width: 390px; height: 400px"
-          />
-          <audio
-            src="https://res.cloudinary.com/dtiihknqe/video/upload/v1668093124/mordor_srfa58.mp3"
-            controls="true"
-            loop
-            class="audio"
-          ></audio>
-          <script>
-            const audio = document.querySelector(".audio");
-            audio.volume = 0.05;
-          </script>
+            <div class="about-page">
+                <div class="about-image">
+                    <img src="/images/mordor.jpg" alt="Mordor" class="mordorImg"/>
+                    <audio src="https://res.cloudinary.com/dtiihknqe/video/upload/v1668093124/mordor_srfa58.mp3" controls="true" loop class="audio"></audio>
+                    <script>
+                        const audio = document.querySelector(".audio");
+                        audio.volume = 0.05;
+                    </script>
+                </div>
+                <div class="about about-mordor">
+                    <p>
+                        Mordor was a black, volcanic plain in the southeast of Middle-earth
+                                                                                                                                                                                    to the east of Gondor, Ithilien, and the great river Anduin. Mordor
+                                                                                                                                                                                    was chosen by Sauron as his realm because of the mountain ranges
+                                                                                                                                                                                    surrounding it on three sides, creating a natural fortress against
+                                                                                                                                                                                    his enemies.
+                    </p>
+                    <p>
+                        The Mount Doom was created by Morgoth during the First Age. Sauron
+                                                                                                                                                                                    settled in Mordor 1,000 years after the end of the First Age, and it
+                                                                                                                                                                                    remained the centre of his power for the whole of the Second Age and
+                                                                                                                                                                                    again at the end of the Third Age of Middle-earth. In the
+                                                                                                                                                                                    north-western corner of this land stood Mount Doom, where Sauron had
+                                                                                                                                                                                    forged the One Ring. Near Mount Doom stood Sauron's stronghold
+                                                                                                                                                                                    Barad-dûr. After this time, Sauron was known as the Dark Lord of
+                                                                                                                                                                                    Mordor.
+                    </p>
+                    <p>
+                        For 2500 years, Sauron ruled Mordor uninterruptedly. Having wrought
+                                                                                                                                                                                    the Ring, it was from there that he launched the attack upon the
+                                                                                                                                                                                    Elves of Eregion in the War of the Elves and Sauron. He was repelled
+                                                                                                                                                                                    by the Men of Númenor. He later opposed Númenor, but such was their
+                                                                                                                                                                                    power that his own servants deserted him and he was captured by the
+                                                                                                                                                                                    Númenóreans and brought to their island kingdom, eventually causing
+                                                                                                                                                                                    its destruction. Immediately after Númenor's destruction, Sauron
+                                                                                                                                                                                    returned to Mordor as a spirit and resumed his rule.
+                    </p>
+
+                    <p>
+                        Sauron's rule was interrupted again when his efforts to destroy
+                                                                                                                                                                                    Gondor failed; his forces were driven back and the Last Alliance of
+                                                                                                                                                                                    Elves and Men formed to oppose him. After the Battle of Dagorlad,
+                                                                                                                                                                                    the army of the Last Alliance entered Mordor and besieged the
+                                                                                                                                                                                    Barad-dûr for seven years. Eventually Sauron came forth and was
+                                                                                                                                                                                    defeated in a final battle on the slopes of Mount Doom. For about
+                                                                                                                                                                                    1600 years, Mordor was guarded by Gondor in order to prevent evil
+                                                                                                                                                                                    from returning.
+                    </p>
+
+                    <p>
+                        However, following the Great Plague, the watch on Mordor failed and
+                                                                                                                                                                                    evil began to creep back in. Sauron eventually used the Wainriders
+                                                                                                                                                                                    to distract and weaken Gondor, and the Nazgûl re-entered. They
+                                                                                                                                                                                    reclaimed Mordor and started to rebuild its might. Minas Ithil was
+                                                                                                                                                                                    conquered by the Nine Ringwraiths and Gondor's abandoned fortresses
+                                                                                                                                                                                    were occupied by evil creatures. By the time Sauron returned to
+                                                                                                                                                                                    Mordor after his false defeat at Dol Guldur (in the events that took
+                                                                                                                                                                                    place at the time of Bilbo Baggins's quest), Mordor was too strong
+                                                                                                                                                                                    to be captured by any military might that was available in
+                                                                                                                                                                                    Middle-earth at the end of the Third Age. Sauron declared himself
+                                                                                                                                                                                    openly and Mount Doom burst into flame three years later.
+                    </p>
+                    <p>
+                        During the War of the Ring, Sauron gathered all his forces to
+                                                                                                                                                                                    Mordor. After the Battle of the Pelennor Fields, the Army of the
+                                                                                                                                                                                    West marched to the Black Gate. Sauron sent his army to destroy the
+                                                                                                                                                                                    Men of Gondor and Rohan at the Battle of the Black Gate, but then
+                                                                                                                                                                                    Frodo Baggins destroyed the One Ring and Mordor fell. Sauron's power
+                                                                                                                                                                                    was destroyed, sending shock waves through the air and ground. The
+                                                                                                                                                                                    Dark Tower of Barad-dûr, the Black Gate and the Towers of Teeth
+                                                                                                                                                                                    collapsed into ruin. Mount Doom erupted and both Sauron and his
+                                                                                                                                                                                    Ringwraiths were destroyed.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="about">
-          <p>
-            Mordor was a black, volcanic plain in the southeast of Middle-earth
-            to the east of Gondor, Ithilien, and the great river Anduin. Mordor
-            was chosen by Sauron as his realm because of the mountain ranges
-            surrounding it on three sides, creating a natural fortress against
-            his enemies.
-          </p>
-          <p>
-            The Mount Doom was created by Morgoth during the First Age. Sauron
-            settled in Mordor 1,000 years after the end of the First Age, and it
-            remained the centre of his power for the whole of the Second Age and
-            again at the end of the Third Age of Middle-earth. In the
-            north-western corner of this land stood Mount Doom, where Sauron had
-            forged the One Ring. Near Mount Doom stood Sauron's stronghold
-            Barad-dûr. After this time, Sauron was known as the Dark Lord of
-            Mordor.
-          </p>
-          <p>
-            For 2500 years, Sauron ruled Mordor uninterruptedly. Having wrought
-            the Ring, it was from there that he launched the attack upon the
-            Elves of Eregion in the War of the Elves and Sauron. He was repelled
-            by the Men of Númenor. He later opposed Númenor, but such was their
-            power that his own servants deserted him and he was captured by the
-            Númenóreans and brought to their island kingdom, eventually causing
-            its destruction. Immediately after Númenor's destruction, Sauron
-            returned to Mordor as a spirit and resumed his rule.
-          </p>
-
-          <p>
-            Sauron's rule was interrupted again when his efforts to destroy
-            Gondor failed; his forces were driven back and the Last Alliance of
-            Elves and Men formed to oppose him. After the Battle of Dagorlad,
-            the army of the Last Alliance entered Mordor and besieged the
-            Barad-dûr for seven years. Eventually Sauron came forth and was
-            defeated in a final battle on the slopes of Mount Doom. For about
-            1600 years, Mordor was guarded by Gondor in order to prevent evil
-            from returning.
-          </p>
-
-          <p>
-            However, following the Great Plague, the watch on Mordor failed and
-            evil began to creep back in. Sauron eventually used the Wainriders
-            to distract and weaken Gondor, and the Nazgûl re-entered. They
-            reclaimed Mordor and started to rebuild its might. Minas Ithil was
-            conquered by the Nine Ringwraiths and Gondor's abandoned fortresses
-            were occupied by evil creatures. By the time Sauron returned to
-            Mordor after his false defeat at Dol Guldur (in the events that took
-            place at the time of Bilbo Baggins's quest), Mordor was too strong
-            to be captured by any military might that was available in
-            Middle-earth at the end of the Third Age. Sauron declared himself
-            openly and Mount Doom burst into flame three years later.
-          </p>
-          <p>
-            During the War of the Ring, Sauron gathered all his forces to
-            Mordor. After the Battle of the Pelennor Fields, the Army of the
-            West marched to the Black Gate. Sauron sent his army to destroy the
-            Men of Gondor and Rohan at the Battle of the Black Gate, but then
-            Frodo Baggins destroyed the One Ring and Mordor fell. Sauron's power
-            was destroyed, sending shock waves through the air and ground. The
-            Dark Tower of Barad-dûr, the Black Gate and the Towers of Teeth
-            collapsed into ruin. Mount Doom erupted and both Sauron and his
-            Ringwraiths were destroyed.
-          </p>
-        </div>
-      </div>
     </div>
-  </div>
 </div>

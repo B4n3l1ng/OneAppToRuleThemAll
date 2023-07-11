@@ -7,18 +7,18 @@
   font-family: CustomFont;
 }
 
+body {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
 .pageCtr {
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-padding-top: 100px;
-}
-
-body {
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
+  padding-top: 100px;
 }
 
 a {
@@ -28,10 +28,31 @@ a {
 h1 {
   text-align: center;
 }
+
 h2 {
   text-align: center;
   font-size: larger;
   padding: 10px
+}
+
+.headingCtr {
+display: flex;
+justify-content: space-around;
+}
+
+.exploreBox {
+  margin: auto;
+  margin-top: 50px;
+  border: 5px solid white;
+  background-color: rgba(6, 58, 19, 0.7);
+  width:80%;
+  height: 75vh;
+}
+
+.exploreText {
+  font-size: 15px;
+  text-align: center;
+  color: white;
 }
 
 .explore-page {
@@ -40,16 +61,18 @@ h2 {
   justify-content: space-around;
 }
 
-.places {
+.itemList {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  max-height: 90%;
+  flex-wrap: wrap;
 }
 
-.places a {
+.itemList a {
   border: 1px solid white;
   border-radius: 50% 20% / 10% 40%;
-  margin: 5px;
+  margin: 20px;
   width: 10vw;
   text-align: center;
   text-decoration: none;
@@ -57,22 +80,6 @@ h2 {
   background-color: white;
 }
 
-.characters {
-  display: flex;
-  flex-direction:column;
-  justify-content: space-evenly;
-}
-
-.characters a {
-  border: 1px solid white;
-  border-radius: 50% 20% / 10% 40%;
-  margin: 5px;
-  width: 10vw;
-  text-align: center;
-  text-decoration: none;
-  color: rgb(6, 58, 19);
-  background-color: white;
-}
 .about-page {
   display: flex;
   justify-content: center;
@@ -85,21 +92,28 @@ h2 {
   margin-left: 10px;
   margin-bottom: 10px;
 }
+
 .about-image img {
-  width: 500px;
+  max-width: 450px;
 }
+
 .about {
   margin-left: 20px;
-  text-align: left;
-  margin-top: 0px;
-  padding-top: 0px
+  text-align: left
 }
 
 .gimli-picture{
   width: 500px;
-  height: 400px;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+.aragornImg {
+width: 250px;
+}
+
+.legolasImg {
+width: 270px;
 }
 
 .frodo-image {
@@ -109,6 +123,7 @@ h2 {
 
 .sam-image {
   margin-left: 10px;
+  width: 300px
 }
 
 .elrond-image {
@@ -116,18 +131,16 @@ h2 {
   margin-bottom: 10px;
 }
 
-.saruman-image {
-  margin-left: 10px;
-  margin-bottom: 10px;
+.sarumanImg {
+  width: 200px
 }
 
-.merryPippinImage{
-  width:550px;
-  margin-left: 10px;
+.merryPippinImage {
+  width:500px;
 }
+
 .galadriel-image {
   width: 620px;
-  height: 390px;
   margin-left: 10px;
 }
 
@@ -146,31 +159,45 @@ h2 {
   margin-left: 10px;
 }
 
-.coatOfArms{
-  width:269px
+.coatOfArms {
+  width:269px;
 }
+
 .locationImageG {
-  width: 400px;
-  margin-left: 10px;
-}
-.coatOfArmsG{
-  width:156px;
-}
-.locationImageR {
-  width: 400px;
+  width: 200px;
   margin-left: 10px;
 }
 
-.meme{
+.coatOfArmsG {
+  width:120px;
+}
+
+.coatOfArmsR {
+  width:120px;
+}
+
+.locationImageR {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.meme {
   display: flex;
   justify-content: center;
-  padding: 10px
+  padding: 50px
+}
+
+.meme img {
+  max-width: 900px
+}
+
+.mordorImg {
+  width: 300px
 }
 
 .answers {
   margin-bottom: 15px;
 }
-
 
 .navButtonImage {
   width: 100px;
@@ -203,10 +230,17 @@ h2 {
   padding-top: 20px;
 }
 
+.profileBox {
+  margin:auto;
+  border: 5px solid white;
+  background-color: rgba(6, 58, 19, 0.7);
+  width:70vw;
+}
+
 .indexBackground {
   background-image: url("/images/map.jpg");
   background-size: cover;
-width: 100vw;
+  width: 100vw;
   height: 100vh;
   padding: 0px;
   margin: 0;
@@ -215,7 +249,7 @@ width: 100vw;
 .shopBackground {
   background-image: url("/images/shopBackground.jpg");
   background-size: cover;
-  height: 110%;
+  height: 100%;
 }
 
 .shopItemBackground {
@@ -231,7 +265,9 @@ width: 100vw;
 }
 
 .shopBox {
-  margin: 50px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 5px solid white;
   background-color: rgba(6, 58, 19, 0.7);
   width: 95%;
@@ -239,36 +275,16 @@ width: 100vw;
   font-size: 20px;
   text-align: center;
   padding-bottom: 50px;
-  height: 100vh;
-}
-
-.checkoutBox {
-  margin: 50px;
-  border: 5px solid white;
-  background-color: rgba(6, 58, 19, 0.7);
-  width: 95%;
-  color: white;
-  font-size: 20px;
-  text-align: center;
+  height: 100%;
 }
 
 .shopItems {
- 
   color: white;
   font-size: 15px; 
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
   flex-wrap: wrap;
-}
-
-.inventoryItems {
-  color: white;
-  font-size: 15px; 
-  display: flex;
-flex-direction: column;
-padding-bottom: 50px;
-border: 1px solid black
 }
 
 .shopItem {
@@ -278,6 +294,37 @@ border: 1px solid black
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.checkoutBox {
+  position: fixed;
+  top: 25%;
+  margin-left: 2.5%;
+  border: 5px solid white;
+  background-color: rgba(6, 58, 19, 0.7);
+  width: 95%;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.charBox {
+  border: 5px solid white;
+  background-color: rgba(6, 58, 19, 0.7);
+  width:70%;
+  height: 62%;
+  position: fixed;
+  top: 20%;
+  margin: auto;
+}
+
+.inventoryItems {
+  color: white;
+  font-size: 15px; 
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  border: 1px solid black
 }
 
 .inventoryItem {
@@ -358,7 +405,19 @@ padding-right: 50px;
 .box {
   border: 5px solid white;
   background-color: rgba(6, 58, 19, 0.7);
-  width:70vw;
+  width:70%;
+  position: fixed;
+  top: 30%;
+  margin-left: 15%;
+}
+
+.entryBox {
+  border: 5px solid white;
+  background-color: rgba(6, 58, 19, 0.7);
+  width:70%;
+  position: fixed;
+  top: 20%;
+  margin-left: 15%;
 }
 
 .pageText {
@@ -370,6 +429,7 @@ padding-right: 50px;
   justify-content: center;
   align-items: center;
 }
+
  .buttons {
   display: flex;
   justify-content: center;
@@ -383,13 +443,16 @@ padding-right: 50px;
   text-decoration: none;
   color: rgb(6, 58, 19);
  }
+
  nav {
   height: 4vh;
   background-color: rgb(6,58,19);
   border: 1px solid rgb(6,58,19);
   display: flex;
   justify-content: flex-start;
+  align-items: center;
  }
+
  nav a {
   text-decoration: none;
   margin: 5px;
@@ -426,7 +489,6 @@ button {
   color: rgb(6, 58, 19);
 }
 
- 
 .profileBackground {
   background-image: url("/images/tavern.jpg");
   background-size: cover;
@@ -437,14 +499,6 @@ button {
   font-size: 20px;
   text-align: center;
   color: white;
-}
-
-.profileBox {
-margin-top: 50px;
-  margin-left: 250px;
-  border: 5px solid white;
-  background-color: rgba(6, 58, 19, 0.7);
-  width:70vw;
 }
 
 .characterImg {
@@ -459,8 +513,8 @@ margin-top: 50px;
 .characterButtons{
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
-
 
 .updateBackground {
   background-image: url("/images/characters.jpg");
@@ -486,20 +540,6 @@ margin-top: 50px;
   color: rgb(6, 58, 19);
 }
 
-.exploreBox {
-  margin-top: 20px;
-  margin-left: 260px;
-  border: 5px solid white;
-  background-color: rgba(6, 58, 19, 0.7);
-  width:70vw;
-}
-
-.exploreText {
-  font-size: 15px;
-  text-align: center;
-  color: white;
-}
-
 .dealerBackground {
   background-image: url("/images/dealer.jpg");
   background-size: cover;
@@ -512,34 +552,149 @@ margin-top: 50px;
   height: 100vh;
 }
 
-
 .charactersBox {
-  margin-top: 150px;
-  margin-left: 250px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
   background-color: rgba(6, 58, 19, 0.7);
   width:70vw;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .error {
   color: tomato;
  }
+
+ @media (max-width: 1800px) {
+  .about-rohan {
+    font-size: 12px;
+  }
+  .about-mirk {
+    font-size: 12px;
+  }
+  .about-moria {
+    font-size: 12px;
+  }
+  .about-isengard {
+    font-size: 12px;
+  }
+  .about-mordor {
+    font-size: 12px;
+  }
+ }
+
+ @media (max-width: 1300px) or (max-height: 800px) {
+  .pageText {
+    font-size: 15px;
+  }
+  .box {
+    margin-top: auto;
+  }
+  nav {
+    font-size: 80%;
+  }
+  .exploreText {
+    font-size: 13px;
+  }
+  .exploreBox {
+   width: 80vw;
+  }
+  .itemList a {
+    margin: 15px
+   }
+   .about-image img {
+    max-width: 400px;
+  }
+  .about-rohan {
+    font-size: 11.5px;
+  }
+  .about-mirk {
+    font-size: 11.5px;
+  }
+  .about-moria {
+    font-size: 11.5px;
+  }
+  .about-isengard {
+    font-size: 11.5px;
+  }
+  .about-mordor {
+    font-size: 11px;
+  }
+  .meme img {
+    max-width: 700px
+  }
+  .navButtonImage {
+    width: 80px;
+    height: 80px;
+  }
+  .button {
+    font-size: 15px;
+  }
+  .detailsImg{
+    height: 400px
+  }
+  nav {
+    height: 6vh;
+  }
+  .basketText {
+    font-size: 15 px;
+  }
+}
+
+@media (max-width: 1000px) or (max-height: 700px) {
+  .pageText {
+    font-size: 12px;
+  }
+  .box {
+    margin-top: auto;
+  }
+  nav {
+    font-size: 70%;
+  }
+  .exploreBox {
+    width: 90vw;
+   }
+   .itemList a {
+    margin: 8px
+   }
+   .about-image img {
+    max-width: 300px;
+  }
+  .about-image-mp {
+    margin-left: 0;
+  }
+  .about-mp {
+    margin-left: 0;
+  }
+  .meme img {
+    max-width: 500px
+  }
+  .detailsImg{
+    height: 300px
+  }
+  .navButtonImage {
+    width: 60px;
+    height: 60px;
+  }
+  .button {
+    font-size: 12px;
+  }
+}
+
+@media (max-height: 650px) {
+  .about-image img {
+    display: none;
+  }
+  .about-page {
+display: inline;
+  }
+  .audio {
+    display: block;
+    height: 30px;
+  }
+  .about {
+    font-size: 75%;
+  }
+  .headingCtr {
+    display: none;
+  }
+}

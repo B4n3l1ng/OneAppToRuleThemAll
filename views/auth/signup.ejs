@@ -1,40 +1,40 @@
 <div class="indexBackground">
-  <nav>
-    <a href="/login">Already have an account? Login here</a>
-    <a href="/profile/explore">Explore Middle-earth</a>
-  </nav>
-  <div class="pageCtr">
-  <div class="box">
-    <div class="pageText">
-      <h1>Create a new account and leap into the world of Middle-earth!</h1>
+    <nav>
+        <a href="/login">Already have an account? Login here</a>
+        <a href="/profile/explore">Explore Middle-earth</a>
+    </nav>
+    <div>
+        <div class="box">
+            <div class="pageText">
+                <h1>Create a new account and leap into the world of Middle-earth!</h1>
 
-      <form action="/signup" method="POST">
-        <ul class="wrapper">
-          <li class="form-row">
-            <label>Username:</label>
-            <input type="text" required name="username" />
-          </li>
-          <li class="form-row">
-            <label>Email:</label>
-            <input type="email" required name="email" />
-          </li>
-          <li class="form-row">
-            <label>Password:</label>
-            <input type="password" required name="password" />
-          </li>
-          <li class="form-row">
-            <button>Sign up!</button>
-          </li>
-        </ul>
-      </form>
+                <form action="/signup" method="POST">
+                    <ul class="wrapper">
+                        <li class="form-row">
+                            <label>Username:</label>
+                            <input type="text" required name="username"/>
+                        </li>
+                        <li class="form-row">
+                            <label>Email:</label>
+                            <input type="email" required name="email"/>
+                        </li>
+                        <li class="form-row">
+                            <label>Password:</label>
+                            <input type="password" required name="password"/>
+                        </li>
+                        <li class="form-row">
+                            <button>Sign up!</button>
+                        </li>
+                    </ul>
+                </form>
 
-      <div>
-        <% if (typeof errorMessage !== "undefined") { %>
-        <p class="error"><%= errorMessage %></p>
-        <% } %>
-      </div>
+                <div>
+                    <% if (typeof errorMessage !== "undefined") { %>
+                        <p class="error"><%= errorMessage %></p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  </div>
 
 </div>

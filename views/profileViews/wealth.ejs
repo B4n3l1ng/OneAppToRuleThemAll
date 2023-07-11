@@ -1,27 +1,29 @@
 <div class="bankBackground">
-  <nav>
-    <a href="/profile">Back to the Prancing Pony</a>
-    <a href="/characters">Your characters!</a>
-    <a href="/characters/new">Create a new character!</a>
-    <a href="/profile/shop">Visit Eginhard's Emporium</a>
-    <a href="/profile/inventory">Take stock of your supplies!</a>
-    <a href="/profile/dealer">Talk to the Dealer</a>
-    <a href="/profile/explore">Explore Middle-earth!</a>
-    <a href="/logout">Logout</a>
-  </nav>
-  <div class="pageCtr">
-  <div class="box">
-    <div class="pageText">
-      <h1>COUNT YOUR COINS</h1>
+    <nav>
+        <a href="/profile">Back to the Prancing Pony</a>
+        <a href="/characters">Your characters!</a>
+        <a href="/characters/new">Create a new character!</a>
+        <a href="/profile/shop">Visit Eginhard's Emporium</a>
+        <a href="/profile/inventory">Take stock of your supplies!</a>
+        <a href="/profile/dealer">Talk to the Dealer</a>
+        <a href="/profile/explore">Explore Middle-earth!</a>
+        <a href="/logout">Logout</a>
+    </nav>
+    <div>
+        <div class="box">
+            <div class="pageText">
+                <h1>COUNT YOUR COINS</h1>
 
-      <p>
-        Good day to you, traveller. Bodrig's Bank is honoured to keep your
-        wealth safely under lock and key for you. Have you been to see the
-        dealer recently?
-      </p>
+                <p>
+                    Good day to you, traveller. Bodrig's Bank is honoured to keep your
+                                        wealth safely under lock and key for you. Have you been to see the
+                                        dealer recently?
+                </p>
 
-      <p>Your coins: <%= user.money %> Castar</p>
+                <p>Your coins:
+                    <%= user.money %>
+                    Castar</p>
+            </div>
+        </div>
     </div>
-  </div>
-  </div>
 </div>
