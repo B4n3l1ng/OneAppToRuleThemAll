@@ -11,14 +11,17 @@ router.get("/login", (req, res) => {
 
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
-  const currentUser = await User.findOne({ username });
+
   try {
+    const currentUser = await User.findOne({ username });
     if (!currentUser) {
       res.render("auth/login", { errorMessage: "Username does not exist" });
     } else {
       if (bcrypt.compareSync(password, currentUser.password)) {
-        currentUser.password="";
-        req.session.user = currentUser;
+        console.log(currentUser._doc);
+        const loggedUser = { ...currentUser._doc };
+        delete loggedUser.password;
+        req.session.user = loggedUser;
         res.redirect("/profile");
       } else {
         res.render("auth/login", { errorMessage: "Incorrect password" });

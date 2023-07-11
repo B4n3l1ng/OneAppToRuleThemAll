@@ -64,7 +64,7 @@ router.post("/new", isLoggedIn, async (req, res) => {
       allegiance: req.body.allegiance,
       weapons: req.body.weapons,
       image: imgUrl,
-      owner: req.session.user,
+      owner: req.session.user._id,
     });
     res.redirect(`/characters/${created.id}/details`);
   } catch (error) {
@@ -115,7 +115,9 @@ router.get("/:id/deleteValid", isLoggedIn, async (req, res) => {
   try {
     await Character.findByIdAndDelete(req.params.id);
     res.redirect("/characters");
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 module.exports = router;
